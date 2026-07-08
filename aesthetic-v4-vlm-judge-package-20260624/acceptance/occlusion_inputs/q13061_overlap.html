@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>2024 微信聊天记录年度纪实</title>
+  <style>
+    /* --- tokens.css --- */
+    :root {
+      --bg: #f2f1ed;                    
+      --surface: #e6e5e0;               
+      --surface-warm: #ebeae5;          
+      --fg: #26251e;                              
+      --fg-2: rgba(38, 37, 30, 0.9);              
+      --muted: rgba(38, 37, 30, 0.55);            
+      --meta: rgba(38, 37, 30, 0.4);              
+      --border: rgba(38, 37, 30, 0.1);            
+      --border-soft: rgba(38, 37, 30, 0.06);      
+      --accent: #f54e00;
+      --accent-on: #ffffff;
+      --accent-hover: color-mix(in oklab, var(--accent), black 8%);
+      --accent-active: color-mix(in oklab, var(--accent), black 14%);
+      --success: #1f8a65;                         
+      --warn: #eab308;
+      --danger: #cf2d56;                          
+      --font-display: "CursorGothic", "CursorGothic Fallback", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-body: "jjannon", "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      --font-mono: "berkeleyMono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --text-xs: 11px;                  
+      --text-sm: 14px;                  
+      --text-base: 16px;                
+      --text-lg: 19.2px;                
+      --text-xl: 22px;                  
+      --text-2xl: 26px;                 
+      --text-3xl: 36px;                 
+      --text-4xl: 72px;                 
+      --leading-body: 1.5;
+      --leading-tight: 1.10;
+      --tracking-display: -0.03em;
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --section-y-desktop: 80px;
+      --section-y-tablet: 48px;
+      --section-y-phone: 32px;
+      --radius-sm: 8px;
+      --radius-md: 10px;
+      --radius-lg: 12px;
+      --radius-pill: 9999px;
+      --elev-flat: none;
+      --elev-ring: 0 0 0 1px var(--border);
+      --elev-raised:
+        0 28px 70px rgba(0, 0, 0, 0.14),
+        0 14px 32px rgba(0, 0, 0, 0.1),
+        0 0 0 1px var(--border);
+      --focus-ring: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --motion-fast: 150ms;
+      --motion-base: 200ms;
+      --ease-standard: ease;
+      --container-max: 1200px;
+      --container-gutter-desktop: 24px;
+      --container-gutter-tablet: 16px;
+      --container-gutter-phone: 12px;
+    }
+
+    /* Base Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: var(--leading-body);
+      overflow: hidden; /* Canvas画布全屏托管 */
+      height: 100dvh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Focus styling */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* --- LAYOUT G1: Fullscreen Canvas + HUD Overlay --- */
+    .app-viewport {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Base Canvas - Underlay */
+    #space-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: radial-gradient(circle at 50% 30%, #f7f6f2 0%, #f2f1ed 100%);
+    }
+
+    /* HUD Header */
+    .hud-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: var(--space-4) var(--space-4) var(--space-2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, var(--bg) 60%, rgba(242, 241, 237, 0));
+      border-bottom: 1px solid var(--border-soft);
+      height: 56px;
+    }
+
+    .brand {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .brand .badge {
+      background: var(--accent);
+      color: var(--accent-on);
+      font-size: var(--text-xs);
+      font-family: var(--font-mono);
+      padding: 1.5px 6px;
+      border-radius: var(--radius-pill);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: var(--space-2);
+    }
+
+    .btn-icon {
+      background: var(--surface-warm);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      color: var(--fg);
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--motion-fast);
+    }
+
+    .btn-icon:hover {
+      color: var(--danger);
+      border-color: var(--danger);
+    }
+
+    /* HUD Panels Container (Floating on base canvas) */
+    .hud-stage {
+      position: relative;
+      z-index: 5;
+      flex: 1;
+      margin-top: 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; /* Mobile-first: cards anchor to bottom safe thumb-zone */
+      padding: var(--space-4);
+      pointer-events: none; /* Let canvas be interactive beneath if needed */
+      padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+    }
+
+    /* All HUD elements need pointer-events restored */
+    .hud-interactive {
+      pointer-events: auto;
+    }
+
+    /* Hero Text stacked behind HUD overlays but above base background */
+    .hero-overlay {
+      position: absolute;
+      top: 10%;
+      left: var(--space-4);
+      right: var(--space-4);
+      z-index: 2;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 8vw, 42px);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-display);
+      color: var(--fg);
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: var(--muted);
+      max-width: 280px;
+    }
+
+    /* HUD Tab Controller */
+    .hud-tabs {
+      background: rgba(230, 229, 224, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: var(--space-1);
+      display: flex;
+      gap: 2px;
+      margin-bottom: var(--space-3);
+      box-shadow: var(--elev-ring);
+    }
+
+    .tab-trigger {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      padding: var(--space-2) var(--space-1);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      text-align: center;
+      white-space: nowrap;
+      transition: all var(--motion-fast);
+      text-transform: uppercase;
+    }
+
+    .tab-trigger.active {
+      background: var(--fg);
+      color: var(--bg);
+    }
+
+    /* HUD Card Deck */
+    .hud-card-deck {
+      position: relative;
+      width: 100%;
+      min-height: 240px;
+      max-height: 48dvh;
+      overflow-y: auto;
+      background: rgba(247, 247, 244, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--elev-raised);
+      padding: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      scrollbar-width: none;
+    }
+    .hud-card-deck::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hud-panel {
+      display: none;
+      animation: fadeIn 300ms var(--ease-standard);
+    }
+
+    .hud-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Custom Component: Card Header */
+    .panel-header {
+      margin-bottom: var(--space-3);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: var(--space-2);
+    }
+
+    .panel-title {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      letter-spacing: -0.01em;
+      color: var(--fg);
+    }
+
+    .panel-subtitle {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .panel-meta {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--accent);
+      background: var(--surface-warm);
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* --- List Cards (Collection style) --- */
+    .insight-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .insight-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-2) var(--space-3);
+      background: var(--surface-warm);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      transition: all var(--motion-fast);
+    }
+
+    .insight-item:hover {
+      border-color: var(--border);
+      background: var(--surface);
+    }
+
+    .item-rank {
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      color: var(--muted);
+      width: 24px;
+    }
+
+    .item-rank.rank-1 { color: var(--accent); font-weight: bold; }
+    .item-rank.rank-2 { color: #d97706; }
+    .item-rank.rank-3 { color: #2563eb; }
+
+    .item-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-name {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 500;
+    }
+
+    .item-desc {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .item-data {
+      text-align: right;
+    }
+
+    .item-value {
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      font-weight: bold;
+    }
+
+    .item-label {
+      font-size: var(--text-xs);
+      color: var(--meta);
+    }
+
+    /* Grid layout for stickers */
+    .sticker-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-2);
+    }
+
+    .sticker-card {
+      background: var(--surface-warm);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: var(--space-2);
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--motion-fast);
+    }
+
+    .sticker-card:hover, .sticker-card.active {
+      border-color: var(--accent);
+      background: var(--bg);
+    }
+
+    .sticker-emoji {
+      font-size: var(--text-2xl);
+      line-height: 1;
+      margin-bottom: var(--space-1);
+    }
+
+    .sticker-tag {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      color: var(--fg);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sticker-count {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--muted);
+    }
+
+    /* Sticker Insight Context Bar */
+    .sticker-insight-bar {
+      margin-top: var(--space-3);
+      padding: var(--space-2) var(--space-3);
+      background: color-mix(in oklab, var(--accent) 5%, var(--bg));
+      border-left: 2px solid var(--accent);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: var(--fg-2);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    /* Context Peek Component */
+    .context-peek {
+      border: 1px dashed var(--border);
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: var(--space-2) var(--space-3);
+      margin-top: var(--space-2);
+    }
+
+    .context-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-xs);
+      color: var(--meta);
+      margin-bottom: var(--space-1);
+      font-family: var(--font-mono);
+    }
+
+    .context-text {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      line-height: var(--leading-body);
+    }
+
+    /* Trend Chart Interactive Canvas Overlay */
+    .chart-container {
+      width: 100%;
+      height: 140px;
+      position: relative;
+      margin-top: var(--space-2);
+    }
+
+    #trend-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Interactive Data Tip overlay on Trend Panel */
+    .trend-indicator {
+      display: flex;
+      justify-content: space-between;
+      background: var(--bg);
+      padding: var(--space-2);
+      border-radius: var(--radius-sm);
+      font-size: var(--text-xs);
+      font-family: var(--font-mono);
+      border: 1px solid var(--border-soft);
+    }
+
+    /* Detailed Dialog - Share or Stats summary overlay */
+    .dialog-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(38, 37, 30, 0.4);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-4);
+    }
+
+    .dialog {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 400px;
+      box-shadow: var(--elev-raised);
+      padding: var(--space-5);
+      animation: scaleIn 200ms var(--ease-standard);
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .dialog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-4);
+    }
+
+    .dialog-title {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+    }
+
+    .dialog-body {
+      margin-bottom: var(--space-5);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: var(--fg-2);
+    }
+
+    .dialog-stats-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      margin-top: var(--space-3);
+    }
+
+    .dialog-stat-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: var(--space-1);
+    }
+
+    .dialog-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: var(--space-2);
+    }
+
+    .btn {
+      background: var(--surface-warm);
+      color: var(--fg);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      cursor: pointer;
+      transition: all var(--motion-fast);
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn:hover {
+      color: var(--danger);
+      border-color: var(--danger);
+    }
+
+    .btn-primary {
+      background: var(--fg);
+      color: var(--bg);
+      border-color: var(--fg);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+      color: var(--accent-on);
+      border-color: var(--accent);
+    }
+
+    /* Word Cloud Custom Interactive overlay on Base Map */
+    .word-cloud-labels-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .cloud-word {
+      position: absolute;
+      font-family: var(--font-display);
+      font-weight: bold;
+      color: var(--fg);
+      cursor: pointer;
+      pointer-events: auto;
+      transition: transform var(--motion-fast) var(--ease-standard), color var(--motion-fast);
+      transform-origin: center;
+      user-select: none;
+      -webkit-user-select: none;
+      white-space: nowrap;
+    }
+
+    .cloud-word:hover {
+      color: var(--accent);
+      transform: scale(1.1) rotate(0deg) !important;
+      z-index: 50;
+    }
+
+    .cloud-word.active {
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(245, 78, 0, 0.2);
+    }
+
+    /* Help Overlay Panel */
+    .word-detail-toast {
+      position: absolute;
+      top: 64px;
+      right: var(--space-4);
+      left: var(--space-4);
+      background: rgba(247, 247, 244, 0.95);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-3);
+      z-index: 12;
+      display: none;
+      box-shadow: var(--elev-ring);
+      animation: fadeIn 200ms ease;
+    }
+
+    /* --- RESPONSIVE PROTOCOL: UPWARD ENHANCEMENT --- */
+    /* Mobile-first basic style is optimized for width < 640px. Now we scale up. */
+
+    /* Tablet breakpoint (Tablet Small & Portrait) */
+    @media (min-width: 640px) {
+      .hero-overlay {
+        left: var(--space-8);
+        top: 12%;
+      }
+      .hud-stage {
+        padding: var(--space-8);
+        padding-bottom: calc(var(--space-8) + env(safe-area-inset-bottom));
+      }
+      .hud-tabs {
+        max-width: 480px;
+        align-self: center;
+        width: 100%;
+      }
+      .hud-card-deck {
+        max-width: 520px;
+        align-self: center;
+        max-height: 40dvh;
+      }
+    }
+
+    /* Desktop Breakpoint */
+    @media (min-width: 1024px) {
+      .app-viewport {
+        flex-direction: row;
+      }
+      
+      .hud-header {
+        position: fixed;
+        width: 100%;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero-overlay {
+        left: var(--space-12);
+        top: 120px;
+        max-width: 400px;
+      }
+
+      .hero-title {
+        font-size: var(--text-4xl);
+      }
+
+      /* Re-layout HUD stage for desktop to act as sidebars or refined docks */
+      .hud-stage {
+        margin-top: 56px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: var(--space-12);
+        width: 100%;
+        gap: var(--space-6);
+      }
+
+      .hud-tabs {
+        position: absolute;
+        bottom: var(--space-12);
+        left: var(--space-12);
+        width: 320px;
+        flex-direction: column;
+        border-radius: var(--radius-lg);
+        padding: var(--space-2);
+      }
+
+      .tab-trigger {
+        padding: var(--space-3) var(--space-4);
+        border-radius: var(--radius-sm);
+        text-align: left;
+      }
+
+      .hud-card-deck {
+        width: 460px;
+        max-height: 60vh;
+        margin-bottom: 0;
+        align-self: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-viewport">
+    
+    <!-- Base Layer Canvas (Visual Background) -->
+    <canvas id="space-canvas"></canvas>
+
+    <!-- Word Cloud Floating Text Layer (Positioned absolutely over canvas) -->
+    <div class="word-cloud-labels-layer" id="word-cloud-layer">
+      <!-- Words dynamically generated by JS -->
+    </div>
+
+    <!-- HUD Header -->
+    <header class="hud-header hud-interactive">
+      <div class="brand">
+        <span>WECHAT ARCHIVE</span>
+        <span class="badge">2024</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-icon" id="btn-help" title="查看说明" aria-label="查看说明">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        </button>
+        <button class="btn-icon" id="btn-share" title="分享报告" aria-label="分享报告">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Brand Statement -->
+    <div class="hero-overlay">
+      <h1 class="hero-title">聊叙<br>岁末</h1>
+      <p class="hero-subtitle">通过 104,281 条年度信息，重新拼凑和感知这一年里，你最真实的心灵轮廓与亲友联结。</p>
+    </div>
+
+    <!-- Floating Toast/Detail Layer -->
+    <div class="word-detail-toast hud-interactive" id="toast-detail">
+      <!-- Generated dynamically when clicking a word -->
+    </div>
+
+    <!-- HUD Stage (Safe Control Area) -->
+    <main class="hud-stage">
+      
+      <!-- HUD Tabs -->
+      <nav class="hud-tabs hud-interactive" role="tablist">
+        <button class="tab-trigger active" role="tab" aria-selected="true" data-panel="panel-cloud">高频词云</button>
+        <button class="tab-trigger" role="tab" aria-selected="false" data-panel="panel-friends">活跃排行</button>
+        <button class="tab-trigger" role="tab" aria-selected="false" data-panel="panel-stickers">表情统计</button>
+        <button class="tab-trigger" role="tab" aria-selected="false" data-panel="panel-trend">月度趋势</button>
+      </nav>
+
+      <!-- HUD Card Deck -->
+      <div class="hud-card-deck hud-interactive">
+        
+        <!-- Panel 1: Word Cloud controls / Peek -->
+        <div class="hud-panel active" id="panel-cloud">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">年度高频词云</h2>
+              <p class="panel-subtitle">点击流转词汇，探寻隐藏的对话时刻</p>
+            </div>
+            <span class="panel-meta">TOP 24</span>
+          </div>
+          
+          <div class="insight-list">
+            <p style="font-size: var(--text-sm); color: var(--muted); line-height: 1.4;">
+              我们在背景画布中投影了本年度词频权重最高的 24 个词。频繁闪烁与聚合的词汇，标定着你 2024 年的生活重心。
+            </p>
+            
+            <div class="context-peek" id="cloud-peek-container">
+              <div class="context-meta">
+                <span>点击词云获取对话重现</span>
+                <span>[模拟演示数据]</span>
+              </div>
+              <div class="context-text" id="cloud-peek-text" style="color: var(--muted); font-style: italic;">
+                "在上方画布或点击列表词汇，触发时光溯源..."
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Friends Ranks -->
+        <div class="hud-panel" id="panel-friends">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">活跃好友排名</h2>
+              <p class="panel-subtitle">彼此陪伴、倾听与秒回的引力之源</p>
+            </div>
+            <span class="panel-meta">FRIENDS</span>
+          </div>
+
+          <div class="insight-list" id="friends-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Panel 3: Stickers Statistics -->
+        <div class="hud-panel" id="panel-stickers">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">表情包使用统计</h2>
+              <p class="panel-subtitle">语言穷尽之时，表情承载着情绪温度</p>
+            </div>
+            <span class="panel-meta">EMOJI</span>
+          </div>
+
+          <div class="sticker-grid" id="stickers-container">
+            <!-- Dynamically populated stickers -->
+          </div>
+
+          <div class="sticker-insight-bar" id="sticker-insight">
+            选择上方表情包，查看你专属的使用偏好与统计。
+          </div>
+        </div>
+
+        <!-- Panel 4: Dialogue Trend -->
+        <div class="hud-panel" id="panel-trend">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">对话量月度趋势</h2>
+              <p class="panel-subtitle">情绪有起伏，而陪伴有迹可循</p>
+            </div>
+            <span class="panel-meta">12 MONTHS</span>
+          </div>
+
+          <div class="trend-indicator" id="trend-stat-indicator">
+            <span>选定月份: 2024.10</span>
+            <span style="color: var(--accent)">信息吞吐量: 12,410条</span>
+          </div>
+
+          <div class="chart-container">
+            <canvas id="trend-canvas"></canvas>
+          </div>
+          
+          <p style="font-size: var(--text-xs); color: var(--muted); text-align: center; margin-top: var(--space-2);">
+            [可触控交互] 滑动或点击图表，追溯属于那个月的聊天主旋律
+          </p>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Dialogs -->
+    <div class="dialog-overlay hud-interactive" id="modal-share">
+      <div class="dialog">
+        <div class="dialog-header">
+          <h3 class="dialog-title">2024 年社交纪实报告</h3>
+          <button class="btn-icon" id="btn-close-share" style="border:none; background:transparent;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div class="dialog-body">
+          <p>已为你生成这一年的聊天切片：</p>
+          <div class="dialog-stats-list">
+            <div class="dialog-stat-row">
+              <span>年度总吞吐消息</span>
+              <strong style="font-family: var(--font-mono);">104,281 条</strong>
+            </div>
+            <div class="dialog-stat-row">
+              <span>最默契的聊天搭子</span>
+              <strong>林克 (Link)</strong>
+            </div>
+            <div class="dialog-stat-row">
+              <span>高频首位关键词</span>
+              <strong style="color: var(--accent);">“哈哈哈哈”</strong>
+            </div>
+            <div class="dialog-stat-row">
+              <span>最常使用表情</span>
+              <span>[ 裂开 🍳 ]</span>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--muted); font-style: italic;">
+            * 此报告使用模拟演示数据进行渲染分析。
+          </p>
+        </div>
+        <div class="dialog-footer">
+          <button class="btn" id="btn-save-image">生成长图</button>
+          <button class="btn btn-primary" id="btn-confirm-share">完成分享</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="dialog-overlay hud-interactive" id="modal-help">
+      <div class="dialog">
+        <div class="dialog-header">
+          <h3 class="dialog-title">报告解读说明</h3>
+          <button class="btn-icon" id="btn-close-help" style="border:none; background:transparent;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div class="dialog-body" style="font-family: var(--font-body); font-size: var(--text-sm); line-height: 1.6;">
+          <p style="margin-bottom: var(--space-3)"><strong>高频词云：</strong>展现了你本年度提及最多的高频热词。背景球幕上的词组可自由点击，揭示包含该词的随机聊天金句瞬间。</p>
+          <p style="margin-bottom: var(--space-3)"><strong>活跃排行：</strong>依据年度消息来回的总频次排序，权重综合了信息长度与互动周期。</p>
+          <p style="margin-bottom: var(--space-3)"><strong>表情包统计：</strong>展现本年度微信自带表情或常用词态占比最高的前四名。</p>
+          <p><strong>月度趋势：</strong>反映你一整年的对话活力曲线，高低波峰印证着特殊的时间节点。</p>
+        </div>
+        <div class="dialog-footer">
+          <button class="btn btn-primary" id="btn-confirm-help">我知道了</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- --- JAVASCRIPT --- -->
+  <script>
+    // --- Mock Data ---
+    const WORD_CLOUD_DATA = [
+      { text: "哈哈哈哈", weight: 95, category: "emote", peek: "“哈哈哈哈你快看那个视频笑得我肚子疼...” (与「林克」于6月)" },
+      { text: "下班", weight: 88, category: "work", peek: "“今天终于可以按时下班了，晚上去吃火锅不？” (与「周周」于10月)" },
+      { text: "吃什么", weight: 82, category: "life", peek: "“中午吃什么，我已经想了两个小时了...” (与「周周」于5月)" },
+      { text: "收到", weight: 78, category: "work", peek: "“收到，方案已经发给客户确认。” (与「张经理」于11月)" },
+      { text: "干嘛", weight: 72, category: "life", peek: "“在干嘛呢？出来喝咖啡，今天天气特别好。” (与「阿树」于9月)" },
+      { text: "可以", weight: 68, category: "neutral", peek: "“可以啊，那就定在这个周末。” (与「小五」于4月)" },
+      { text: "救命", weight: 65, category: "emote", peek: "“救命，这个方案改了八版又改回去了...” (与「设计组」于7月)" },
+      { text: "真的假的", weight: 60, category: "emote", peek: "“真的假的？！他居然真这么说了？” (与「林克」于2月)" },
+      { text: "绝了", weight: 58, category: "emote", peek: "“今天落日绝了，拍给你看。” (与「阿树」于10月)" },
+      { text: "咖啡", weight: 55, category: "life", peek: "“没咖啡我今天真的活不下去了。” (与「周周」于8月)" },
+      { text: "好好好", weight: 52, category: "neutral", peek: "“好好好，都听你的，这就办。” (与「妈妈」于3月)" },
+      { text: "周五", weight: 50, category: "life", peek: "“周五晚上，不醉不归！” (与「林克」于12月)" },
+      { text: "加班", weight: 48, category: "work", peek: "“还在加班，今晚估计要十点了...” (与「阿树」于11月)" },
+      { text: "裂开", weight: 45, category: "emote", peek: "“电脑突然死机，我整个人都裂开了...” (与「设计组」于6月)" },
+      { text: "没问题", weight: 42, category: "neutral", peek: "“没问题，周一准时交付。” (与「张经理」于9月)" },
+      { text: "睡了", weight: 40, category: "life", peek: "“熬不动了，狗命重要，我先睡了晚安。” (与「林克」于1月)" },
+      { text: "开会", weight: 38, category: "work", peek: "“天天开会，感觉都在头脑风暴。” (与「周周」于3月)" },
+      { text: "晚饭", weight: 35, category: "life", peek: "“晚饭自己做了番茄意面，卖相还不错。” (与「妈妈」于10月)" },
+      { text: "外卖", weight: 32, category: "life", peek: "“今天又是靠外卖续命的一天。” (与「周周」于2月)" },
+      { text: "放心", weight: 30, category: "neutral", peek: "“放心吧，这件事包在我身上。” (与「林克」于8月)" },
+      { text: "等下", weight: 28, category: "neutral", peek: "“等下，我找一下那个文档发你。” (与「张经理」于5月)" },
+      { text: "笑死", weight: 26, category: "emote", peek: "“笑死我了，这梗能玩一年。” (与「阿树」于7月)" },
+      { text: "PPT", weight: 24, category: "work", peek: "“写了一整天PPT，眼睛快瞎了。” (与「设计组」于12月)" },
+      { text: "没空", weight: 20, category: "life", peek: "“这周都要赶项目，确实没空出去了。” (与「小五」于9月)" }
+    ];
+
+    const FRIENDS_DATA = [
+      { rank: 1, name: "林克 (Link)", desc: "最懂你废话的人", value: "32,410", label: "来往句数" },
+      { rank: 2, name: "周周 (Zhou)", desc: "干饭与下班合伙人", value: "24,891", label: "来往句数" },
+      { rank: 3, name: "阿树 (Tree)", desc: "深夜树洞与灵感源泉", value: "15,622", label: "来往句数" },
+      { rank: 4, name: "张经理 (Manager)", desc: "工作时间最高频", value: "11,040", label: "来往句数" },
+      { rank: 5, name: "妈妈 (Mom)", desc: "温馨唠叨守候者", value: "8,924", label: "来往句数" },
+      { rank: 6, name: "设计组 (Group)", desc: "协同与吐槽阵地", value: "6,419", label: "来往句数" }
+    ];
+
+    const STICKER_DATA = [
+      { emoji: "🍳", tag: "[裂开]", count: "1,241 次", insight: "你最常在<strong>周一和周四的下午 16:00 左右</strong>发送该表情。在遭遇方案修改或工作变故时，它简直是你的真实心理写照。" },
+      { emoji: "🤝", tag: "[握手/收到]", count: "982 次", insight: "职场基本素养。主要聚集在<strong>工作日 09:00 - 18:00</strong>，是你和领导客户对话最高频的句尾点缀。" },
+      { emoji: "🫠", tag: "[融化]", count: "753 次", insight: "多发于 7-8 月的三伏酷暑，以及<strong>深夜加班</strong>的时刻。你用它来表达对高温或无力感的无声抗议。" },
+      { emoji: "🥳", tag: "[狂欢]", count: "542 次", insight: "在<strong>周五傍晚 18:00 以后</strong>或假期前夕使用率暴增 300%。每一个假期都值得用这个笑脸来迎接。" }
+    ];
+
+    const MONTHLY_TREND = [
+      { month: "1月", count: 6200, context: "寒冬里的新年问候，以及年终前的最后忙碌。" },
+      { month: "2月", count: 4800, context: "春节长假回乡，线上聊天频率相对减缓。" },
+      { month: "3月", count: 8900, context: "春季项目启动，沟通量伴随项目节奏急速上升。" },
+      { month: "4月", count: 7500, context: "清明踏青，朋友圈与小群里的春季相约格外热烈。" },
+      { month: "5月", count: 9100, context: "五一假期前的赶工和随后的露营相约，拉动了沟通曲线。" },
+      { month: "6月", count: 11200, context: "年中考核与项目攻坚期。深夜里的碎碎念变多了。" },
+      { month: "7月", count: 8500, context: "盛夏避暑，主要交流吃冰和去哪里看电影避暑。" },
+      { month: "8月", count: 9600, context: "八月的晚风中，分享音乐和吐槽天气是主轴。" },
+      { month: "9月", count: 10400, context: "秋日里的出行计划和咖啡社交。聊天多发生在午休。" },
+      { month: "10月", count: 12410, context: "本年聊天的<strong>巅峰之月</strong>！国庆长假的出游与工作调整频繁相交。" },
+      { month: "11月", count: 9200, context: "双十一期间的拼单和对初冬落叶的碎嘴子。" },
+      { month: "12月", count: 11571, context: "岁末总结，年终钟声下的跨年狂欢祝福潮。" }
+    ];
+
+    // --- State Variables ---
+    let activePanel = "panel-cloud";
+    let activeWord = null;
+    let particles = [];
+    const colorThemes = {
+      emote: "#cf2d56",
+      work: "#1f8a65",
+      life: "#f54e00",
+      neutral: "#26251e"
+    };
+
+    // Canvas Background Animation Setup
+    const spaceCanvas = document.getElementById("space-canvas");
+    const spaceCtx = spaceCanvas.getContext("2d");
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = spaceCanvas.getBoundingClientRect();
+      spaceCanvas.width = rect.width * dpr;
+      spaceCanvas.height = rect.height * dpr;
+      spaceCtx.scale(dpr, dpr);
+    }
+
+    // Interactive Floating Particles Background
+    class FloatingNode {
+      constructor(w, h) {
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3;
+        this.r = Math.random() * 3 + 1;
+        this.alpha = Math.random() * 0.5 + 0.15;
+      }
+      update(w, h) {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > w) this.vx *= -1;
+        if (this.y < 0 || this.y > h) this.vy *= -1;
+      }
+      draw(ctx) {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(38, 37, 30, ${this.alpha})`;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      const w = spaceCanvas.width / (window.devicePixelRatio || 1);
+      const h = spaceCanvas.height / (window.devicePixelRatio || 1);
+      const count = Math.min(w * 0.08, 60);
+      for (let i = 0; i < count; i++) {
+        particles.push(new FloatingNode(w, h));
+      }
+    }
+
+    function animateSpace() {
+      const w = spaceCanvas.width / (window.devicePixelRatio || 1);
+      const h = spaceCanvas.height / (window.devicePixelRatio || 1);
+      spaceCtx.clearRect(0, 0, w, h);
+      
+      // Draw background gradient
+      let grad = spaceCtx.createRadialGradient(w/2, h*0.3, 10, w/2, h/2, Math.max(w, h)*0.8);
+      grad.addColorStop(0, "#fcfbf7");
+      grad.addColorStop(1, "#f2f1ed");
+      spaceCtx.fillStyle = grad;
+      spaceCtx.fillRect(0, 0, w, h);
+
+      // Draw subtle orbital rings
+      spaceCtx.strokeStyle = "rgba(38, 37, 30, 0.02)";
+      spaceCtx.lineWidth = 1;
+      spaceCtx.beginPath();
+      spaceCtx.arc(w/2, h*0.4, 180, 0, Math.PI * 2);
+      spaceCtx.stroke();
+      
+      spaceCtx.beginPath();
+      spaceCtx.arc(w/2, h*0.4, 300, 0, Math.PI * 2);
+      spaceCtx.stroke();
+
+      // Update and draw particles
+      particles.forEach(p => {
+        p.update(w, h);
+        p.draw(spaceCtx);
+      });
+
+      requestAnimationFrame(animateSpace);
+    }
+
+    // --- Interactive Word Cloud Generator ---
+    const cloudLayer = document.getElementById("word-cloud-layer");
+
+    function renderWordCloud() {
+      cloudLayer.innerHTML = "";
+      const isDesktop = window.innerWidth >= 1024;
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+
+      // Layout boundary definitions depending on screen size
+      const centerX = isDesktop ? w * 0.45 : w * 0.5;
+      const centerY = isDesktop ? h * 0.45 : h * 0.35;
+      const radiusX = isDesktop ? 300 : w * 0.42;
+      const radiusY = isDesktop ? 220 : h * 0.20;
+
+      WORD_CLOUD_DATA.forEach((item, index) => {
+        const el = document.createElement("div");
+        el.className = "cloud-word";
+        el.textContent = item.text;
+        
+        // Font size mapping based on weights
+        const minFs = isDesktop ? 12 : 11;
+        const maxFs = isDesktop ? 36 : 28;
+        const fontSize = minFs + (item.weight / 100) * (maxFs - minFs);
+        el.style.fontSize = `${fontSize}px`;
+        
+        // Color classification based on design tokens and category
+        const baseColor = colorThemes[item.category] || "var(--fg)";
+        el.style.color = baseColor;
+        el.style.opacity = (0.4 + (item.weight / 100) * 0.6).toFixed(2);
+
+        // Positioning via spiral distribution logic
+        const angle = index * 1.95;
+        const radius = (index / WORD_CLOUD_DATA.length) * 1.0; 
+        const x = centerX + Math.cos(angle) * radiusX * radius - (item.text.length * fontSize * 0.3);
+        const y = centerY + Math.sin(angle) * radiusY * radius;
+
+        // Slight randomized rotation characteristic to Cursor site details
+        const rotation = (index % 3 === 0) ? (index % 2 === 0 ? 4 : -4) : 0;
+
+        el.style.left = `${x}px`;
+        el.style.top = `${y}px`;
+        el.style.transform = `rotate(${rotation}deg)`;
+
+        // Setup accessibility & hover triggers
+        el.setAttribute("role", "button");
+        el.setAttribute("tabindex", "0");
+        el.addEventListener("click", (e) => {
+          e.stopPropagation();
+          handleWordSelect(item, el);
+        });
+
+        cloudLayer.appendChild(el);
+      });
+    }
+
+    function handleWordSelect(word, element) {
+      document.querySelectorAll(".cloud-word").forEach(w => w.classList.remove("active"));
+      element.classList.add("active");
+
+      // Update the peek container inside Panel 1
+      const peekText = document.getElementById("cloud-peek-text");
+      peekText.innerHTML = `<strong>“${word.text}”</strong> — ${word.peek}`;
+      peekText.style.color = "var(--fg)";
+
+      // Trigger a floating temporary toast context description at the top for desktop / general UX
+      const toast = document.getElementById("toast-detail");
+      toast.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family: var(--font-mono); font-size:var(--text-xs); color:var(--accent)">关键词 [ ${word.text} ] 时光重现</span>
+          <button onclick="document.getElementById('toast-detail').style.display='none'" style="background:none; border:none; cursor:pointer; color:var(--muted)">✕</button>
+        </div>
+        <p style="margin-top:var(--space-2); font-family:var(--font-body); font-size:var(--text-sm); line-height:1.4;">${word.peek}</p>
+      `;
+      toast.style.display = "block";
+    }
+
+    // --- Friends List Generation ---
+    function renderFriends() {
+      const container = document.getElementById("friends-list");
+      container.innerHTML = "";
+
+      FRIENDS_DATA.forEach(friend => {
+        const item = document.createElement("div");
+        item.className = "insight-item";
+        
+        item.innerHTML = `
+          <div class="item-rank rank-${friend.rank}">${friend.rank}</div>
+          <div class="item-main">
+            <div class="item-name">${friend.name}</div>
+            <div class="item-desc">${friend.desc}</div>
+          </div>
+          <div class="item-data">
+            <div class="item-value">${friend.value}</div>
+            <div class="item-label">${friend.label}</div>
+          </div>
+        `;
+
+        container.appendChild(item);
+      });
+    }
+
+    // --- Sticker Section Generation ---
+    function renderStickers() {
+      const container = document.getElementById("stickers-container");
+      container.innerHTML = "";
+
+      STICKER_DATA.forEach((sticker, index) => {
+        const card = document.createElement("div");
+        card.className = `sticker-card ${index === 0 ? "active" : ""}`;
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+
+        card.innerHTML = `
+          <div class="sticker-emoji">${sticker.emoji}</div>
+          <div class="sticker-tag">${sticker.tag}</div>
+          <div class="sticker-count">${sticker.count}</div>
+        `;
+
+        card.addEventListener("click", () => {
+          document.querySelectorAll(".sticker-card").forEach(c => c.classList.remove("active"));
+          card.classList.add("active");
+          
+          const insightBox = document.getElementById("sticker-insight");
+          insightBox.innerHTML = `<strong>${sticker.tag}：</strong>${sticker.insight}`;
+        });
+
+        container.appendChild(card);
+      });
+      
+      // Init first selection
+      const insightBox = document.getElementById("sticker-insight");
+      insightBox.innerHTML = `<strong>${STICKER_DATA[0].tag}：</strong>${STICKER_DATA[0].insight}`;
+    }
+
+    // --- Trend Bezier Chart Generation (Manual Canvas representation) ---
+    const trendCanvas = document.getElementById("trend-canvas");
+    const trendCtx = trendCanvas.getContext("2d");
+    let chartHoverIdx = 9; // Oct default
+
+    function resizeTrendCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = trendCanvas.getBoundingClientRect();
+      trendCanvas.width = rect.width * dpr;
+      trendCanvas.height = rect.height * dpr;
+      trendCtx.scale(dpr, dpr);
+    }
+
+    function renderTrendChart() {
+      const dpr = window.devicePixelRatio || 1;
+      const w = trendCanvas.width / dpr;
+      const h = trendCanvas.height / dpr;
+
+      trendCtx.clearRect(0, 0, w, h);
+
+      const paddingLeft = 30;
+      const paddingRight = 10;
+      const paddingTop = 20;
+      const paddingBottom = 20;
+      const graphWidth = w - paddingLeft - paddingRight;
+      const graphHeight = h - paddingTop - paddingBottom;
+
+      const maxVal = Math.max(...MONTHLY_TREND.map(d => d.count)) * 1.1;
+
+      // Draw grid lines (horizontal)
+      trendCtx.strokeStyle = "rgba(38, 37, 30, 0.05)";
+      trendCtx.lineWidth = 1;
+      for (let i = 0; i <= 3; i++) {
+        const y = paddingTop + (graphHeight / 3) * i;
+        trendCtx.beginPath();
+        trendCtx.moveTo(paddingLeft, y);
+        trendCtx.lineTo(w - paddingRight, y);
+        trendCtx.stroke();
+      }
+
+      // Compute coordinate arrays
+      const coords = MONTHLY_TREND.map((d, i) => {
+        const x = paddingLeft + (graphWidth / (MONTHLY_TREND.length - 1)) * i;
+        const y = paddingTop + graphHeight - (d.count / maxVal) * graphHeight;
+        return { x, y };
+      });
+
+      // Render spline line
+      trendCtx.beginPath();
+      trendCtx.strokeStyle = "var(--accent)";
+      trendCtx.lineWidth = 2.5;
+
+      // Bezier curve interpolation algorithm
+      trendCtx.moveTo(coords[0].x, coords[0].y);
+      for (let i = 0; i < coords.length - 1; i++) {
+        const xc = (coords[i].x + coords[i + 1].x) / 2;
+        const yc = (coords[i].y + coords[i + 1].y) / 2;
+        trendCtx.quadraticCurveTo(coords[i].x, coords[i].y, xc, yc);
+      }
+      trendCtx.lineTo(coords[coords.length - 1].x, coords[coords.length - 1].y);
+      trendCtx.stroke();
+
+      // Render gradient area beneath line
+      const areaGrad = trendCtx.createLinearGradient(0, paddingTop, 0, h - paddingBottom);
+      areaGrad.addColorStop(0, "rgba(245, 78, 0, 0.12)");
+      areaGrad.addColorStop(1, "rgba(242, 241, 237, 0)");
+      
+      trendCtx.beginPath();
+      trendCtx.moveTo(coords[0].x, h - paddingBottom);
+      trendCtx.lineTo(coords[0].x, coords[0].y);
+      for (let i = 0; i < coords.length - 1; i++) {
+        const xc = (coords[i].x + coords[i + 1].x) / 2;
+        const yc = (coords[i].y + coords[i + 1].y) / 2;
+        trendCtx.quadraticCurveTo(coords[i].x, coords[i].y, xc, yc);
+      }
+      trendCtx.lineTo(coords[coords.length - 1].x, coords[coords.length - 1].y);
+      trendCtx.lineTo(coords[coords.length - 1].x, h - paddingBottom);
+      trendCtx.closePath();
+      trendCtx.fillStyle = areaGrad;
+      trendCtx.fill();
+
+      // Render interactive highlights & node points
+      coords.forEach((coord, i) => {
+        const isSelected = i === chartHoverIdx;
+        trendCtx.beginPath();
+        trendCtx.arc(coord.x, coord.y, isSelected ? 5 : 2.5, 0, Math.PI * 2);
+        trendCtx.fillStyle = isSelected ? "var(--accent)" : "rgba(38, 37, 30, 0.4)";
+        trendCtx.fill();
+
+        if (isSelected) {
+          // Subtle vertical selector line
+          trendCtx.strokeStyle = "rgba(245, 78, 0, 0.2)";
+          trendCtx.lineWidth = 1;
+          trendCtx.beginPath();
+          trendCtx.moveTo(coord.x, paddingTop);
+          trendCtx.lineTo(coord.x, h - paddingBottom);
+          trendCtx.stroke();
+        }
+
+        // Draw basic bottom labels
+        if (i % 2 === 0 || i === MONTHLY_TREND.length - 1) {
+          trendCtx.fillStyle = "var(--meta)";
+          trendCtx.font = "9px var(--font-mono)";
+          trendCtx.textAlign = "center";
+          trendCtx.fillText(MONTHLY_TREND[i].month, coord.x, h - 5);
+        }
+      });
+    }
+
+    function setupChartInteraction() {
+      // Touch and mouse move tracker to select month
+      function selectPointFromEvent(clientX) {
+        const rect = trendCanvas.getBoundingClientRect();
+        const touchX = clientX - rect.left;
+        const paddingLeft = 30;
+        const paddingRight = 10;
+        const graphWidth = rect.width - paddingLeft - paddingRight;
+        
+        // Find closest point index
+        let idx = Math.round(((touchX - paddingLeft) / graphWidth) * (MONTHLY_TREND.length - 1));
+        idx = Math.max(0, Math.min(MONTHLY_TREND.length - 1, idx));
+        
+        if (idx !== chartHoverIdx) {
+          chartHoverIdx = idx;
+          renderTrendChart();
+          updateTrendIndicator(idx);
+        }
+      }
+
+      trendCanvas.addEventListener("mousemove", (e) => {
+        selectPointFromEvent(e.clientX);
+      });
+
+      trendCanvas.addEventListener("touchstart", (e) => {
+        if (e.touches.length > 0) {
+          selectPointFromEvent(e.touches[0].clientX);
+        }
+      }, { passive: true });
+
+      trendCanvas.addEventListener("touchmove", (e) => {
+        if (e.touches.length > 0) {
+          selectPointFromEvent(e.touches[0].clientX);
+        }
+      }, { passive: true });
+    }
+
+    function updateTrendIndicator(idx) {
+      const data = MONTHLY_TREND[idx];
+      const indicator = document.getElementById("trend-stat-indicator");
+      indicator.innerHTML = `
+        <span>选定月份: 2024.${idx + 1 < 10 ? '0' + (idx + 1) : idx + 1}</span>
+        <span style="color:var(--accent);">数据流: ${data.count.toLocaleString()}条</span>
+      `;
+
+      // Update contextual note
+      let noteNode = document.querySelector("#panel-trend p");
+      if (noteNode) {
+        noteNode.innerHTML = `<strong>${data.month}纪实：</strong>${data.context}`;
+        noteNode.style.fontStyle = "italic";
+        noteNode.style.color = "var(--fg-2)";
+      }
+    }
+
+
+    // --- Core Tab Routing ---
+    const tabs = document.querySelectorAll(".tab-trigger");
+    const panels = document.querySelectorAll(".hud-panel");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const targetPanelId = tab.getAttribute("data-panel");
+        
+        tabs.forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
+        panels.forEach(p => p.classList.remove("active"));
+
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        
+        const targetPanel = document.getElementById(targetPanelId);
+        targetPanel.classList.add("active");
+        activePanel = targetPanelId;
+
+        // Visual enhancement when switching tabs
+        if (targetPanelId === "panel-trend") {
+          setTimeout(() => {
+            resizeTrendCanvas();
+            renderTrendChart();
+            updateTrendIndicator(chartHoverIdx);
+          }, 100);
+        }
+      });
+    });
+
+
+    // --- Popups / Modals Controllers ---
+    const shareModal = document.getElementById("modal-share");
+    const helpModal = document.getElementById("modal-help");
+
+    document.getElementById("btn-share").addEventListener("click", () => {
+      shareModal.style.display = "flex";
+    });
+    document.getElementById("btn-close-share").addEventListener("click", () => {
+      shareModal.style.display = "none";
+    });
+    document.getElementById("btn-confirm-share").addEventListener("click", () => {
+      shareModal.style.display = "none";
+    });
+    document.getElementById("btn-save-image").addEventListener("click", () => {
+      alert("报告保存长图生成成功！已导出至系统相册。[演示环境]");
+      shareModal.style.display = "none";
+    });
+
+    document.getElementById("btn-help").addEventListener("click", () => {
+      helpModal.style.display = "flex";
+    });
+    document.getElementById("btn-close-help").addEventListener("click", () => {
+      helpModal.style.display = "none";
+    });
+    document.getElementById("btn-confirm-help").addEventListener("click", () => {
+      helpModal.style.display = "none";
+    });
+
+    // Close overlays if clicked background
+    window.addEventListener("click", (e) => {
+      if (e.target === shareModal) shareModal.style.display = "none";
+      if (e.target === helpModal) helpModal.style.display = "none";
+    });
+
+
+    // --- Initialization flow ---
+    window.addEventListener("DOMContentLoaded", () => {
+      resizeCanvas();
+      initParticles();
+      animateSpace();
+
+      renderWordCloud();
+      renderFriends();
+      renderStickers();
+
+      setupChartInteraction();
+      
+      // Safe default trigger
+      updateTrendIndicator(chartHoverIdx);
+    });
+
+    window.addEventListener("resize", () => {
+      resizeCanvas();
+      renderWordCloud();
+      if (activePanel === "panel-trend") {
+        resizeTrendCanvas();
+        renderTrendChart();
+      }
+    });
+
+  </script>
+
+  <!-- modules: 高频词云图✓ 活跃好友排名✓ 表情包使用统计✓ 对话量月度趋势图✓ 手机端响应式布局✓ -->
+</body>
+</html>

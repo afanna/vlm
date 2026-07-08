@@ -1,0 +1,2 @@
+id,status,score_100,bucket,aggregate_view,prompt_version,model,occlusion_overlap_check,occlusion_findings,occlusion_affected_axes,input_path,rationale
+sample_aesthetic_v4_dashboard_820530cbcd,scored,75.0,"[70,80)",mobile,aesthetic-v4,claude-opus-4-7-thinking,always_on,[],[],/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/input_html/sample_aesthetic_v4_dashboard.html,"mobile: 命中 [70,80) 档：属于精致移动端产品/品牌着陆页类型；可见证据是顶部指标四宫格排布克制、巨幅黑体标题搭配真实建筑摄影 hero、柠檬绿主 CTA 与玻璃质感次级按钮形成成熟节奏、米白底配深墨字与卡片化数据模块；未进更高档因为整体仍是常见产品营销骨架，品牌资产与差异化视觉系统未达设计站级稀缺度。"

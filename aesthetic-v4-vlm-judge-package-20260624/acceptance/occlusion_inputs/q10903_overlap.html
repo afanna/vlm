@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Stillness | 每日饮水正念打卡</title>
+  <style>
+    /* --- tokens.css （Stillness 风格包） --- */
+    :root {
+      --bg: #f2efe8;
+      --surface: #fbf9f4;
+      --surface-warm: #e6e2d6;
+      --fg: #353a33;
+      --fg-2: #5b5f55;
+      --muted: #8d8b7f;
+      --meta: #6f8268;
+      --border: #e0ddd1;
+      --border-soft: #eeebe1;
+      --accent: #6f8268;
+      --accent-on: #ffffff;
+      --accent-hover: color-mix(in oklab, var(--accent), black 8%);
+      --accent-active: color-mix(in oklab, var(--accent), black 14%);
+      --success: #5f8a5f;
+      --warn: #c0974a;
+      --danger: #b56a5e;
+      --font-display: "Iowan Old Style", "Palatino Linotype", "Hoefler Text", Georgia, serif;
+      --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", Inter, system-ui, sans-serif;
+      --font-mono: "SF Mono", ui-monospace, Menlo, monospace;
+      --text-xs: 12px;
+      --text-sm: 14px;
+      --text-base: 17px;
+      --text-lg: 21px;
+      --text-xl: 27px;
+      --text-2xl: 38px;
+      --text-3xl: 54px;
+      --text-4xl: 72px;
+      --leading-body: 1.78;
+      --leading-tight: 1.18;
+      --tracking-display: -0.01em;
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --section-y-desktop: 124px;
+      --section-y-tablet: 88px;
+      --section-y-phone: 60px;
+      --radius-sm: 14px;
+      --radius-md: 22px;
+      --radius-lg: 30px;
+      --radius-pill: 9999px;
+      --elev-flat: none;
+      --elev-ring: 0 0 0 1px var(--border);
+      --elev-raised: 0 14px 40px rgba(53, 58, 51, 0.07);
+      --focus-ring: 0 0 0 4px rgba(111, 130, 104, 0.22);
+      --motion-fast: 180ms;
+      --motion-base: 320ms;
+      --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+      --container-max: 1080px;
+      --container-gutter-desktop: 36px;
+      --container-gutter-tablet: 24px;
+      --container-gutter-phone: 18px;
+    }
+
+    /* --- 基础复位 --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: var(--leading-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    input, button, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+    }
+
+    /* --- 交互焦点环 --- */
+    *:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    /* --- 移动优先基础样式 (360px) --- */
+    /* T1 布局变体：移动端分层切换，底部 Tab 导航控制 */
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      height: 100svh;
+      position: relative;
+    }
+
+    /* 顶部导航简易紧凑 */
+    .app-header {
+      height: 56px;
+      padding: 0 var(--container-gutter-phone);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-soft);
+      background: var(--surface);
+      z-index: 10;
+    }
+
+    .app-logo {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: var(--tracking-display);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    /* T1 三栏骨架在窄屏下的面板容器 */
+    .panel-wrapper {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .panel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      padding: var(--space-5) var(--container-gutter-phone);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity var(--motion-base) var(--ease-standard),
+                  transform var(--motion-base) var(--ease-standard);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .panel.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+      z-index: 2;
+    }
+
+    /* 卡片与通用组件 */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--elev-raised);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-3);
+      color: var(--fg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* 水源选择网格 */
+    .water-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+    }
+
+    .cup-btn {
+      background: var(--surface-warm);
+      border-radius: var(--radius-sm);
+      padding: var(--space-4);
+      text-align: left;
+      cursor: pointer;
+      transition: background var(--motion-fast) var(--ease-standard), 
+                  transform var(--motion-fast) var(--ease-standard);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .cup-btn:hover {
+      background: var(--border);
+    }
+
+    .cup-btn:active {
+      transform: scale(0.97);
+    }
+
+    .cup-btn .cup-name {
+      font-weight: 500;
+      font-size: var(--text-sm);
+    }
+
+    .cup-btn .cup-vol {
+      font-size: var(--text-xs);
+      color: var(--fg-2);
+    }
+
+    /* 核心圆环进度区域 */
+    .progress-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-8) 0;
+      position: relative;
+    }
+
+    .progress-svg-container {
+      position: relative;
+      width: 240px;
+      height: 240px;
+    }
+
+    .progress-ring-bg {
+      fill: none;
+      stroke: var(--surface-warm);
+      stroke-width: 10;
+    }
+
+    .progress-ring-indicator {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 10;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      transition: stroke-dashoffset var(--motion-base) var(--ease-standard);
+    }
+
+    .progress-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .progress-num {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      line-height: 1;
+      color: var(--fg);
+    }
+
+    .progress-unit {
+      font-size: var(--text-sm);
+      color: var(--muted);
+      margin-top: var(--space-1);
+    }
+
+    .progress-pct {
+      font-size: var(--text-xs);
+      color: var(--accent);
+      background: var(--surface-warm);
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      margin-top: var(--space-2);
+      font-weight: 500;
+    }
+
+    /* 喝水记录主按钮 */
+    .action-btn {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      background: var(--accent);
+      color: var(--accent-on);
+      padding: var(--space-4) var(--space-6);
+      border-radius: var(--radius-pill);
+      font-weight: 500;
+      font-size: var(--text-base);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      box-shadow: var(--elev-raised);
+      transition: background var(--motion-fast) var(--ease-standard),
+                  transform var(--motion-fast) var(--ease-standard);
+    }
+
+    .action-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .action-btn:active {
+      transform: scale(0.97) translateY(2px);
+      background: var(--accent-active);
+    }
+
+    /* 目标设置输入 */
+    .settings-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      background: var(--surface-warm);
+      border-radius: var(--radius-sm);
+      padding: 4px var(--space-4);
+    }
+
+    .input-wrapper label {
+      font-size: var(--text-sm);
+      color: var(--fg-2);
+      white-space: nowrap;
+    }
+
+    .input-control {
+      flex: 1;
+      font-size: 16px; /* 移动端防缩水 */
+      padding: var(--space-2) 0;
+      color: var(--fg);
+      font-weight: 500;
+    }
+
+    .input-control:focus {
+      outline: none;
+    }
+
+    /* 日志列表 */
+    .log-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      max-height: 220px;
+      overflow-y: auto;
+      padding-right: var(--space-1);
+    }
+
+    .log-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-3) var(--space-4);
+      background: var(--surface-warm);
+      border-radius: var(--radius-sm);
+      animation: fadeIn var(--motion-base) var(--ease-standard) forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .log-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .log-time {
+      font-size: var(--text-xs);
+      color: var(--muted);
+    }
+
+    .log-amount {
+      font-size: var(--text-sm);
+      font-weight: 500;
+    }
+
+    .log-delete {
+      color: var(--danger);
+      cursor: pointer;
+      font-size: var(--text-xs);
+      padding: var(--space-1) var(--space-2);
+      border-radius: var(--radius-pill);
+      transition: background var(--motion-fast);
+    }
+
+    .log-delete:hover {
+      background: rgba(181, 106, 94, 0.1);
+    }
+
+    /* 移动端吸底 Tab */
+    .mobile-nav {
+      height: calc(56px + env(safe-area-inset-bottom));
+      padding-bottom: env(safe-area-inset-bottom);
+      background: var(--surface);
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      z-index: 10;
+    }
+
+    .nav-tab {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-xs);
+      color: var(--muted);
+      cursor: pointer;
+      gap: 2px;
+    }
+
+    .nav-tab.active {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .nav-tab svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* 微信分享卡片弹窗 */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(53, 58, 51, 0.4);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--motion-base) var(--ease-standard);
+      padding: var(--space-4);
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .share-card-container {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 360px;
+      overflow: hidden;
+      box-shadow: var(--elev-raised);
+      transform: translateY(20px);
+      transition: transform var(--motion-base) var(--ease-standard);
+    }
+
+    .modal-overlay.active .share-card-container {
+      transform: translateY(0);
+    }
+
+    /* 正念卡片主体 */
+    .zen-card {
+      background: var(--surface);
+      padding: var(--space-8) var(--space-6);
+      text-align: center;
+      border-bottom: 1px dashed var(--border);
+      position: relative;
+    }
+
+    .zen-card::before, .zen-card::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      width: 16px;
+      height: 16px;
+      background: var(--bg);
+      border-radius: 50%;
+    }
+    .zen-card::before { left: -8px; }
+    .zen-card::after { right: -8px; }
+
+    .zen-illustration {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--space-5);
+      color: var(--accent);
+      opacity: 0.85;
+    }
+
+    .zen-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-2);
+      color: var(--fg);
+    }
+
+    .zen-desc {
+      font-size: var(--text-sm);
+      color: var(--fg-2);
+      line-height: var(--leading-body);
+      margin-bottom: var(--space-6);
+    }
+
+    .zen-metrics {
+      display: flex;
+      justify-content: space-around;
+      background: var(--surface-warm);
+      padding: var(--space-4) var(--space-2);
+      border-radius: var(--radius-md);
+    }
+
+    .zen-metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .zen-metric-val {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--accent);
+    }
+
+    .zen-metric-lbl {
+      font-size: var(--text-xs);
+      color: var(--muted);
+    }
+
+    .share-actions {
+      padding: var(--space-5);
+      background: var(--surface-warm);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .share-tips {
+      font-size: var(--text-xs);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* 极简 Toast */
+    .toast {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--fg);
+      color: var(--surface);
+      padding: var(--space-3) var(--space-5);
+      border-radius: var(--radius-pill);
+      font-size: var(--text-sm);
+      z-index: 110;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--motion-fast) var(--ease-standard),
+                  transform var(--motion-fast) var(--ease-standard);
+    }
+
+    .toast.active {
+      opacity: 0.95;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* 庆祝动效 Canvas */
+    #celebration-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    /* --- 桌面端与平板媒体查询 (min-width: 640px) --- */
+    @media (min-width: 640px) {
+      .panel {
+        padding: var(--space-6) var(--container-gutter-tablet);
+      }
+      .progress-svg-container {
+        width: 280px;
+        height: 280px;
+      }
+    }
+
+    /* --- 桌面端黄金比例 T1 三栏布局 (min-width: 1024px) --- */
+    @media (min-width: 1024px) {
+      body {
+        justify-content: center;
+        align-items: center;
+        padding: var(--space-6);
+      }
+
+      .app-container {
+        width: 100%;
+        max-width: var(--container-max);
+        height: 720px;
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+        box-shadow: var(--elev-raised);
+        border: 1px solid var(--border-soft);
+        flex-direction: row; /* 横向排列 */
+        overflow: hidden;
+      }
+
+      /* 移除头部，改用侧栏融合架构 */
+      .app-header {
+        display: none;
+      }
+
+      .mobile-nav {
+        display: none;
+      }
+
+      .panel-wrapper {
+        display: grid;
+        grid-template-columns: 280px 1fr 320px; /* T1 三栏 */
+        width: 100%;
+        height: 100%;
+      }
+
+      .panel {
+        position: static;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
+        height: 100%;
+        padding: var(--space-6);
+        border-right: 1px solid var(--border-soft);
+        display: flex !important; /* 强制全部显示 */
+      }
+
+      .panel-left {
+        background: var(--surface);
+      }
+
+      .panel-main {
+        background: var(--surface-warm);
+        justify-content: center;
+      }
+
+      .panel-right {
+        background: var(--surface);
+        border-right: none;
+      }
+    }
+
+    /* 隐藏滚动条 */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: var(--radius-pill);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container" id="app">
+    <!-- 移动端顶部标题栏 -->
+    <header class="app-header">
+      <div class="app-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        <span>Stillness Water</span>
+      </div>
+      <span style="font-size: var(--text-xs); color: var(--muted);" id="date-indicator">今日</span>
+    </header>
+
+    <!-- T1 核心面板容器 -->
+    <div class="panel-wrapper">
+      
+      <!-- 左栏：日志与容器配置 (T1 Left Sidebar) -->
+      <section class="panel panel-left active" id="panel-left">
+        <div class="card">
+          <h3 class="card-title">
+            <span>选择水源</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </h3>
+          <p style="font-size: var(--text-xs); color: var(--muted); margin-bottom: var(--space-4);">点击下方预设直接完成记录</p>
+          <div class="water-grid" id="preset-grid">
+            <!-- 动态生成 -->
+          </div>
+        </div>
+
+        <div class="card" style="flex: 1; display: flex; flex-direction: column;">
+          <h3 class="card-title">饮水日志</h3>
+          <div class="log-list" id="log-list">
+            <!-- 动态生成 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 中栏：主打卡进度 (T1 Center Main Area) -->
+      <section class="panel panel-main active" id="panel-main">
+        <div class="progress-hero">
+          <div class="progress-svg-container">
+            <svg width="100%" height="100%" viewBox="0 0 120 120">
+              <circle class="progress-ring-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring-indicator" id="progress-indicator" cx="60" cy="60" r="50" stroke-dasharray="314.16" stroke-dashoffset="314.16" />
+            </svg>
+            <div class="progress-text">
+              <span class="progress-num" id="current-display">0</span>
+              <span class="progress-unit">已饮用 / 毫升</span>
+              <span class="progress-pct" id="pct-display">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="action-btn" id="quick-drink-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          <span>记录一次饮水</span>
+        </button>
+      </section>
+
+      <!-- 右栏：属性设置与分享 (T1 Right Sidebar) -->
+      <section class="panel panel-right" id="panel-right">
+        <div class="card">
+          <h3 class="card-title">正念设定</h3>
+          <div class="settings-group">
+            <div class="input-wrapper">
+              <label for="target-input">每日目标 (ml)</label>
+              <input type="number" id="target-input" class="input-control" min="500" max="8000" step="50" value="2000">
+            </div>
+            <div class="input-wrapper">
+              <label for="cup-input">单次水杯 (ml)</label>
+              <input type="number" id="cup-input" class="input-control" min="50" max="1000" step="50" value="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h3 class="card-title">每日觉察</h3>
+            <p style="font-size: var(--text-sm); color: var(--fg-2); line-height: var(--leading-body); margin-bottom: var(--space-4);" id="zen-quote">
+              “水能洗涤，亦能滋养。每一次饮水，都是一次温柔的呼吸。”
+            </p>
+          </div>
+          <button class="action-btn" style="background: var(--surface-warm); color: var(--fg); box-shadow: none; border: 1px solid var(--border);" id="generate-card-btn">
+            <span>生成今日成就卡片</span>
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 移动端底部导航栏 -->
+    <nav class="mobile-nav">
+      <div class="nav-tab active" data-target="panel-left">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9M3 20h4M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+        <span>日志</span>
+      </div>
+      <div class="nav-tab" data-target="panel-main">
+        <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <span>打卡</span>
+      </div>
+      <div class="nav-tab" data-target="panel-right">
+        <svg viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/></svg>
+        <span>设置</span>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 微信分享成就卡片弹窗 -->
+  <div class="modal-overlay" id="share-modal">
+    <div class="share-card-container">
+      <div class="zen-card" id="zen-card-render">
+        <svg class="zen-illustration" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          <path d="M12 6a3 3 0 0 1 3-3M9 18a3 3 0 0 1 3-3" opacity="0.5"/>
+        </svg>
+        <h4 class="zen-title">今日水润 · 身心安定</h4>
+        <p class="zen-desc" id="card-quote">“在喧嚣的日常里，你已为身体注入了最纯净的关怀。今日打卡达成，心生欢喜。”</p>
+        
+        <div class="zen-metrics">
+          <div class="zen-metric-item">
+            <span class="zen-metric-val" id="card-total">1800 ml</span>
+            <span class="zen-metric-lbl">今日已饮</span>
+          </div>
+          <div class="zen-metric-item">
+            <span class="zen-metric-val" id="card-target">2000 ml</span>
+            <span class="zen-metric-lbl">设定目标</span>
+          </div>
+          <div class="zen-metric-item">
+            <span class="zen-metric-val" id="card-rate">90%</span>
+            <span class="zen-metric-lbl">达成率</span>
+          </div>
+        </div>
+      </div>
+      <div class="share-actions">
+        <button class="action-btn" id="simulate-share-btn">一键分享至微信</button>
+        <button class="action-btn" style="background: transparent; color: var(--fg-2); box-shadow: none;" id="close-modal-btn">关闭</button>
+        <p class="share-tips">已为您自动渲染正念成就卡片</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 庆祝粒子 Canvas -->
+  <canvas id="celebration-canvas"></canvas>
+
+  <!-- 提示浮层 -->
+  <div class="toast" id="toast">记录成功</div>
+
+  <!-- 功能模块与交互脚本 -->
+  <script>
+    // --- 禅意语录库 ---
+    const quotes = [
+      "“水能洗涤，亦能滋养。每一次饮水，都是一次温柔的呼吸。”",
+      "“让流水带走身体的尘埃，留存片刻的安宁与清澈。”",
+      "“正念饮水：端起杯，感知温度，缓缓咽下。你与当下同在。”",
+      "“身体是一座圣殿，清水是最好的供养。”",
+      "“如水般包容，如水般静默。今天也温柔对待自己。”"
+    ];
+
+    // --- 数据存储与管理 ---
+    const STORAGE_KEY = 'stillness_water_logs_v1';
+    let state = {
+      target: 2000,      // 默认目标 2000ml
+      quickCup: 250,     // 快捷杯量 250ml
+      logs: [],          // 日志数据
+      presets: [
+        { name: '晨起温水', vol: 200, icon: 'sun' },
+        { name: '日常水杯', vol: 250, icon: 'cup' },
+        { name: '大容量瓶', vol: 500, icon: 'bottle' },
+        { name: '下午茶盏', vol: 150, icon: 'tea' }
+      ]
+    };
+
+    // 初始化数据
+    function initData() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          if (parsed.target) state.target = parsed.target;
+          if (parsed.quickCup) state.quickCup = parsed.quickCup;
+          
+          // 仅保留今天的日志
+          const todayStr = new Date().toDateString();
+          if (parsed.logs) {
+            state.logs = parsed.logs.filter(log => new Date(log.time).toDateString() === todayStr);
+          }
+        } catch(e) {
+          console.error("加载存档失败", e);
+        }
+      }
+      // 设置表单初始值
+      document.getElementById('target-input').value = state.target;
+      document.getElementById('cup-input').value = state.quickCup;
+      document.getElementById('zen-quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+      
+      saveData();
+      renderAll();
+    }
+
+    function saveData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        target: state.target,
+        quickCup: state.quickCup,
+        logs: state.logs
+      }));
+    }
+
+    // --- 渲染逻辑 ---
+    function renderAll() {
+      renderProgress();
+      renderPresets();
+      renderLogs();
+    }
+
+    // 渲染圆形进度
+    function renderProgress() {
+      const current = state.logs.reduce((sum, log) => sum + log.amount, 0);
+      document.getElementById('current-display').innerText = current;
+      
+      const pct = Math.min(Math.round((current / state.target) * 100), 100);
+      document.getElementById('pct-display').innerText = `${pct}%`;
+
+      // SVG 圆环计算 (半径50，周长 314.16)
+      const indicator = document.getElementById('progress-indicator');
+      const circumference = 2 * Math.PI * 50;
+      const offset = circumference - (pct / 100) * circumference;
+      indicator.style.strokeDashoffset = offset;
+    }
+
+    // 渲染预设水杯
+    function renderPresets() {
+      const grid = document.getElementById('preset-grid');
+      grid.innerHTML = '';
+      state.presets.forEach(p => {
+        const btn = document.createElement('button');
+        btn.className = 'cup-btn';
+        btn.innerHTML = `
+          <span class="cup-name">${p.name}</span>
+          <span class="cup-vol">${p.vol} ml</span>
+        `;
+        btn.addEventListener('click', () => addWater(p.vol, p.name));
+        grid.appendChild(btn);
+      });
+    }
+
+    // 渲染饮水日志
+    function renderLogs() {
+      const list = document.getElementById('log-list');
+      list.innerHTML = '';
+      if (state.logs.length === 0) {
+        list.innerHTML = `<p style="font-size: var(--text-sm); color: var(--muted); text-align: center; margin-top: var(--space-4);">今日暂无记录，滴水成河</p>`;
+        return;
+      }
+      
+      // 按时间倒序
+      const sorted = [...state.logs].reverse();
+      sorted.forEach(log => {
+        const item = document.createElement('div');
+        item.className = 'log-item';
+        const timeStr = new Date(log.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        item.innerHTML = `
+          <div class="log-meta">
+            <span class="log-amount">${log.amount} ml <span style="font-size:var(--text-xs); font-weight:normal; color:var(--muted)">(${log.source})</span></span>
+            <span class="log-time">${timeStr}</span>
+          </div>
+          <span class="log-delete" data-id="${log.id}">撤销</span>
+        `;
+        
+        // 撤销事件
+        item.querySelector('.log-delete').addEventListener('click', (e) => {
+          const id = e.target.getAttribute('data-id');
+          if(confirm("确定撤销这条饮水记录吗？")) {
+            deleteLog(id);
+          }
+        });
+        
+        list.appendChild(item);
+      });
+    }
+
+    // --- 核心业务操作 ---
+    function addWater(amount, source = '快速打卡') {
+      const oldTotal = state.logs.reduce((sum, log) => sum + log.amount, 0);
+      const newLog = {
+        id: Date.now().toString(),
+        time: new Date().toISOString(),
+        amount: parseInt(amount),
+        source: source
+      };
+      
+      state.logs.push(newLog);
+      saveData();
+      renderAll();
+      showToast(`已记录 ${amount} ml`);
+
+      // 检查是否刚刚完成目标
+      const newTotal = oldTotal + amount;
+      if (oldTotal < state.target && newTotal >= state.target) {
+        triggerCelebration();
+      }
+    }
+
+    function deleteLog(id) {
+      state.logs = state.logs.filter(log => log.id !== id);
+      saveData();
+      renderAll();
+      showToast('已撤销该记录');
+    }
+
+    // --- UI 响应交互 ---
+    
+    // 快速打卡按钮 (读取右侧设置中的单次水杯容量)
+    document.getElementById('quick-drink-btn').addEventListener('click', () => {
+      addWater(state.quickCup, '快速打卡');
+    });
+
+    // 目标改变输入
+    document.getElementById('target-input').addEventListener('change', (e) => {
+      let val = parseInt(e.target.value);
+      if (isNaN(val) || val < 500) val = 500;
+      if (val > 8000) val = 8000;
+      state.target = val;
+      e.target.value = val;
+      saveData();
+      renderProgress();
+    });
+
+    // 单次杯量改变输入
+    document.getElementById('cup-input').addEventListener('change', (e) => {
+      let val = parseInt(e.target.value);
+      if (isNaN(val) || val < 50) val = 50;
+      if (val > 1000) val = 1000;
+      state.quickCup = val;
+      e.target.value = val;
+      saveData();
+    });
+
+    // 日期显示
+    const d = new Date();
+    document.getElementById('date-indicator').innerText = `${d.getMonth() + 1}月${d.getDate()}日`;
+
+    // --- 移动端多层级切换 (T1 Panel Toggle) ---
+    const tabs = document.querySelectorAll('.nav-tab');
+    const panels = document.querySelectorAll('.panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-target');
+        
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+
+    // --- 极简 Toast 提示 ---
+    let toastTimeout;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('active');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('active');
+      }, 2000);
+    }
+
+    // --- 禅意庆祝 Canvas 涟漪粒子 ---
+    const canvas = document.getElementById('celebration-canvas');
+    const ctx = canvas.getContext('2d');
+    let ripples = [];
+    let animationFrameId;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth * window.devicePixelRatio;
+      canvas.height = window.innerHeight * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Ripple {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.radius = 0;
+        this.maxRadius = Math.random() * 80 + 80;
+        this.alpha = 0.6;
+        this.velocity = Math.random() * 1.5 + 1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(111, 130, 104, ${this.alpha})`;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+      update() {
+        this.radius += this.velocity;
+        this.alpha = 1 - (this.radius / this.maxRadius);
+      }
+    }
+
+    function triggerCelebration() {
+      showToast("🎉 达成今日正念饮水目标！");
+      ripples = [];
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      
+      // 在屏幕中心生成多层涟漪
+      for(let i=0; i<6; i++) {
+        setTimeout(() => {
+          ripples.push(new Ripple(
+            centerX + (Math.random() - 0.5) * 100, 
+            centerY + (Math.random() - 0.5) * 100
+          ));
+        }, i * 400);
+      }
+      
+      cancelAnimationFrame(animationFrameId);
+      animateCelebration();
+    }
+
+    function animateCelebration() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ripples.forEach((r, idx) => {
+        r.update();
+        r.draw();
+        if (r.alpha <= 0) {
+          ripples.splice(idx, 1);
+        }
+      });
+      if (ripples.length > 0) {
+        animationFrameId = requestAnimationFrame(animateCelebration);
+      }
+    }
+
+    // --- 微信分享卡片逻辑 ---
+    const shareModal = document.getElementById('share-modal');
+    
+    document.getElementById('generate-card-btn').addEventListener('click', () => {
+      const current = state.logs.reduce((sum, log) => sum + log.amount, 0);
+      const pct = Math.min(Math.round((current / state.target) * 100), 100);
+      
+      document.getElementById('card-total').innerText = `${current} ml`;
+      document.getElementById('card-target').innerText = `${state.target} ml`;
+      document.getElementById('card-rate').innerText = `${pct}%`;
+      
+      // 根据达成率切换禅意卡片文案
+      const cardQuote = document.getElementById('card-quote');
+      if (pct >= 100) {
+        cardQuote.innerText = "“在喧嚣的日常里，你已为身体注入了最纯净的关怀。今日圆满，身心康宁。”";
+      } else if (pct >= 50) {
+        cardQuote.innerText = "“流水润泽，不疾不徐。今日行至半途，让内心如溪水般安详流淌。”";
+      } else {
+        cardQuote.innerText = "“清茶淡水，一酌一饮。生活有度，从容落座，享受片刻的滋养。”";
+      }
+
+      shareModal.classList.add('active');
+    });
+
+    document.getElementById('close-modal-btn').addEventListener('click', () => {
+      shareModal.classList.remove('active');
+    });
+
+    document.getElementById('simulate-share-btn').addEventListener('click', () => {
+      showToast("正在拉起微信分享面板...");
+      setTimeout(() => {
+        showToast("分享成功，今日水润满格！");
+        shareModal.classList.remove('active');
+      }, 1500);
+    });
+
+    // 页面初次加载
+    window.addEventListener('load', initData);
+  </script>
+</body>
+<!-- modules: 目标杯数设定✓ 喝水记录按钮✓ 圆形进度环显示✓ 完成庆祝动画✓ 微信分享成就卡片✓ 响应式布局适配✓ -->
+</html>

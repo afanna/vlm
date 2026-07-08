@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aesthetic-v4 sample dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f6f2;
+      color: #17211d;
+    }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 240px 1fr 320px;
+      gap: 1px;
+      background: #d9ded6;
+    }
+    aside, main, .rail { background: #fbfbf8; }
+    aside { padding: 28px 22px; display: flex; flex-direction: column; gap: 26px; }
+    .brand { font-size: 22px; font-weight: 760; letter-spacing: 0; }
+    nav { display: grid; gap: 8px; }
+    nav a {
+      text-decoration: none;
+      color: #58615b;
+      padding: 10px 12px;
+      border-radius: 7px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+    nav a.active { background: #e8efe7; color: #18372d; font-weight: 650; }
+    main { padding: 30px; display: grid; gap: 24px; }
+    .hero {
+      min-height: 360px;
+      border-radius: 8px;
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, rgba(12, 21, 18, .78), rgba(26, 51, 43, .08)),
+        url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .eyebrow { font-size: 12px; text-transform: uppercase; opacity: .74; letter-spacing: .08em; }
+    h1 { max-width: 740px; margin: 10px 0 0; font-size: 52px; line-height: 1.02; letter-spacing: 0; }
+    .hero p { max-width: 620px; margin: 14px 0 0; color: rgba(255,255,255,.82); line-height: 1.55; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    button { border: 0; border-radius: 7px; padding: 11px 14px; font: inherit; cursor: pointer; }
+    button.primary { background: #d8f06d; color: #1d2a15; font-weight: 700; }
+    button.secondary { background: rgba(255,255,255,.16); color: white; border: 1px solid rgba(255,255,255,.28); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card { background: #fff; border: 1px solid #dfe3dc; border-radius: 8px; padding: 16px; min-height: 136px; }
+    .card h2 { margin: 0; font-size: 14px; color: #667068; font-weight: 600; }
+    .metric { margin-top: 16px; font-size: 34px; font-weight: 760; }
+    .note { margin-top: 8px; color: #667068; font-size: 13px; line-height: 1.45; }
+    .rail { padding: 30px 22px; display: grid; align-content: start; gap: 14px; }
+    .rail-card { border: 1px solid #dfe3dc; border-radius: 8px; padding: 16px; background: #fff; }
+    .rail-card h2 { margin: 0 0 12px; font-size: 15px; }
+    .timeline { display: grid; gap: 12px; }
+    .event { display: grid; grid-template-columns: 62px 1fr; gap: 10px; font-size: 13px; }
+    .event time { color: #7b847c; }
+    .event b { display: block; margin-bottom: 3px; }
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+      aside, .rail { padding: 18px; }
+      nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      main { padding: 18px; }
+      h1 { font-size: 38px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">Aesthetic Ops</div>
+      <nav>
+        <a class="active" href="#">Review <span>14</span></a>
+        <a href="#">Signals <span>38</span></a>
+        <a href="#">Buckets <span>9</span></a>
+        <a href="#">Exports <span>6</span></a>
+      </nav>
+    </aside>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">aesthetic-v4 sample</div>
+          <h1>Design quality review for generated interfaces</h1>
+          <p>One HTML input becomes desktop and mobile screenshots, then the VLM judge explains the score with designer-language evidence.</p>
+        </div>
+        <div class="actions">
+          <button class="primary">Review queue</button>
+          <button class="secondary">Export rationale</button>
+        </div>
+      </section>
+      <section class="grid">
+        <article class="card">
+          <h2>Scored samples</h2>
+          <div class="metric">128</div>
+          <div class="note">Dual viewport aggregation keeps mobile regressions visible.</div>
+        </article>
+        <article class="card">
+          <h2>Median score</h2>
+          <div class="metric">57.5</div>
+          <div class="note">Scores use the 0-8 model scale and a 100-point report view.</div>
+        </article>
+        <article class="card">
+          <h2>Needs review</h2>
+          <div class="metric">21</div>
+          <div class="note">Low confidence cases move into designer calibration.</div>
+        </article>
+      </section>
+    </main>
+    <section class="rail">
+      <article class="rail-card">
+        <h2>Current checks</h2>
+        <div class="timeline">
+          <div class="event"><time>09:10</time><div><b>Screenshot</b>Desktop and mobile captured.</div></div>
+          <div class="event"><time>09:12</time><div><b>Rubric</b>Six-axis scoring applied.</div></div>
+          <div class="event"><time>09:13</time><div><b>Output</b>Score, axis scores and rationale written.</div></div>
+        </div>
+      </article>
+      <article class="rail-card">
+        <h2>Judge output</h2>
+        <p class="note">The report preserves screenshot evidence, final bucket, axis scores and the designer-style rationale for each viewport.</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

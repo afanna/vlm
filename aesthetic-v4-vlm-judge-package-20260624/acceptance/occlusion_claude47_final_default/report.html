@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aesthetic-v4 report</title>
+  <style>
+    :root { color-scheme: light; --bg: #f7f7f5; --panel: #fff; --text: #171717; --muted: #666b73; --line: #d9ddd6; --accent: #1f6f61; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+    body > header { padding: 24px; border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 2; }
+    h1 { margin: 0 0 6px; font-size: 24px; }
+    .meta { color: var(--muted); font-size: 13px; display: flex; gap: 14px; flex-wrap: wrap; }
+    main { display: grid; grid-template-columns: minmax(210px, 260px) 1fr; gap: 18px; padding: 18px; }
+    aside { align-self: start; position: sticky; top: 98px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border-bottom: 1px solid var(--line); padding: 7px 0; font-size: 13px; text-align: left; }
+    td { text-align: right; color: var(--muted); }
+    .cards { display: grid; gap: 14px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .card > header { display: flex; justify-content: space-between; gap: 16px; padding: 14px; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0; font-size: 17px; }
+    h2 + p { margin: 5px 0 0; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+    .score { text-align: right; min-width: 110px; }
+    .score b { font-size: 28px; line-height: 1; }
+    .score span { color: var(--muted); font-size: 12px; }
+    .score em { display: block; margin-top: 4px; color: var(--accent); font-style: normal; font-weight: 650; }
+    .rationale { padding: 14px; border-bottom: 1px solid var(--line); color: #2c3035; line-height: 1.55; font-size: 14px; }
+    .view { display: grid; grid-template-columns: minmax(280px, 42%) 1fr; gap: 14px; padding: 14px; border-top: 1px solid var(--line); }
+    .shot { background: #ebeee9; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; min-height: 180px; display: grid; place-items: center; }
+    .shot img { width: 100%; height: auto; display: block; }
+    .view h3 { margin: 0 0 10px; font-size: 15px; }
+    .view h3 span { color: var(--muted); font-weight: 500; margin-left: 8px; }
+    .axis { margin-bottom: 10px; }
+    .occ { margin: 8px 0; font-size: 12px; color: var(--muted); }
+    .occ.warn { color: #8a4b13; font-weight: 650; }
+    .occ.ok { color: #4d655d; }
+    .occ-table { margin: 8px 0 10px; }
+    .occ-table th, .occ-table td { text-align: left; vertical-align: top; padding: 6px 8px 6px 0; }
+    .designer-review { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13px; }
+    .designer-review h4 { margin: 8px 0 4px; font-size: 13px; }
+    .designer-review ul { margin: 0 0 8px 18px; padding: 0; color: #2c3035; }
+    .view p { margin: 0; color: #2c3035; line-height: 1.55; font-size: 13px; }
+    .missing { color: var(--muted); font-size: 13px; }
+    @media (max-width: 860px) { main { grid-template-columns: 1fr; } aside { position: static; } .view { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>aesthetic-v4 VLM Judge Report</h1>
+    <div class="meta">
+      <span>generated 2026-06-29 20:10:26</span>
+      <span>records 6</span>
+      <span>scored 6</span>
+      <span>partial/failed 0</span>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <h2>分档统计</h2>
+      <table><tbody><tr><th>[0,10)</th><td>2</td></tr><tr><th>[10,20)</th><td>1</td></tr><tr><th>[20,30)</th><td>0</td></tr><tr><th>[30,40)</th><td>1</td></tr><tr><th>[40,50)</th><td>2</td></tr><tr><th>[50,60)</th><td>0</td></tr><tr><th>[60,70)</th><td>0</td></tr><tr><th>[70,80)</th><td>0</td></tr><tr><th>[80,100]</th><td>0</td></tr></tbody></table>
+    </aside>
+    <section class="cards">
+      
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>t64_2_scroll_normal_87b59b64cc</h2>
+      <p>T64_2_scroll_normal.html</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">mobile: 命中 [10,20) 档：属于纯文字科普文章页模板。可见证据是蓝色实色顶栏标题、灰底正文两段说明、底部深蓝版权条，承诺的交互图表完全缺席，无卡片、无图像、无控件，排版仅靠系统字重区分层级。未进 [20,30) 因为页面只有标题加段落加页脚的低密度模板骨架，没有完整工作流或多块组件，视觉语言全为默认。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/occlusion_claude47_final_default/screenshots/t64_2_scroll_normal_87b59b64cc/mobile.png" alt="mobile screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>mobile <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.4</td></tr><tr><th>字体表现</th><td>0.8</td></tr><tr><th>色彩与材质</th><td>1.6</td></tr><tr><th>细节完成度</th><td>0.7</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于纯文字科普文章页模板。可见证据是蓝色实色顶栏标题、灰底正文两段说明、底部深蓝版权条，承诺的交互图表完全缺席，无卡片、无图像、无控件，排版仅靠系统字重区分层级。未进 [20,30) 因为页面只有标题加段落加页脚的低密度模板骨架，没有完整工作流或多块组件，视觉语言全为默认。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>q10252_user_sample_a0e6292c91</h2>
+      <p>q10252_user_sample.html</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">mobile: 命中 [40,50) 档：属于双语彩票模拟单卡页面；可见证据是米色背景、墨绿衬线乌尔都标题、红蓝立体球体、卡片化模拟区与中文说明段落，整体有刻意的编辑性排版氛围；未进 [50,60) 因为顶部乌尔都标题与右上 logo 存在轻度叠压，组件语言仅一张球体卡加正文，缺少更成熟的品牌系统与状态层次。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/occlusion_claude47_final_default/screenshots/q10252_user_sample_a0e6292c91/mobile.png" alt="mobile screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>mobile <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.9</td></tr><tr><th>构图层级</th><td>3.6</td></tr><tr><th>字体表现</th><td>3.0</td></tr><tr><th>色彩与材质</th><td>3.8</td></tr><tr><th>细节完成度</th><td>3.1</td></tr><tr><th>基础可用性</th><td>3.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [40,50) 档：属于双语彩票模拟单卡页面；可见证据是米色背景、墨绿衬线乌尔都标题、红蓝立体球体、卡片化模拟区与中文说明段落，整体有刻意的编辑性排版氛围；未进 [50,60) 因为顶部乌尔都标题与右上 logo 存在轻度叠压，组件语言仅一张球体卡加正文，缺少更成熟的品牌系统与状态层次。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>q10903_overlap_21c6205968</h2>
+      <p>q10903_overlap.html</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">mobile: ZERO_DEFECT: 命中 [0,10) 档：属于喝水记录类移动小工具；可见证据是中央水滴图形与大号 0 严重压住四个预设水源卡片，&#x27;晨起&#x27;、&#x27;日常水杯&#x27;、&#x27;大容量&#x27;、&#x27;下午茶&#x27; 文字被截断且毫升数被遮挡，下方绿色&#x27;记录一次饮水&#x27;按钮又压在&#x27;饮水记录&#x27;标题之上，核心选择控件不可读；未进更高档因为核心信息层级混乱、关键操作被遮挡。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/occlusion_claude47_final_default/screenshots/q10903_overlap_21c6205968/mobile.png" alt="mobile screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>mobile <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.6</td></tr><tr><th>构图层级</th><td>0.2</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.3</td></tr><tr><th>基础可用性</th><td>0.1</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 4</div><table class="occ-table"><tbody><tr><th>text_graphic</th><td>severe</td><td>四个预设水源卡片文字与毫升数</td><td>中央水滴形图案与超大 0 字覆盖卡片中部，&#x27;晨起&#x27;、&#x27;日常水杯&#x27;、&#x27;大容量&#x27;、&#x27;下午茶&#x27; 名称被裁切，毫升数字被压住</td></tr><tr><th>text_text</th><td>severe</td><td>&#x27;饮水记录&#x27; 标题与 &#x27;+ 记录一次饮水&#x27; 按钮</td><td>绿色椭圆按钮横压在区块标题上，只剩左侧&#x27;饮&#x27;字可见</td></tr><tr><th>text_graphic</th><td>moderate</td><td>&#x27;点击下方预设...完成记录&#x27; 提示语</td><td>提示文字中段被水滴图形覆盖，阅读断裂</td></tr></tbody></table>
+    <p>ZERO_DEFECT: 命中 [0,10) 档：属于喝水记录类移动小工具；可见证据是中央水滴图形与大号 0 严重压住四个预设水源卡片，&#x27;晨起&#x27;、&#x27;日常水杯&#x27;、&#x27;大容量&#x27;、&#x27;下午茶&#x27; 文字被截断且毫升数被遮挡，下方绿色&#x27;记录一次饮水&#x27;按钮又压在&#x27;饮水记录&#x27;标题之上，核心选择控件不可读；未进更高档因为核心信息层级混乱、关键操作被遮挡。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>q13061_overlap_9a84d51448</h2>
+      <p>q13061_overlap.html</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">mobile: 命中 [40,50) 档：属于年度回顾/词云编辑类页面；可见证据是顶部 WECHAT ARCHIVE 标识、聊叙岁末大标题、词云画布、四标签切换与年度高频词卡片，排版与配色具备编辑感；但词云中心可以/收到/上班/干嘛/哈哈多词严重叠压导致核心可读性受损，无法达到 [50,60) 的成熟编辑级完成度。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/occlusion_claude47_final_default/screenshots/q13061_overlap_9a84d51448/mobile.png" alt="mobile screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>mobile <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.8</td></tr><tr><th>构图层级</th><td>3.4</td></tr><tr><th>字体表现</th><td>3.1</td></tr><tr><th>色彩与材质</th><td>3.9</td></tr><tr><th>细节完成度</th><td>3.5</td></tr><tr><th>基础可用性</th><td>3.3</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 4</div><table class="occ-table"><tbody><tr><th>text_text</th><td>moderate</td><td>词云中心多词叠压</td><td>中央可以/收到/上班/干嘛/哈哈等词彼此重叠，字形互相穿透不可辨识</td></tr></tbody></table>
+    <p>命中 [40,50) 档：属于年度回顾/词云编辑类页面；可见证据是顶部 WECHAT ARCHIVE 标识、聊叙岁末大标题、词云画布、四标签切换与年度高频词卡片，排版与配色具备编辑感；但词云中心可以/收到/上班/干嘛/哈哈多词严重叠压导致核心可读性受损，无法达到 [50,60) 的成熟编辑级完成度。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[30,40)" data-status="scored">
+  <header>
+    <div>
+      <h2>q13382_overlap_bd2302a9c4</h2>
+      <p>q13382_overlap.html</p>
+    </div>
+    <div class="score"><b>35.00</b><span>/100</span><em>[30,40)</em></div>
+  </header>
+  <div class="rationale">mobile: 命中 [30,40) 档：属于开发者影响力数据看板原型；可见证据是顶部 DEV_PATH 标识、ENGINEER PROFILE 大标题、博客阅读量折线图与 124.8k/42 KPI，组件语言整体克制但偏模板；未进 [40,50) 因为 Tab 切换栏内中英文标签 ALGORITHMS//INFLUENCE 与算法突破/系统工程明显重叠错位，是 moderate 级 text_text 遮挡，细节完成度被拉低。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/occlusion_claude47_final_default/screenshots/q13382_overlap_bd2302a9c4/mobile.png" alt="mobile screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>mobile <span>35.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.0</td></tr><tr><th>构图层级</th><td>2.8</td></tr><tr><th>字体表现</th><td>2.6</td></tr><tr><th>色彩与材质</th><td>3.2</td></tr><tr><th>细节完成度</th><td>2.5</td></tr><tr><th>基础可用性</th><td>2.8</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 4</div><table class="occ-table"><tbody><tr><th>text_text</th><td>moderate</td><td>顶部分类 Tab 标签</td><td>ALGORITHMS // INFLUENCE 与中文“算法突破/系统工程”在同一胶囊内重叠覆盖，难以阅读</td></tr></tbody></table>
+    <p>命中 [30,40) 档：属于开发者影响力数据看板原型；可见证据是顶部 DEV_PATH 标识、ENGINEER PROFILE 大标题、博客阅读量折线图与 124.8k/42 KPI，组件语言整体克制但偏模板；未进 [40,50) 因为 Tab 切换栏内中英文标签 ALGORITHMS//INFLUENCE 与算法突破/系统工程明显重叠错位，是 moderate 级 text_text 遮挡，细节完成度被拉低。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>q51042_overlap_d1c47bb5a1</h2>
+      <p>q51042_overlap.html</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">mobile: 命中 [0,10) 档：属于深色内容周报仪表盘类型；可见证据是巨大蓝色折线图层穿透整个页面，严重遮挡标题、AI洞察正文、按钮文字与核心指标数值（74.1k 旁的数字被覆盖），核心阅读和操作均失败；未进更高档因为遮挡为 blocking 级硬缺陷，触发 ZERO_DEFECT 边界。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/occlusion_claude47_final_default/screenshots/q51042_overlap_d1c47bb5a1/mobile.png" alt="mobile screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>mobile <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.6</td></tr><tr><th>构图层级</th><td>0.1</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.3</td></tr><tr><th>基础可用性</th><td>0.1</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 4</div><table class="occ-table"><tbody><tr><th>text_graphic</th><td>severe</td><td>chart/body content</td><td>命中 [0,10) 档：属于深色内容周报仪表盘类型；可见证据是巨大蓝色折线图层穿透整个页面，严重遮挡标题、AI洞察正文、按钮文字与核心指标数值（74.1k 旁的数字被覆盖），核心阅读和操作均失败；未进更高档因为遮挡为 blocking 级硬缺陷，触发 ZERO_DEFECT 边界。</td></tr></tbody></table>
+    <p>命中 [0,10) 档：属于深色内容周报仪表盘类型；可见证据是巨大蓝色折线图层穿透整个页面，严重遮挡标题、AI洞察正文、按钮文字与核心指标数值（74.1k 旁的数字被覆盖），核心阅读和操作均失败；未进更高档因为遮挡为 blocking 级硬缺陷，触发 ZERO_DEFECT 边界。</p>
+    
+  </div>
+</section>
+
+</article>
+
+    </section>
+  </main>
+</body>
+</html>

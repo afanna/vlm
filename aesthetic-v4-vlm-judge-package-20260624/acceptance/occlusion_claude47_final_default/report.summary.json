@@ -1,0 +1,16 @@
+{
+  "bucket_counts": {
+    "[0,10)": 2,
+    "[10,20)": 1,
+    "[30,40)": 1,
+    "[40,50)": 2
+  },
+  "csv": "../acceptance/occlusion_claude47_final_default/scores.csv",
+  "out": "../acceptance/occlusion_claude47_final_default/report.html",
+  "profile": "aesthetic-v4",
+  "records": 6,
+  "score_breakdown": "on",
+  "status_counts": {
+    "scored": 6
+  }
+}

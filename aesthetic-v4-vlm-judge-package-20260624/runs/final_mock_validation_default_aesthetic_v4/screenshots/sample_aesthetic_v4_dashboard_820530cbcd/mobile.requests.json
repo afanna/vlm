@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "sample_id": "sample_aesthetic_v4_dashboard_820530cbcd",
+  "viewport": "mobile",
+  "started_at": "2026-06-29T19:16:35.352Z",
+  "requests": [],
+  "summary": {
+    "total_logged": 0,
+    "failed_count": 0,
+    "http_error_count": 0,
+    "domains": {}
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "record_count": 1,
+  "records": [
+    {
+      "id": "q10903_070b231424",
+      "qid": "q10903",
+      "html_path": "/Volumes/TU820/aesthetic/快思考3500/q10903.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10903_occlusion_smoke/outputs/json/q10903.json",
+      "score": {
+        "score_100": 28.375,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 12.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.625
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 52.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.875
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 15.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 12.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.875
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 12.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 43.75,
+            "weight": 0.3,
+            "weighted_contribution_100": 13.125
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": true,
+        "status": "severe",
+        "types": [
+          "text_graphic",
+          "control_nav"
+        ],
+        "affected_axes": [
+          "composition_hierarchy",
+          "typography",
+          "detail_finish",
+          "basic_usability"
+        ]
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10903_occlusion_smoke/screenshots/q10903_070b231424/mobile.png"
+      ]
+    }
+  ]
+}

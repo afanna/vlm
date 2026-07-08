@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "sample_id": "t64_2_scroll_normal_87b59b64cc",
+  "viewport": "mobile",
+  "started_at": "2026-06-30T03:08:22.814Z",
+  "requests": [
+    {
+      "kind": "failed",
+      "url": "https://cdn.jsdelivr.net/npm/chart.js",
+      "method": "GET",
+      "resource_type": "script",
+      "failure": "net::ERR_CONNECTION_CLOSED"
+    }
+  ],
+  "summary": {
+    "total_logged": 1,
+    "failed_count": 1,
+    "http_error_count": 0,
+    "domains": {
+      "cdn.jsdelivr.net": 1
+    }
+  }
+}

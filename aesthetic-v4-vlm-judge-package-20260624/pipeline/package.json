@@ -1,0 +1,30 @@
+{
+  "name": "aesthetic-v4-vlm-judge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "run:mock": "bash run_aesthetic_v4.sh --mock",
+    "run:model": "AESTHETIC_V4_MODEL_PROVIDER=pangu bash run_aesthetic_v4.sh",
+    "run:model:packy": "AESTHETIC_V4_MODEL_PROVIDER=packy bash run_aesthetic_v4.sh",
+    "run:model:pangu": "AESTHETIC_V4_MODEL_PROVIDER=pangu bash run_aesthetic_v4.sh",
+    "run:model:claude47": "AESTHETIC_V4_MODEL_PROVIDER=pangu PANGU_JUDGE_MODEL=claude-opus-4-7-thinking bash run_aesthetic_v4.sh",
+    "run:mock:first-view": "AESTHETIC_V4_SCREENSHOT_MODE=first_view bash run_aesthetic_v4.sh --mock",
+    "run:model:first-view": "AESTHETIC_V4_MODEL_PROVIDER=pangu AESTHETIC_V4_SCREENSHOT_MODE=first_view bash run_aesthetic_v4.sh",
+    "run:model:score-only": "AESTHETIC_V4_MODEL_PROVIDER=pangu PANGU_JUDGE_OUTPUT_MODE=score-only PANGU_JUDGE_MAX_TOKENS=64 bash run_aesthetic_v4.sh",
+    "run:mock:fullpage": "AESTHETIC_V4_SCREENSHOT_MODE=fullpage bash run_aesthetic_v4.sh --mock",
+    "run:model:fullpage": "AESTHETIC_V4_MODEL_PROVIDER=pangu AESTHETIC_V4_SCREENSHOT_MODE=fullpage bash run_aesthetic_v4.sh",
+    "run:surface-policy": "AESTHETIC_V4_MODEL_PROVIDER=pangu AESTHETIC_V4_SCREENSHOT_MODE=first_view AESTHETIC_V4_SURFACE_POLICY=first_view_plus_fullpage bash run_aesthetic_v4.sh",
+    "manifest": "python3 scripts/build_html_manifest.py --input ../input_html --out ../runs/aesthetic-v4/manifest.jsonl --viewport mobile",
+    "render": "node scripts/render_screenshots.mjs --manifest ../runs/aesthetic-v4/manifest.jsonl --out ../runs/aesthetic-v4/screenshots --viewport mobile --screenshot-on-timeout --capture-scroll-width",
+    "render:fullpage": "node scripts/render_screenshots.mjs --manifest ../runs/aesthetic-v4/manifest.jsonl --out ../runs/aesthetic-v4/screenshots_fullpage --viewport mobile --screenshot-on-timeout --capture-scroll-width --full-page --max-screenshot-css-height 12000",
+    "report": "python3 scripts/build_aesthetic_v4_report.py --scores ../runs/aesthetic-v4/scores.jsonl --out ../runs/aesthetic-v4/report.html",
+    "export:json": "python3 scripts/export_clean_html_score_json.py --scores ../runs/aesthetic-v4/scores.jsonl --out-dir ../outputs/json --index ../outputs/json/index.json",
+    "manual-qc": "python3 scripts/build_manual_qc.py --index ../outputs/json/index.json --out ../manual_qc/index.html",
+    "validate:json": "python3 scripts/validate_clean_json.py ../outputs/json/index.json",
+    "benchmark:eval": "python3 scripts/evaluate_aesthetic_v4_benchmark.py --scores ../runs/aesthetic-v4/scores.jsonl --out-csv ../acceptance/benchmark_details.csv --metrics-json ../acceptance/benchmark_metrics.json --report-html ../acceptance/benchmark_report.html",
+    "compare:models": "python3 scripts/compare_aesthetic_v4_runs.py --left ../acceptance/benchmark_gpt55/scores.jsonl --right ../acceptance/benchmark_claude47/scores.jsonl --left-label pangu_gpt55 --right-label pangu_claude47 --out-csv ../acceptance/model_comparison.csv --metrics-json ../acceptance/model_comparison.metrics.json --report-html ../acceptance/model_comparison.html"
+  },
+  "devDependencies": {
+    "playwright": "1.60.0"
+  }
+}

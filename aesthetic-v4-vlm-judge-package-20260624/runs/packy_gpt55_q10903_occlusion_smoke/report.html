@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aesthetic-v4 report</title>
+  <style>
+    :root { color-scheme: light; --bg: #f7f7f5; --panel: #fff; --text: #171717; --muted: #666b73; --line: #d9ddd6; --accent: #1f6f61; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+    body > header { padding: 24px; border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 2; }
+    h1 { margin: 0 0 6px; font-size: 24px; }
+    .meta { color: var(--muted); font-size: 13px; display: flex; gap: 14px; flex-wrap: wrap; }
+    main { display: grid; grid-template-columns: minmax(210px, 260px) 1fr; gap: 18px; padding: 18px; }
+    aside { align-self: start; position: sticky; top: 98px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border-bottom: 1px solid var(--line); padding: 7px 0; font-size: 13px; text-align: left; }
+    td { text-align: right; color: var(--muted); }
+    .cards { display: grid; gap: 14px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .card > header { display: flex; justify-content: space-between; gap: 16px; padding: 14px; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0; font-size: 17px; }
+    h2 + p { margin: 5px 0 0; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+    .score { text-align: right; min-width: 110px; }
+    .score b { font-size: 28px; line-height: 1; }
+    .score span { color: var(--muted); font-size: 12px; }
+    .score em { display: block; margin-top: 4px; color: var(--accent); font-style: normal; font-weight: 650; }
+    .rationale { padding: 14px; border-bottom: 1px solid var(--line); color: #2c3035; line-height: 1.55; font-size: 14px; }
+    .view { display: grid; grid-template-columns: minmax(280px, 42%) 1fr; gap: 14px; padding: 14px; border-top: 1px solid var(--line); }
+    .shot { background: #ebeee9; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; min-height: 180px; display: grid; place-items: center; }
+    .shot img { width: 100%; height: auto; display: block; }
+    .view h3 { margin: 0 0 10px; font-size: 15px; }
+    .view h3 span { color: var(--muted); font-weight: 500; margin-left: 8px; }
+    .axis { margin-bottom: 10px; }
+    .occ { margin: 8px 0; font-size: 12px; color: var(--muted); }
+    .occ.warn { color: #8a4b13; font-weight: 650; }
+    .occ.ok { color: #4d655d; }
+    .occ-table { margin: 8px 0 10px; }
+    .occ-table th, .occ-table td { text-align: left; vertical-align: top; padding: 6px 8px 6px 0; }
+    .designer-review { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13px; }
+    .designer-review h4 { margin: 8px 0 4px; font-size: 13px; }
+    .designer-review ul { margin: 0 0 8px 18px; padding: 0; color: #2c3035; }
+    .view p { margin: 0; color: #2c3035; line-height: 1.55; font-size: 13px; }
+    .missing { color: var(--muted); font-size: 13px; }
+    @media (max-width: 860px) { main { grid-template-columns: 1fr; } aside { position: static; } .view { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>aesthetic-v4 VLM Judge Report</h1>
+    <div class="meta">
+      <span>generated 2026-06-29 11:46:59</span>
+      <span>records 1</span>
+      <span>scored 1</span>
+      <span>partial/failed 0</span>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <h2>分档统计</h2>
+      <table><tbody><tr><th>[0,10)</th><td>0</td></tr><tr><th>[10,20)</th><td>0</td></tr><tr><th>[20,30)</th><td>1</td></tr><tr><th>[30,40)</th><td>0</td></tr><tr><th>[40,50)</th><td>0</td></tr><tr><th>[50,60)</th><td>0</td></tr><tr><th>[60,70)</th><td>0</td></tr><tr><th>[70,80)</th><td>0</td></tr><tr><th>[80,100]</th><td>0</td></tr></tbody></table>
+    </aside>
+    <section class="cards">
+      
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>q10903_070b231424</h2>
+      <p>q10903.html</p>
+    </div>
+    <div class="score"><b>28.75</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">mobile: ZERO_DEFECT: 命中 [20,30) 档：选择水源卡片被中央圆环、数字和竖条大面积压住，晨起、日常水杯、下午茶等关键文字与容量不可稳定阅读；下方饮水记录标题也被主按钮遮挡。虽有柔和米白与鼠尾草绿的统一色调，但核心信息层级和组件叠放崩坏，无法进入更高完整 UI 档。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10903_occlusion_smoke/screenshots/q10903_070b231424/mobile.png" alt="mobile screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>mobile <span>28.75/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.5</td></tr><tr><th>构图层级</th><td>1.2</td></tr><tr><th>字体表现</th><td>1.0</td></tr><tr><th>色彩与材质</th><td>4.2</td></tr><tr><th>细节完成度</th><td>1.0</td></tr><tr><th>基础可用性</th><td>1.0</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 4</div><table class="occ-table"><tbody><tr><th>text_graphic</th><td>severe</td><td>选择水源预设卡片文字与容量</td><td>中央圆环、0 数字与竖条覆盖四个预设卡片区域，部分名称和 ml 数值被遮挡或裁切。</td></tr><tr><th>control_nav</th><td>moderate</td><td>饮水记录区标题</td><td>绿色主按钮横向覆盖卡片左上方标题，仅露出“饮”字边缘，破坏区块识别。</td></tr></tbody></table>
+    <p>ZERO_DEFECT: 命中 [20,30) 档：选择水源卡片被中央圆环、数字和竖条大面积压住，晨起、日常水杯、下午茶等关键文字与容量不可稳定阅读；下方饮水记录标题也被主按钮遮挡。虽有柔和米白与鼠尾草绿的统一色调，但核心信息层级和组件叠放崩坏，无法进入更高完整 UI 档。</p>
+    
+  </div>
+</section>
+
+</article>
+
+    </section>
+  </main>
+</body>
+</html>

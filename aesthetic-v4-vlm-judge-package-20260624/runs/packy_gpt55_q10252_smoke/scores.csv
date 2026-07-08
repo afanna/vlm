@@ -1,0 +1,2 @@
+id,status,score_100,bucket,aggregate_view,prompt_version,model,occlusion_overlap_check,occlusion_findings,occlusion_affected_axes,input_path,rationale
+q10252_6843fa8cde,scored,48.75,"[40,50)",mobile,aesthetic-v4,gpt-5.5,always_on,[],[],/Volumes/TU820/aesthetic/快思考3500/q10252.html,"mobile: 命中 [40,50) 档：页面有明确中巴彩票主题，米色底、深青书法字与红蓝球体形成可识别氛围，卡片和开奖球构成基本层级。但中乌/中文混排比例失衡，顶部导航拥挤，主标题笔画过大压迫正文；卡片边框、阴影和球体高光偏模板，缺少更系统的品牌资产与精修细节，未达 50+。"

@@ -1,0 +1,1910 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aesthetic-v4 manual QC</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f2; color: #171717; }
+    header.top { position: sticky; top: 0; z-index: 2; background: #fff; border-bottom: 1px solid #ddd; padding: 16px 24px; display: flex; gap: 24px; align-items: baseline; }
+    header.top h1 { margin: 0; font-size: 22px; }
+    main { padding: 20px 24px 48px; }
+    .card { background: #fff; border: 1px solid #d8d8d2; border-radius: 8px; margin: 0 0 18px; padding: 16px; }
+    .card > header { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid #ecece7; padding-bottom: 12px; }
+    h2 { margin: 0 0 6px; font-size: 18px; }
+    h3 { margin: 16px 0 8px; font-size: 14px; }
+    p { margin: 0; color: #555; }
+    nav { display: flex; gap: 10px; margin: 12px 0; }
+    a { color: #0f5f99; text-decoration: none; }
+    .score { text-align: right; min-width: 110px; }
+    .score b { font-size: 28px; display: block; }
+    .score span { color: #666; }
+    .grid { display: grid; grid-template-columns: minmax(260px, 380px) 1fr; gap: 16px; align-items: start; }
+    .shot img { width: 100%; max-height: 760px; object-fit: contain; border: 1px solid #ddd; background: #eee; }
+    .missing { border: 1px dashed #aaa; padding: 24px; color: #777; }
+    .occ { display: inline-block; padding: 6px 9px; border-radius: 6px; font-size: 13px; }
+    .occ.ok { background: #edf7ee; color: #176426; }
+    .occ.bad { background: #fff1e5; color: #9a3412; }
+    .rationale { margin: 12px 0; color: #222; line-height: 1.5; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { border: 1px solid #ddd; padding: 6px 7px; text-align: left; vertical-align: top; }
+    th { background: #f0f0eb; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } header.top { flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <header class="top"><h1>aesthetic-v4 manual QC</h1><span>Total 72</span><span>Occlusion 6</span></header>
+  <main>
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>00010_naka_com_c6413660b2</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/00010_naka.com.html</p>
+    </div>
+    <div class="score"><b>74.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/00010_naka.com.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/00010_naka_com_c6413660b2.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/00010_naka_com_c6413660b2/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/00010_naka_com_c6413660b2/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [70,80) 档：属于加密/支付品牌落地页类型；可见证据是定制等距 3D 插画，BTC/ETH 代币串联到带绿色 N 的处理卡，再到橙色 Transaction Declined 卡，底部进入深色品牌区，留白克制有节奏，cookie 弹层组件精致；未进更高档因为首屏只见插画与法务弹层，导航/CTA/正文模块未充分展开，整体仍属常见高质量品牌站，未达设计站级别。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>78.750</td><td>0.05</td><td>3.938</td></tr><tr><td>color_material</td><td>78.750</td><td>0.15</td><td>11.813</td></tr><tr><td>composition_hierarchy</td><td>76.250</td><td>0.2</td><td>15.250</td></tr><tr><td>detail_finish</td><td>67.500</td><td>0.15</td><td>10.125</td></tr><tr><td>typography</td><td>72.500</td><td>0.15</td><td>10.875</td></tr><tr><td>visual_impact_originality</td><td>76.250</td><td>0.3</td><td>22.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>00016_somervilles_co_uk_f74fec35ca</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/00016_somervilles.co.uk.html</p>
+    </div>
+    <div class="score"><b>74.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/00016_somervilles.co.uk.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/00016_somervilles_co_uk_f74fec35ca.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/00016_somervilles_co_uk_f74fec35ca/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/00016_somervilles_co_uk_f74fec35ca/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [70,80) 档：属于精致 B2B 服务/fit-out 品牌站类型；可见证据是顶部居中品牌标、清晰主导航与 Start Your Project 黑色胶囊 CTA、面包屑、奶油底色配大号 Fit-Out 标题与精炼副文案，以及下方高质感办公空间实拍配 Metro Office 项目图，整体首屏排版克制、留白纪律强、品牌调性统一；未进更高档因为首屏内容主要是标题+一张图，组件系统与模块深度尚未完全展开，cookie 浮层也略压视觉。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>77.500</td><td>0.05</td><td>3.875</td></tr><tr><td>color_material</td><td>77.500</td><td>0.15</td><td>11.625</td></tr><tr><td>composition_hierarchy</td><td>75.000</td><td>0.2</td><td>15.000</td></tr><tr><td>detail_finish</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>typography</td><td>67.500</td><td>0.15</td><td>10.125</td></tr><tr><td>visual_impact_originality</td><td>78.750</td><td>0.3</td><td>23.625</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>149_feed_standalone_acd6f0048e</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/149-feed-standalone.html</p>
+    </div>
+    <div class="score"><b>64.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/149-feed-standalone.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/149_feed_standalone_acd6f0048e.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/149_feed_standalone_acd6f0048e/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/149_feed_standalone_acd6f0048e/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [60,70) 档：属于深色移动端 feed 信息流壳；可见证据是紫黑配色、feed logo、顶部分类 tab（推荐高亮）、插画封面卡片配标题/摘要/作者点赞评论、底部四项导航和紫色 FAB，层级与间距成熟；未进 [70,80) 因为整体仍是常见 feed 应用骨架，缺乏更具辨识度的品牌视觉系统与独特素材。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>68.750</td><td>0.05</td><td>3.438</td></tr><tr><td>color_material</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>composition_hierarchy</td><td>66.250</td><td>0.2</td><td>13.250</td></tr><tr><td>detail_finish</td><td>61.250</td><td>0.15</td><td>9.188</td></tr><tr><td>typography</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>visual_impact_originality</td><td>66.250</td><td>0.3</td><td>19.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>150_folio_reading_app_2f4b8dd61b</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/150-Folio Reading App.html</p>
+    </div>
+    <div class="score"><b>74.627</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/150-Folio%20Reading%20App.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/150_folio_reading_app_2f4b8dd61b.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/150_folio_reading_app_2f4b8dd61b/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/150_folio_reading_app_2f4b8dd61b/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [70,80) 档：属于精致编辑/阅读类移动应用。可见证据是衬线刊名 Folio、日期 meta、斜体 tab 切换、暖米色背景配酒红点缀、大幅暗调头图、Essay/Paris Review 分栏 meta、衬线大标题与斜体导语、高亮引文卡、底部胶囊式 Read 浮动栏，材质与排版统一且具杂志品牌感。未进 [80,100] 是因为整体仍是常见编辑 app 框架，未出现真正突破性的视觉资产或独有品牌系统。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>78.750</td><td>0.05</td><td>3.938</td></tr><tr><td>color_material</td><td>78.750</td><td>0.15</td><td>11.813</td></tr><tr><td>composition_hierarchy</td><td>75.000</td><td>0.2</td><td>15.000</td></tr><tr><td>detail_finish</td><td>71.250</td><td>0.15</td><td>10.688</td></tr><tr><td>typography</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>visual_impact_originality</td><td>76.250</td><td>0.3</td><td>22.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>15_task_app_6c4038fd71</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/15-Task App.html</p>
+    </div>
+    <div class="score"><b>75.439</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/15-Task%20App.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/15_task_app_6c4038fd71.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/15_task_app_6c4038fd71/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/15_task_app_6c4038fd71/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [70,80) 档：属于精致深色移动待办/专注追踪应用；可见证据包括优雅的紫色渐变头像与FAB、衬线斜体问候语、环形进度3/7卡片、专注/连续/下一项指标行、左侧时间轴节点串联的任务卡、彩色标签 chips、当前项高亮描边及底部导航，材质与间距成熟，品牌方向明确；未进 [80,100] 因整体仍是常见任务应用骨架，未达到设计站级别的独特视觉系统。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>78.750</td><td>0.05</td><td>3.938</td></tr><tr><td>color_material</td><td>78.750</td><td>0.15</td><td>11.813</td></tr><tr><td>composition_hierarchy</td><td>76.250</td><td>0.2</td><td>15.250</td></tr><tr><td>detail_finish</td><td>71.250</td><td>0.15</td><td>10.688</td></tr><tr><td>typography</td><td>72.500</td><td>0.15</td><td>10.875</td></tr><tr><td>visual_impact_originality</td><td>76.250</td><td>0.3</td><td>22.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="yes" data-status="minor">
+  <header>
+    <div>
+      <h2>169_38c46c7bfa</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/169-经期跟踪.html</p>
+    </div>
+    <div class="score"><b>75.000</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/169-%E7%BB%8F%E6%9C%9F%E8%B7%9F%E8%B8%AA.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/169_38c46c7bfa.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/169_38c46c7bfa/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/169_38c46c7bfa/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ bad">occlusion: yes · minor · control_nav</div>
+      <p class="rationale">desktop: 命中 [70,80) 档：属于精致的经期/健康移动应用。可见证据是统一的奶粉色新拟态材质，圆形进度环带渐变高亮，第14天大字层级清晰，周历胶囊按钮、流量水滴卡片与底部四项导航排版工整，问候语与右上月份徽标构成柔和品牌语气。未进更高档因为底部 tab 下方有轻微裁切重叠的二次行，整体仍是常见周期应用范式，缺少更独特的视觉资产或品牌系统深度。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>72.500</td><td>0.05</td><td>3.625</td></tr><tr><td>color_material</td><td>80.000</td><td>0.15</td><td>12.000</td></tr><tr><td>composition_hierarchy</td><td>73.750</td><td>0.2</td><td>14.750</td></tr><tr><td>detail_finish</td><td>72.500</td><td>0.15</td><td>10.875</td></tr><tr><td>typography</td><td>70.000</td><td>0.15</td><td>10.500</td></tr><tr><td>visual_impact_originality</td><td>77.500</td><td>0.3</td><td>23.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td>control_nav</td><td>minor</td><td>interactive control</td><td>basic_usability, composition_hierarchy, detail_finish</td><td>命中 [70,80) 档：属于精致的经期/健康移动应用。可见证据是统一的奶粉色新拟态材质，圆形进度环带渐变高亮，第14天大字层级清晰，周历胶囊按钮、流量水滴卡片与底部四项导航排版工整，问候语与右上月份徽标构成柔和品牌语气。未进更高档因为底部 tab 下方有轻微裁切重叠的二次行，整体仍是常见周期应用范式，缺少更独特的视觉资产或品牌系统深度。</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="yes" data-status="minor">
+  <header>
+    <div>
+      <h2>179_3f96b037be</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/179.健康习惯应用.html</p>
+    </div>
+    <div class="score"><b>74.439</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/179.%E5%81%A5%E5%BA%B7%E4%B9%A0%E6%83%AF%E5%BA%94%E7%94%A8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/179_3f96b037be.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/179_3f96b037be/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/179_3f96b037be/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ bad">occlusion: yes · minor · control_nav</div>
+      <p class="rationale">desktop: 命中 [70,80) 档：精致移动习惯追踪应用。可见证据是绿色渐变主卡含进度环 67% 与连续打卡徽章，本周概览双指标卡带涨幅 chip，今日习惯列表含图标、连续天数火苗、进度条与完成态对勾，底部五项导航配橙色 FAB，排版与留白成熟、品牌色统一。未进更高档因为仍是常见健康习惯壳层，缺少更独特的视觉资产与品牌系统深度，底部导航对第三张卡片有轻微叠压。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>75.000</td><td>0.05</td><td>3.750</td></tr><tr><td>color_material</td><td>78.750</td><td>0.15</td><td>11.813</td></tr><tr><td>composition_hierarchy</td><td>75.000</td><td>0.2</td><td>15.000</td></tr><tr><td>detail_finish</td><td>71.250</td><td>0.15</td><td>10.688</td></tr><tr><td>typography</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>visual_impact_originality</td><td>76.250</td><td>0.3</td><td>22.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td>control_nav</td><td>minor</td><td>第三张今日习惯卡片底部</td><td>detail_finish, basic_usability, composition_hierarchy</td><td>底部固定导航与 FAB 轻微叠压第三个习惯卡的进度条与对勾区域，但核心标题与天数可读，属正常移动安全区行为。</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>372_f6b2197e82</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/372-去掉灵动岛.html</p>
+    </div>
+    <div class="score"><b>75.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/372-%E5%8E%BB%E6%8E%89%E7%81%B5%E5%8A%A8%E5%B2%9B.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/372_f6b2197e82.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/372_f6b2197e82/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/372_f6b2197e82/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [70,80) 档：属于精致移动端旅行 App 登录页类型；可见证据是大幅高质量雪山云海摄影、暖米色品牌底色、ovip 品牌标识与 chip 徽章、克制衬线大标题搭配点分隔副标、圆角输入框与黑色主 CTA 加次级游客入口，材质与留白成熟，呈现 launch-grade 完成度；未进更高档因为整体仍是常见登录范式，组件系统深度有限，未达设计站级别。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>80.000</td><td>0.05</td><td>4.000</td></tr><tr><td>color_material</td><td>80.000</td><td>0.15</td><td>12.000</td></tr><tr><td>composition_hierarchy</td><td>77.500</td><td>0.2</td><td>15.500</td></tr><tr><td>detail_finish</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>typography</td><td>70.000</td><td>0.15</td><td>10.500</td></tr><tr><td>visual_impact_originality</td><td>77.500</td><td>0.3</td><td>23.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>490_8db5d97635</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/490-消息通知应用.html</p>
+    </div>
+    <div class="score"><b>64.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/490-%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E5%BA%94%E7%94%A8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/490_8db5d97635.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/490_8db5d97635/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/490_8db5d97635/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [60,70) 档：属于成熟的移动端运营收件箱/通知聚合应用；可见证据是顶部日期与专注开关、加粗大标题、立即/今日/待办/已合并状态计数、胶囊式分类筛选、彩色分组徽标、红色边条强调紧急条目、规整的卡片层级、标签 chip、底部四项导航与未读小红点；类型与间距成熟，信息层级清晰。未进更高档因为整体仍是常见的移动收件箱壳层，色彩与材质偏克制，缺少更具辨识度的品牌系统与更丰富的视觉资产。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>68.750</td><td>0.05</td><td>3.438</td></tr><tr><td>color_material</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>composition_hierarchy</td><td>66.250</td><td>0.2</td><td>13.250</td></tr><tr><td>detail_finish</td><td>61.250</td><td>0.15</td><td>9.188</td></tr><tr><td>typography</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>visual_impact_originality</td><td>66.250</td><td>0.3</td><td>19.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>496_7a3283092a</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/496-论文展示应用.html</p>
+    </div>
+    <div class="score"><b>75.439</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/496-%E8%AE%BA%E6%96%87%E5%B1%95%E7%A4%BA%E5%BA%94%E7%94%A8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/496_7a3283092a.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/496_7a3283092a/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/496_7a3283092a/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [70,80) 档：属于精致编辑风个人学术主页移动端；可见证据是衬线中文姓名搭配斜体拉丁名、暖米色品牌底、棕色头像与状态药丸、深色发邮件主 CTA 与浅色分享卡双联、Scholar/GitHub/简历三按钮、01/02 编号章节、底部四项导航加深色 FAB，材质与间距成熟；未进更高档因为整体仍是常见编辑型作品集骨架，缺少更独特的图像系统或品牌动效深度。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>78.750</td><td>0.05</td><td>3.938</td></tr><tr><td>color_material</td><td>78.750</td><td>0.15</td><td>11.813</td></tr><tr><td>composition_hierarchy</td><td>76.250</td><td>0.2</td><td>15.250</td></tr><tr><td>detail_finish</td><td>71.250</td><td>0.15</td><td>10.688</td></tr><tr><td>typography</td><td>72.500</td><td>0.15</td><td>10.875</td></tr><tr><td>visual_impact_originality</td><td>76.250</td><td>0.3</td><td>22.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>498_f21bb4bfce</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/498-研究分析仪表盘应用.html</p>
+    </div>
+    <div class="score"><b>75.125</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/498-%E7%A0%94%E7%A9%B6%E5%88%86%E6%9E%90%E4%BB%AA%E8%A1%A8%E7%9B%98%E5%BA%94%E7%94%A8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/498_f21bb4bfce.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/498_f21bb4bfce/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/498_f21bb4bfce/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [70,80) 档：属于精致的移动端编辑型气候简报阅读应用。可见证据是奶油底色配深红强调的克制配色，衬线大标题与小型大写副标题形成成熟编辑层级，封面卡含定制趋势曲线图，数字区三栏 KPI 带升降箭头，章节符号 §02 体现刊物语言，底部四项导航与 Saved 徽标完成度高。未进更高档因为整体仍是熟悉的内容应用骨架，缺少更独特的品牌资产或更丰富的状态设计。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>77.500</td><td>0.05</td><td>3.875</td></tr><tr><td>color_material</td><td>77.500</td><td>0.15</td><td>11.625</td></tr><tr><td>composition_hierarchy</td><td>75.000</td><td>0.2</td><td>15.000</td></tr><tr><td>detail_finish</td><td>72.500</td><td>0.15</td><td>10.875</td></tr><tr><td>typography</td><td>67.500</td><td>0.15</td><td>10.125</td></tr><tr><td>visual_impact_originality</td><td>78.750</td><td>0.3</td><td>23.625</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>code_42ed11740c</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/code.html</p>
+    </div>
+    <div class="score"><b>65.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/code.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/code_42ed11740c.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_42ed11740c/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_42ed11740c/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [60,70) 档：属于极简手作/项目库类型；可见证据是奶油米色背景、衬线 logo 与标题、三张统一比例的项目卡，图像可信，stages 胶囊徽标、棕色按钮与搜索框节奏克制，留白纪律性强；未进 [70,80) 因为只有三张卡片且无更深的品牌组件系统、状态层级或独特视觉资产，整体仍是常见 workshop library 模板。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>70.000</td><td>0.05</td><td>3.500</td></tr><tr><td>color_material</td><td>70.000</td><td>0.15</td><td>10.500</td></tr><tr><td>composition_hierarchy</td><td>67.500</td><td>0.2</td><td>13.500</td></tr><tr><td>detail_finish</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>typography</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>visual_impact_originality</td><td>67.500</td><td>0.3</td><td>20.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>code_53fe1ad176</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/query_091/code.html</p>
+    </div>
+    <div class="score"><b>64.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/query_091/code.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/code_53fe1ad176.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_53fe1ad176/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_53fe1ad176/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [60,70) 档：属于精致的移动学习/掌握度日历追踪应用；可见证据是顶部标题与月份切换器、三张KPI卡（连续天数/掌握主题/学习时长）、热力图风格的日历用紫蓝渐变方块表达掌握度、图例条、Skipped too long 警示与标签胶囊、底部四项导航，排版克制、间距成熟、紫色品牌色一致；未进更高档因为整体仍是常见的追踪应用外壳，缺少更具辨识度的品牌资产或更丰富的状态层次，未达到launch-grade的[70,80)。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>68.750</td><td>0.05</td><td>3.438</td></tr><tr><td>color_material</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>composition_hierarchy</td><td>66.250</td><td>0.2</td><td>13.250</td></tr><tr><td>detail_finish</td><td>61.250</td><td>0.15</td><td>9.188</td></tr><tr><td>typography</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>visual_impact_originality</td><td>66.250</td><td>0.3</td><td>19.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>code_810db6c942</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/code.html</p>
+    </div>
+    <div class="score"><b>54.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/code.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/code_810db6c942.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_810db6c942/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_810db6c942/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于技能评估/规划工作台类型；可见证据是衬线标题、绿色品牌点缀、四区结构化面板（Skills Inventory、Gap Analysis、Recommended、Learning Queue）、推荐技能卡片含标签与高需求徽章、空状态提示规范、整体留白与排版克制；未进更高档因为视觉语言仍偏模板，缺乏独特品牌系统与更丰富的状态与视觉资产。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>58.750</td><td>0.05</td><td>2.938</td></tr><tr><td>color_material</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>composition_hierarchy</td><td>56.250</td><td>0.2</td><td>11.250</td></tr><tr><td>detail_finish</td><td>51.250</td><td>0.15</td><td>7.688</td></tr><tr><td>typography</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>visual_impact_originality</td><td>56.250</td><td>0.3</td><td>16.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q037</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/q037_q_web_006_002/code.html</p>
+    </div>
+    <div class="score"><b>65.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/q037_q_web_006_002/code.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q037.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_ea2ed0a405/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_ea2ed0a405/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [60,70) 档：属于编辑型 zine 杂志门户类型；可见证据是米色背景、衬线大标题 Concrete Dreams、等宽字副文、胶带贴角的倾斜大照片、手写圈注细节、Browse Zines 分类胶囊和分类卡片网格，编辑/印刷气质明确且层级清晰；未进更高档因为整体仍是常见编辑门户排版，品牌资产与组件深度不足以达到 launch-grade。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>70.000</td><td>0.05</td><td>3.500</td></tr><tr><td>color_material</td><td>70.000</td><td>0.15</td><td>10.500</td></tr><tr><td>composition_hierarchy</td><td>67.500</td><td>0.2</td><td>13.500</td></tr><tr><td>detail_finish</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>typography</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>visual_impact_originality</td><td>67.500</td><td>0.3</td><td>20.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q19789</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q19789.html</p>
+    </div>
+    <div class="score"><b>44.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/q19789.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q19789.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q19789_eb13fa663d/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q19789_eb13fa663d/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于临床营养 NRS 2002 评分量表工具页；可见证据是顶部标题与步骤标签、四个分数 KPI 小卡、A/B 两组单选题项分区清晰，单选高亮态与分值徽章排版统一，留白与字号节奏克制；未进 [50,60) 是因为整体仍是常见表单卡片组合，缺少图表、品牌色系或更深的产品形态，视觉语言偏模板化。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>48.750</td><td>0.05</td><td>2.438</td></tr><tr><td>color_material</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>composition_hierarchy</td><td>46.250</td><td>0.2</td><td>9.250</td></tr><tr><td>detail_finish</td><td>41.250</td><td>0.15</td><td>6.188</td></tr><tr><td>typography</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>visual_impact_originality</td><td>46.250</td><td>0.3</td><td>13.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q22</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q22.html</p>
+    </div>
+    <div class="score"><b>55.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/q22.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q22.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q22_3ea44f013b/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q22_3ea44f013b/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于精致销售KPI仪表盘类型；可见证据是奶油色背景、橙绿黄协调色系、清晰的大标题排版、柱状图/排行榜/环形图/转化脉冲多卡片有序排布、Today/7Days/30Days胶囊筛选与一致圆角材质；未进 [60,70) 是因为整体仍是常见仪表盘模板，缺乏更鲜明的品牌识别和更深的状态层次，组件语言偏通用。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>60.000</td><td>0.05</td><td>3.000</td></tr><tr><td>color_material</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>composition_hierarchy</td><td>57.500</td><td>0.2</td><td>11.500</td></tr><tr><td>detail_finish</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>typography</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>visual_impact_originality</td><td>57.500</td><td>0.3</td><td>17.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q23700</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/q23700.html</p>
+    </div>
+    <div class="score"><b>54.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/q23700.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q23700.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q23700_2e2744d869/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q23700_2e2744d869/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于 Bauhaus/编辑风碳排放对比页archetype；可见证据是三色几何标识（红圆/蓝方/黄三角）、三栏规格对齐卡片、里程/耗时/说明结构化字段、超大碳排放数字与最高/最低/中等徽标、底部对比图表区与三标签底栏，米色底配克制排印形成统一系统；未进 [60,70) 因为图表区仅露标题、整体仍是常见对比模板，品牌与材质深度未到精品编辑级。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>58.750</td><td>0.05</td><td>2.938</td></tr><tr><td>color_material</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>composition_hierarchy</td><td>56.250</td><td>0.2</td><td>11.250</td></tr><tr><td>detail_finish</td><td>51.250</td><td>0.15</td><td>7.688</td></tr><tr><td>typography</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>visual_impact_originality</td><td>56.250</td><td>0.3</td><td>16.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q25253</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q25253.html</p>
+    </div>
+    <div class="score"><b>45.313</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/q25253.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q25253.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q25253_342e550c7a/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q25253_342e550c7a/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于 MMSE 临床认知评估计算器类型；可见证据是左侧步骤卡含题干、勾选项、0-5 评分按钮和提示框，右侧 11 项域列表带 0/30 实时累加器，米色背景配橙色强调色，排版整齐；未进 [50,60) 因为组件语言仍为常见模板，缺少更深的状态设计与品牌识别，整体偏 clinical calculator 模板感。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>50.000</td><td>0.05</td><td>2.500</td></tr><tr><td>color_material</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>composition_hierarchy</td><td>46.250</td><td>0.2</td><td>9.250</td></tr><tr><td>detail_finish</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>typography</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>visual_impact_originality</td><td>47.500</td><td>0.3</td><td>14.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q277</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/q277_q_scene_026_009/code.html</p>
+    </div>
+    <div class="score"><b>64.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/q277_q_scene_026_009/code.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q277.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_5187e3d6c1/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_5187e3d6c1/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [60,70) 档：属于移动端学术/课程模块列表原型。可见证据：顶部课程选择下拉、粗体标题、0/12 进度文案与浅绿进度条、整齐重复的白色课程卡片配编号、复选框与展开箭头，排版克制、间距统一、配色为米白与橄榄绿，整体launch-grade 接近。未进 [70,80) 因为缺乏更鲜明的品牌识别与视觉资产，仍是常见课程 app 壳。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>68.750</td><td>0.05</td><td>3.438</td></tr><tr><td>color_material</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>composition_hierarchy</td><td>66.250</td><td>0.2</td><td>13.250</td></tr><tr><td>detail_finish</td><td>61.250</td><td>0.15</td><td>9.188</td></tr><tr><td>typography</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>visual_impact_originality</td><td>66.250</td><td>0.3</td><td>19.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q28202</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q28202.html</p>
+    </div>
+    <div class="score"><b>45.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/q28202.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q28202.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q28202_afce121772/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q28202_afce121772/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于深色法治学习案例库仪表盘类型；可见证据是左侧 LEGAL.MIND 品牌区配 EVERYONE.CONNECTED. 标语、环形正确率 0%、总进度/错题统计，右侧搜索栏、分类胶囊、1–20 题号宫格与案例详情卡，红黑配色统一、排版规整；未进 [50,60) 因为组件语言仍属常见暗色仪表板模板，红色横条留白略生硬，品牌系统与状态深度不够独特。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>50.000</td><td>0.05</td><td>2.500</td></tr><tr><td>color_material</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>composition_hierarchy</td><td>47.500</td><td>0.2</td><td>9.500</td></tr><tr><td>detail_finish</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>typography</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>visual_impact_originality</td><td>47.500</td><td>0.3</td><td>14.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q37</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q37.html</p>
+    </div>
+    <div class="score"><b>45.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/q37.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q37.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q37_949a555175/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q37_949a555175/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于深色文学叙事数据可视化页面；可见证据是大标题、时间轴Stage卡片、克朗代克路线示意图、三个状态指标卡和橙蓝点缀色，排版整洁层级清晰；未进 [50,60) 因组件语言仍较模板化，图表简单，缺乏更丰富的状态与品牌纵深。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>50.000</td><td>0.05</td><td>2.500</td></tr><tr><td>color_material</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>composition_hierarchy</td><td>47.500</td><td>0.2</td><td>9.500</td></tr><tr><td>detail_finish</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>typography</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>visual_impact_originality</td><td>47.500</td><td>0.3</td><td>14.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q448</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/q448_q_web_066_002/code.html</p>
+    </div>
+    <div class="score"><b>65.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B60%2C70%29/q448_q_web_066_002/code.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q448.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_6e82443c59/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_6e82443c59/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [60,70) 档：属于参与式社区预算/提案投票仪表盘原型；可见证据是深绿色指标条、衬线标题、分类胶囊筛选、整齐的提案卡片网格带类别标签与投票按钮，以及右侧带进度条的排行榜模块，层级与间距成熟；未进 [70,80) 是因为整体仍是常见仪表盘语言，缺少更具辨识度的品牌资产与材质细节，且 Remaining 显示负值暴露状态打磨不足。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>70.000</td><td>0.05</td><td>3.500</td></tr><tr><td>color_material</td><td>70.000</td><td>0.15</td><td>10.500</td></tr><tr><td>composition_hierarchy</td><td>67.500</td><td>0.2</td><td>13.500</td></tr><tr><td>detail_finish</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>typography</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>visual_impact_originality</td><td>67.500</td><td>0.3</td><td>20.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q4995</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/q4995.html</p>
+    </div>
+    <div class="score"><b>55.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/q4995.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q4995.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q4995_6ab3e4254f/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q4995_6ab3e4254f/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于深色金融并购影响计算器仪表盘类型；可见证据是黑底配金色 Adjust 链接、编号 01-06 的六张假设卡片、清晰的 $68.7B/$3.5B 等大数字层级、克制的衬线/无衬线混排标题与免责声明；未进 [60,70) 档因为整体仍是常见暗色仪表盘模板，缺少图表、状态设计和更鲜明的品牌系统，组件语言偏通用。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>60.000</td><td>0.05</td><td>3.000</td></tr><tr><td>color_material</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>composition_hierarchy</td><td>57.500</td><td>0.2</td><td>11.500</td></tr><tr><td>detail_finish</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>typography</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>visual_impact_originality</td><td>57.500</td><td>0.3</td><td>17.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q_scene_fb_17_185_b2acc9313e</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/q_scene_fb_17_185.html</p>
+    </div>
+    <div class="score"><b>74.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/q_scene_fb_17_185.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q_scene_fb_17_185_b2acc9313e.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_17_185_b2acc9313e/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_17_185_b2acc9313e/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [70,80) 档：属于精致的宠物健康移动应用类型；可见证据是奶油底色配赤陶/粉色品牌系统，overdue 提醒大卡片层级清晰，At a glance 三指标卡、Up Next 列表带图标与状态徽章，底部导航加圆形 FAB，材质间距与字体克制成熟，达到上线级完成度；未进更高档因为整体仍沿用常见 app shell，品牌资产与视觉个性未到设计站级别。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>78.750</td><td>0.05</td><td>3.938</td></tr><tr><td>color_material</td><td>78.750</td><td>0.15</td><td>11.813</td></tr><tr><td>composition_hierarchy</td><td>76.250</td><td>0.2</td><td>15.250</td></tr><tr><td>detail_finish</td><td>71.250</td><td>0.15</td><td>10.688</td></tr><tr><td>typography</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>visual_impact_originality</td><td>76.250</td><td>0.3</td><td>22.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q_scene_fb_19_193_a4d4090c98</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/q_scene_fb_19_193.html</p>
+    </div>
+    <div class="score"><b>65.564</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B70%2C80%29/q_scene_fb_19_193.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q_scene_fb_19_193_a4d4090c98.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_19_193_a4d4090c98/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_19_193_a4d4090c98/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [60,70) 档：属于编辑风格的移动端职业评估入口页；可见证据是大号衬线标题配 actually 斜体红字强调、米色背景、有序编号步骤列表配细分隔线、黑色药丸 CTA、底部四项 tab 导航与等宽小标签，排版克制有层次。未进 [70,80) 因为整体仍是单屏文字海报式落地，缺少更独特的图像系统或品牌资产，材质与组件深度未到 launch-grade。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>68.750</td><td>0.05</td><td>3.438</td></tr><tr><td>color_material</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>composition_hierarchy</td><td>65.000</td><td>0.2</td><td>13.000</td></tr><tr><td>detail_finish</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>typography</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>visual_impact_originality</td><td>70.000</td><td>0.3</td><td>21.000</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>q_scene_fb_20_199_f2da467947</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/q_scene_fb_20_199.html</p>
+    </div>
+    <div class="score"><b>64.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/q_scene_fb_20_199.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q_scene_fb_20_199_f2da467947.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_20_199_f2da467947/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_20_199_f2da467947/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">mobile: 命中 [60,70) 档：属于精致的移动端求职申请追踪应用；可见证据是顶部日期标题、三联 KPI 卡片、搜索栏、状态筛选 chips、按阶段分组的彩色边条卡片（Offer/Final/Interview）、底部四项导航与黑色 FAB，排版克制、间距成熟、留白干净；未进更高档因为整体仍是常见的暖色任务追踪模板，缺乏更具辨识度的品牌系统、定制插画或更突出的材质识别，达不到 launch-grade 水准。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>68.750</td><td>0.05</td><td>3.438</td></tr><tr><td>color_material</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>composition_hierarchy</td><td>66.250</td><td>0.2</td><td>13.250</td></tr><tr><td>detail_finish</td><td>61.250</td><td>0.15</td><td>9.188</td></tr><tr><td>typography</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>visual_impact_originality</td><td>66.250</td><td>0.3</td><td>19.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t21_1_40_2_fae2793652</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T21_1_40.2.html</p>
+    </div>
+    <div class="score"><b>35.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B30%2C40%29/T21_1_40.2.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_1_40_2_fae2793652.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_1_40_2_fae2793652/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_1_40_2_fae2793652/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [30,40) 档：属于蓝色消费银行仪表盘类型；可见证据是蓝色顶栏+欢迎用户、三张蓝色账户卡片含余额与卡号、右侧最近交易列表带图标和正负金额、底部快捷操作按钮，结构完整可读；未进 [40,50) 因为组件语言通用模板化，缺乏品牌特异性和更深的金融组件层次，仅是常见银行仪表板范式。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>40.000</td><td>0.05</td><td>2.000</td></tr><tr><td>color_material</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>composition_hierarchy</td><td>37.500</td><td>0.2</td><td>7.500</td></tr><tr><td>detail_finish</td><td>28.750</td><td>0.15</td><td>4.313</td></tr><tr><td>typography</td><td>30.000</td><td>0.15</td><td>4.500</td></tr><tr><td>visual_impact_originality</td><td>37.500</td><td>0.3</td><td>11.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t21_2_36_0_480d2bac25</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T21_2_36.0.html</p>
+    </div>
+    <div class="score"><b>24.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T21_2_36.0.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_2_36_0_480d2bac25.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_2_36_0_480d2bac25/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_2_36_0_480d2bac25/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [20,30) 档：属于很轻量的消费银行/账户页面，简单顶栏、三张默认白卡、余额读数、绿色按钮、短交易列表，金融组件深度很弱；可见证据是大量空白、默认列表样式、无图表无卡片视觉系统；未进 [30,40) 因缺少快捷操作、账户卡片层级或更完整的仪表盘语言。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>28.750</td><td>0.05</td><td>1.438</td></tr><tr><td>color_material</td><td>28.750</td><td>0.15</td><td>4.313</td></tr><tr><td>composition_hierarchy</td><td>26.250</td><td>0.2</td><td>5.250</td></tr><tr><td>detail_finish</td><td>17.500</td><td>0.15</td><td>2.625</td></tr><tr><td>typography</td><td>22.500</td><td>0.15</td><td>3.375</td></tr><tr><td>visual_impact_originality</td><td>26.250</td><td>0.3</td><td>7.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t21_4_43_8_c2a588b6fa</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T21_4_43.8.html</p>
+    </div>
+    <div class="score"><b>34.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B30%2C40%29/T21_4_43.8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_4_43_8_c2a588b6fa.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_4_43_8_c2a588b6fa/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_4_43_8_c2a588b6fa/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [30,40) 档：属于蓝色消费银行仪表盘类型；可见证据是深色侧边栏带导航、三张活期/储蓄/信用卡账户卡显示余额与卡号、蓝色转账与查看详情按钮、最近交易表格含日期/描述/类型/金额并以红绿区分收支；未进 [40,50) 因为组件语言仍是通用模板，无品牌系统、图表或更深的状态设计，仅基础卡片与表格堆叠。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>38.750</td><td>0.05</td><td>1.938</td></tr><tr><td>color_material</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>composition_hierarchy</td><td>36.250</td><td>0.2</td><td>7.250</td></tr><tr><td>detail_finish</td><td>27.500</td><td>0.15</td><td>4.125</td></tr><tr><td>typography</td><td>32.500</td><td>0.15</td><td>4.875</td></tr><tr><td>visual_impact_originality</td><td>36.250</td><td>0.3</td><td>10.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t21_5_55_9_d695f6a087</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T21_5_55.9.html</p>
+    </div>
+    <div class="score"><b>44.626</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/T21_5_55.9.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_5_55_9_d695f6a087.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_5_55_9_d695f6a087/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_5_55_9_d695f6a087/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于深色钱包/金融仪表盘原型，可见左侧导航、紫色渐变余额卡、收支/储蓄KPI卡、快捷操作四宫格、收支趋势图、右侧双张信用卡 mockup 与近期交易列表，组件齐整、配色克制。未进 [50,60) 因为组件语言仍是常见 fintech 模板，缺少独特品牌系统与更丰富的状态设计。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>48.750</td><td>0.05</td><td>2.438</td></tr><tr><td>color_material</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>composition_hierarchy</td><td>45.000</td><td>0.2</td><td>9.000</td></tr><tr><td>detail_finish</td><td>37.500</td><td>0.15</td><td>5.625</td></tr><tr><td>typography</td><td>42.500</td><td>0.15</td><td>6.375</td></tr><tr><td>visual_impact_originality</td><td>46.250</td><td>0.3</td><td>13.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t22_2_22_4_55cd8b6a24</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T22_2_22.4.html</p>
+    </div>
+    <div class="score"><b>14.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T22_2_22.4.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t22_2_22_4_55cd8b6a24.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t22_2_22_4_55cd8b6a24/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t22_2_22_4_55cd8b6a24/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于稀疏 API/admin 管理面板原型；可见证据是深色纯色顶栏、三张默认白色卡片、普通输入框、蓝色 Add Key 按钮、简短列表和大面积空白，几乎全是默认控件；未进 [20,30) 是因为内容深度和视觉处理都没有超出基本模板，缺少更完整的工作流与设计语言。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>16.250</td><td>0.2</td><td>3.250</td></tr><tr><td>detail_finish</td><td>7.500</td><td>0.15</td><td>1.125</td></tr><tr><td>typography</td><td>12.500</td><td>0.15</td><td>1.875</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t22_6_61_7_e3735f94df</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T22_6_61.7.html</p>
+    </div>
+    <div class="score"><b>54.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/T22_6_61.7.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t22_6_61_7_e3735f94df.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t22_6_61_7_e3735f94df/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t22_6_61_7_e3735f94df/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于深色 SaaS/API 管理仪表板原型；可见证据是左侧导航完整、四个 KPI 卡含趋势变化、折线与环形图配色统一、API 密钥表格含状态徽章和操作按钮，间距与品牌绿点缀克制；未进 [60,70) 因组件语言仍是常见 fintech/SaaS 模板，缺少更具辨识度的品牌系统和更丰富的状态设计。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>58.750</td><td>0.05</td><td>2.938</td></tr><tr><td>color_material</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>composition_hierarchy</td><td>56.250</td><td>0.2</td><td>11.250</td></tr><tr><td>detail_finish</td><td>47.500</td><td>0.15</td><td>7.125</td></tr><tr><td>typography</td><td>52.500</td><td>0.15</td><td>7.875</td></tr><tr><td>visual_impact_originality</td><td>56.250</td><td>0.3</td><td>16.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t24_6_60_3_5d4459d74a</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T24_6_60.3.html</p>
+    </div>
+    <div class="score"><b>54.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/T24_6_60.3.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t24_6_60_3_5d4459d74a.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t24_6_60_3_5d4459d74a/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t24_6_60_3_5d4459d74a/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于火星天气主题数据仪表盘类型；可见证据是深色背景配橙红主色、巨型温度数字、SOL编号、最高/最低/紫外/辐射四个状态卡、风速/大气压/成分三组卡片及底部火星日预报横排卡片，层级清晰、主题统一；未进更高档因为图表仅是简单环形和进度条，组件语言仍是常见仪表盘模板，缺少更具辨识度的品牌系统与材质细节。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>58.750</td><td>0.05</td><td>2.938</td></tr><tr><td>color_material</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>composition_hierarchy</td><td>56.250</td><td>0.2</td><td>11.250</td></tr><tr><td>detail_finish</td><td>47.500</td><td>0.15</td><td>7.125</td></tr><tr><td>typography</td><td>52.500</td><td>0.15</td><td>7.875</td></tr><tr><td>visual_impact_originality</td><td>56.250</td><td>0.3</td><td>16.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t25_2_43_8_d0bee10501</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T25_2_43.8.html</p>
+    </div>
+    <div class="score"><b>24.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T25_2_43.8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t25_2_43_8_d0bee10501.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t25_2_43_8_d0bee10501/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t25_2_43_8_d0bee10501/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [20,30) 档：属于低质学习练习页面类型；可见证据是蓝色纯色顶栏、单张白卡内含 Vocabulary/Grammar/Interactive 三个练习板块，含多个输入框和蓝色按钮，工作流完整但视觉极为默认；未进 [30,40) 因为缺乏品牌语言、排版克制但单调、卡片层次稀薄、下方留白过大、无任何主题装饰或视觉系统。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>28.750</td><td>0.05</td><td>1.438</td></tr><tr><td>color_material</td><td>28.750</td><td>0.15</td><td>4.313</td></tr><tr><td>composition_hierarchy</td><td>26.250</td><td>0.2</td><td>5.250</td></tr><tr><td>detail_finish</td><td>21.250</td><td>0.15</td><td>3.188</td></tr><tr><td>typography</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>visual_impact_originality</td><td>26.250</td><td>0.3</td><td>7.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="yes" data-status="severe">
+  <header>
+    <div>
+      <h2>t26_1_15_2_029d2ff572</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T26_1_15.2.html</p>
+    </div>
+    <div class="score"><b>5.251</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T26_1_15.2.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t26_1_15_2_029d2ff572.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t26_1_15_2_029d2ff572/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t26_1_15_2_029d2ff572/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ bad">occlusion: yes · severe · text_graphic</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于&#x27;今晚吃啥&#x27;随机抽签玩具工具，硬性覆盖明确归入此档。可见证据为一个彩色轮盘居中、默认输入框配蓝色添加按钮、两行粗糙的红色删除列表、底部一个红色转一转按钮，大量留白且无视觉系统。未进入 [10,20) 因控件极少、状态贫乏、视觉语言全为默认，未达到低质模板的复杂度。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>8.750</td><td>0.05</td><td>0.438</td></tr><tr><td>color_material</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>composition_hierarchy</td><td>6.250</td><td>0.2</td><td>1.250</td></tr><tr><td>detail_finish</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>typography</td><td>2.500</td><td>0.15</td><td>0.375</td></tr><tr><td>visual_impact_originality</td><td>6.250</td><td>0.3</td><td>1.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td>text_graphic</td><td>severe</td><td>text over image/icon</td><td>typography, composition_hierarchy, detail_finish, basic_usability</td><td>命中 [0,10) 档：属于&#x27;今晚吃啥&#x27;随机抽签玩具工具，硬性覆盖明确归入此档。可见证据为一个彩色轮盘居中、默认输入框配蓝色添加按钮、两行粗糙的红色删除列表、底部一个红色转一转按钮，大量留白且无视觉系统。未进入 [10,20) 因控件极少、状态贫乏、视觉语言全为默认，未达到低质模板的复杂度。</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="yes" data-status="moderate">
+  <header>
+    <div>
+      <h2>t26_4_13_2_eb4fea5a85</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T26_4_13.2.html</p>
+    </div>
+    <div class="score"><b>5.001</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T26_4_13.2.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t26_4_13_2_eb4fea5a85.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t26_4_13_2_eb4fea5a85/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t26_4_13_2_eb4fea5a85/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ bad">occlusion: yes · moderate · clipping_crop</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于「今晚吃啥」随机抽取玩具工具，硬性归档为此区间。可见证据是一个候选 textarea、灰色更新按钮、单一浅蓝大圆作为结果区、蓝色 CTA 按钮，圆内提示文字被圆边裁切溢出，整体大量留白、默认控件、无品牌系统。未进 [10,20) 档因为该档典型为有多控件的低质模板，而此页符合单图形玩具工具的硬性下限定义。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>2.500</td><td>0.05</td><td>0.125</td></tr><tr><td>color_material</td><td>10.000</td><td>0.15</td><td>1.500</td></tr><tr><td>composition_hierarchy</td><td>3.750</td><td>0.2</td><td>0.750</td></tr><tr><td>detail_finish</td><td>1.250</td><td>0.15</td><td>0.188</td></tr><tr><td>typography</td><td>1.250</td><td>0.15</td><td>0.188</td></tr><tr><td>visual_impact_originality</td><td>7.500</td><td>0.3</td><td>2.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td>clipping_crop</td><td>moderate</td><td>圆形结果区内的提示文字「点击下方按钮开始」</td><td>detail_finish, basic_usability, composition_hierarchy, typography</td><td>文字左右两端被蓝色圆边裁切，未能完整显示</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t27_3_53_8_98737f2def</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T27_3_53.8.html</p>
+    </div>
+    <div class="score"><b>44.439</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/T27_3_53.8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t27_3_53_8_98737f2def.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t27_3_53_8_98737f2def/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t27_3_53_8_98737f2def/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于课堂折射模拟器单卡片类型；可见证据是深蓝背景上居中浅色卡片，内含空气/水分层示意图、黄蓝光线与 θ₁=30°、θ₂=22.1° 标注、入射角滑块、读数行与斯涅尔公式，配色与材质统一协调；未进更高档因为只有单一面板、控件仅一个滑块，缺少多模块产品深度与更具辨识度的品牌系统。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>46.250</td><td>0.05</td><td>2.313</td></tr><tr><td>color_material</td><td>46.250</td><td>0.15</td><td>6.938</td></tr><tr><td>composition_hierarchy</td><td>43.750</td><td>0.2</td><td>8.750</td></tr><tr><td>detail_finish</td><td>41.250</td><td>0.15</td><td>6.188</td></tr><tr><td>typography</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>visual_impact_originality</td><td>47.500</td><td>0.3</td><td>14.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t27_4_30_0_9ba6e6791e</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T27_4_30.0.html</p>
+    </div>
+    <div class="score"><b>44.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T27_4_30.0.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t27_4_30_0_9ba6e6791e.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t27_4_30_0_9ba6e6791e/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t27_4_30_0_9ba6e6791e/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于光折射物理模拟器类型；可见证据是浅蓝主题背景、上下两层介质色块、黄色入射/折射光线与θ角标注、滑块控制入射角、底部Snell定律公式卡片，整体场景协调可读；未进 [50,60) 因为只有单卡单滑块单图示，缺少多面板与更成熟的产品组件系统。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>47.500</td><td>0.05</td><td>2.375</td></tr><tr><td>color_material</td><td>47.500</td><td>0.15</td><td>7.125</td></tr><tr><td>composition_hierarchy</td><td>45.000</td><td>0.2</td><td>9.000</td></tr><tr><td>detail_finish</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>typography</td><td>37.500</td><td>0.15</td><td>5.625</td></tr><tr><td>visual_impact_originality</td><td>48.750</td><td>0.3</td><td>14.625</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t28_2_29_6_fe1305f799</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T28_2_29.6.html</p>
+    </div>
+    <div class="score"><b>14.627</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T28_2_29.6.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t28_2_29_6_fe1305f799.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t28_2_29_6_fe1305f799/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t28_2_29_6_fe1305f799/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于稀疏待办事项工具类型；可见证据是绿色顶部条加标题、一个任务名称输入框、一个优先级下拉选择、一个绿色添加按钮，下方大面积空白，无任何列表区域或状态展示；未进更高档 [20,30) 是因为控件仅三件默认元素，缺少分类、筛选或列表行等完整工作流证据，视觉语言完全默认化。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>15.000</td><td>0.2</td><td>3.000</td></tr><tr><td>detail_finish</td><td>11.250</td><td>0.15</td><td>1.688</td></tr><tr><td>typography</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t28_4_25_1_638b713e8e</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T28_4_25.1.html</p>
+    </div>
+    <div class="score"><b>14.627</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T28_4_25.1.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t28_4_25_1_638b713e8e.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t28_4_25_1_638b713e8e/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t28_4_25_1_638b713e8e/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于稀疏待办/任务输入行类型；可见证据是单一白卡内紫色标题、一个输入框、一个中优先级下拉、一个紫色添加按钮，下方仅一条分隔线和大片空白；未进 [20,30) 档因为没有任何任务行、过滤芯片或统计读数，控件几乎全是默认样式，视觉系统仅是默认表单壳，不足以构成完整工作流。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>15.000</td><td>0.2</td><td>3.000</td></tr><tr><td>detail_finish</td><td>11.250</td><td>0.15</td><td>1.688</td></tr><tr><td>typography</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t30_2_21_8_b8e110f79d</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T30_2_21.8.html</p>
+    </div>
+    <div class="score"><b>14.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T30_2_21.8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t30_2_21_8_b8e110f79d.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t30_2_21_8_b8e110f79d/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t30_2_21_8_b8e110f79d/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于错题本录入表单类低质模板。可见证据是浅灰底、加粗标题、两个默认下拉、两个输入框、两个文本域和一个蓝色添加按钮，下方大量留白，无任何品牌或视觉系统。未进 [20,30) 因为没有列表/记录区或多模块协同，仅是单一表单工作流，控件全部默认。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>16.250</td><td>0.2</td><td>3.250</td></tr><tr><td>detail_finish</td><td>11.250</td><td>0.15</td><td>1.688</td></tr><tr><td>typography</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t31_2_18_6_954da11808</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T31_2_18.6.html</p>
+    </div>
+    <div class="score"><b>4.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T31_2_18.6.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t31_2_18_6_954da11808.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t31_2_18_6_954da11808/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t31_2_18_6_954da11808/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于纯文字同人小说门户类型；可见证据是绿色纯色顶栏加副标题、无任何真实配图、三张默认白卡仅放标题与简介、日期行右对齐的简陋列表、快速导航区只剩文字堆叠、整体大量留白与系统字；未进 [10,20) 因为没有任何可用控件、筛选、表单或组件语言，仅是文字块堆砌，视觉系统几乎为零。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>8.750</td><td>0.05</td><td>0.438</td></tr><tr><td>color_material</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>composition_hierarchy</td><td>6.250</td><td>0.2</td><td>1.250</td></tr><tr><td>detail_finish</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>typography</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>visual_impact_originality</td><td>6.250</td><td>0.3</td><td>1.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t31_6_63_5_486c5ac6d4</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T31_6_63.5.html</p>
+    </div>
+    <div class="score"><b>45.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/T31_6_63.5.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t31_6_63_5_486c5ac6d4.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t31_6_63_5_486c5ac6d4/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t31_6_63_5_486c5ac6d4/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于黑金品牌故事平台落地页类型；可见证据是深黑底配金色 logo/导航 active 线/主 CTA、衬线大标题双色处理、副标题与次 CTA 节奏清晰、顶栏搜索与发布按钮齐整、下方隐约可见统计数据卡片；未进更高档因为首屏仅有居中文字 hero，缺少自定义插画或产品图，组件语言较常见，品牌纵深不足以达到 [50,60)。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>50.000</td><td>0.05</td><td>2.500</td></tr><tr><td>color_material</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>composition_hierarchy</td><td>47.500</td><td>0.2</td><td>9.500</td></tr><tr><td>detail_finish</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>typography</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>visual_impact_originality</td><td>47.500</td><td>0.3</td><td>14.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t32_2_31_9_2800a66d9c</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T32_2_31.9.html</p>
+    </div>
+    <div class="score"><b>14.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T32_2_31.9.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t32_2_31_9_2800a66d9c.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t32_2_31_9_2800a66d9c/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t32_2_31_9_2800a66d9c/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于宠物成长记录表单类低质量模板；可见证据是绿色色块顶栏与页脚、单张白卡内堆叠日期、体重、饮食、健康、趣事、心情等默认输入和文本域、绿色添加按钮、空记录列表，控件均为系统默认样式，排版稀疏；未进 [20,30) 因为视觉处理无主题化，仅多字段表单加空列表，缺少卡片分组、图标或完整工作流展示。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>16.250</td><td>0.2</td><td>3.250</td></tr><tr><td>detail_finish</td><td>11.250</td><td>0.15</td><td>1.688</td></tr><tr><td>typography</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t34_2_22_9_c6fd71fe24</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T34_2_22.9.html</p>
+    </div>
+    <div class="score"><b>15.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T34_2_22.9.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t34_2_22_9_c6fd71fe24.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t34_2_22_9_c6fd71fe24/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t34_2_22_9_c6fd71fe24/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于简单票务列表模板类型；可见证据是蓝色默认标题栏、四项默认导航、单一白卡片中三行 Concert/价格/Buy Ticket、深色页脚以及大量空白。未进 [20,30) 因为视觉几乎全部为默认控件，无 hero、无图像、无筛选或分类结构，组件语言极其模板化。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>20.000</td><td>0.05</td><td>1.000</td></tr><tr><td>color_material</td><td>20.000</td><td>0.15</td><td>3.000</td></tr><tr><td>composition_hierarchy</td><td>17.500</td><td>0.2</td><td>3.500</td></tr><tr><td>detail_finish</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>typography</td><td>10.000</td><td>0.15</td><td>1.500</td></tr><tr><td>visual_impact_originality</td><td>17.500</td><td>0.3</td><td>5.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t34_4_31_5_8f3b86eacf</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T34_4_31.5.html</p>
+    </div>
+    <div class="score"><b>25.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T34_4_31.5.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t34_4_31_5_8f3b86eacf.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t34_4_31_5_8f3b86eacf/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t34_4_31_5_8f3b86eacf/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [20,30) 档：属于简单票务/活动目录类型；可见证据是紫色渐变 hero、白底标签切换、最新热门活动标题、与无关或破图的活动卡片（小狗、灰墙、足球比赛 alt 占位）；未进更高档因为图片明显是占位/不相关素材，组件语言默认，缺乏真实票务信息层级与品牌系统。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>30.000</td><td>0.05</td><td>1.500</td></tr><tr><td>color_material</td><td>30.000</td><td>0.15</td><td>4.500</td></tr><tr><td>composition_hierarchy</td><td>27.500</td><td>0.2</td><td>5.500</td></tr><tr><td>detail_finish</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>typography</td><td>20.000</td><td>0.15</td><td>3.000</td></tr><tr><td>visual_impact_originality</td><td>27.500</td><td>0.3</td><td>8.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t35_2_19_4_d876b3a247</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T35_2_19.4.html</p>
+    </div>
+    <div class="score"><b>5.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T35_2_19.4.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_2_19_4_d876b3a247.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_2_19_4_d876b3a247/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_2_19_4_d876b3a247/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于极简单操作型待办玩具页。可见证据是粉色渐变背景上仅一个标题、一行输入框和一个紫蓝渐变按钮，没有任务列表、过滤、统计或任何状态内容，大量空白主导画面。未进更高档 [10,20) 因为缺少多控件、列表行或分隔结构，连基础模板的状态丰富度都未达到。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>10.000</td><td>0.05</td><td>0.500</td></tr><tr><td>color_material</td><td>10.000</td><td>0.15</td><td>1.500</td></tr><tr><td>composition_hierarchy</td><td>7.500</td><td>0.2</td><td>1.500</td></tr><tr><td>detail_finish</td><td>2.500</td><td>0.15</td><td>0.375</td></tr><tr><td>typography</td><td>1.250</td><td>0.15</td><td>0.188</td></tr><tr><td>visual_impact_originality</td><td>5.000</td><td>0.3</td><td>1.500</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t35_3_39_5_7d2a76053c</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T35_3_39.5.html</p>
+    </div>
+    <div class="score"><b>25.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T35_3_39.5.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_3_39_5_7d2a76053c.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_3_39_5_7d2a76053c/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_3_39_5_7d2a76053c/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [20,30) 档：属于彩色渐变玻璃风单卡待办玩具类型；可见证据是深紫背景上一张玻璃卡，含粉色渐变标题、三个 0 计数胶囊、输入框配粉色添加按钮、三枚筛选 chip、气球空状态插画与底部清除按钮，控件齐全但内容为空；未进 [30,40) 因整体仍是单卡玩具，组件语言通用、层级单薄、无真实数据与产品深度。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>30.000</td><td>0.05</td><td>1.500</td></tr><tr><td>color_material</td><td>30.000</td><td>0.15</td><td>4.500</td></tr><tr><td>composition_hierarchy</td><td>27.500</td><td>0.2</td><td>5.500</td></tr><tr><td>detail_finish</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>typography</td><td>20.000</td><td>0.15</td><td>3.000</td></tr><tr><td>visual_impact_originality</td><td>27.500</td><td>0.3</td><td>8.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t35_4_18_4_1680a4a154</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T35_4_18.4.html</p>
+    </div>
+    <div class="score"><b>5.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T35_4_18.4.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_4_18_4_1680a4a154.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_4_18_4_1680a4a154/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_4_18_4_1680a4a154/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中[0,10)档：属于近乎空的单卡片待办玩具型工具；可见证据是橙粉渐变背景上仅一个白色卡片，含标题、单一输入框和一个蓝色Add Task按钮，无列表、无过滤、无任何状态内容，画面大面积留白；未进入[10,20)档因为缺少多控件、列表行或筛选chips等更完整的模板结构。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>10.000</td><td>0.05</td><td>0.500</td></tr><tr><td>color_material</td><td>10.000</td><td>0.15</td><td>1.500</td></tr><tr><td>composition_hierarchy</td><td>7.500</td><td>0.2</td><td>1.500</td></tr><tr><td>detail_finish</td><td>2.500</td><td>0.15</td><td>0.375</td></tr><tr><td>typography</td><td>1.250</td><td>0.15</td><td>0.188</td></tr><tr><td>visual_impact_originality</td><td>5.000</td><td>0.3</td><td>1.500</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t35_5_23_6_d61de1c976</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T35_5_23.6.html</p>
+    </div>
+    <div class="score"><b>14.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T35_5_23.6.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_5_23_6_d61de1c976.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_5_23_6_d61de1c976/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_5_23_6_d61de1c976/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于彩色渐变单卡待办玩具类型；可见证据是青紫渐变背景配装饰圆点、单一白色卡片含彩虹进度条、输入框、三个筛选 chips、三行任务和清除按钮；未进 [20,30) 因为内容仍是常见 to-do 模板，组件语言默认，缺乏更深的产品状态与品牌系统。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>16.250</td><td>0.2</td><td>3.250</td></tr><tr><td>detail_finish</td><td>7.500</td><td>0.15</td><td>1.125</td></tr><tr><td>typography</td><td>12.500</td><td>0.15</td><td>1.875</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t38_2_24_5_35a83da1e8</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T38_2_24.5.html</p>
+    </div>
+    <div class="score"><b>15.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T38_2_24.5.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t38_2_24_5_35a83da1e8.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t38_2_24_5_35a83da1e8/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t38_2_24_5_35a83da1e8/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于本地美发沙龙服务页类型；可见证据是深色顶栏加居中标题、三张纯文字白卡仅有标题/一句描述/深色预订按钮，无任何真实图像、价格、造型师或评价模块，灰底大量留白；未进 [20,30) 档因为整体仍是默认壳，组件语言极弱，缺少有效图像与品牌氛围。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>20.000</td><td>0.05</td><td>1.000</td></tr><tr><td>color_material</td><td>20.000</td><td>0.15</td><td>3.000</td></tr><tr><td>composition_hierarchy</td><td>17.500</td><td>0.2</td><td>3.500</td></tr><tr><td>detail_finish</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>typography</td><td>10.000</td><td>0.15</td><td>1.500</td></tr><tr><td>visual_impact_originality</td><td>17.500</td><td>0.3</td><td>5.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t38_5_58_6_360a1610e6</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T38_5_58.6.html</p>
+    </div>
+    <div class="score"><b>44.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/T38_5_58.6.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t38_5_58_6_360a1610e6.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t38_5_58_6_360a1610e6/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t38_5_58_6_360a1610e6/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于单图英雄式高端美发沙龙落地页；可见证据是真实沙龙黑白照片、Luxe Hair 衬线金色logo、暗色顶栏含四项中文导航与金色立即预约按钮、衬线主标题搭配金色强调字、副标题与金色预约体验CTA居中、整体黑金调性克制；未进更高档因为只有单一英雄区，没有服务卡片、造型师介绍、品牌系统模块或更深层组件语言。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>47.500</td><td>0.05</td><td>2.375</td></tr><tr><td>color_material</td><td>47.500</td><td>0.15</td><td>7.125</td></tr><tr><td>composition_hierarchy</td><td>45.000</td><td>0.2</td><td>9.000</td></tr><tr><td>detail_finish</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>typography</td><td>37.500</td><td>0.15</td><td>5.625</td></tr><tr><td>visual_impact_originality</td><td>48.750</td><td>0.3</td><td>14.625</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="yes" data-status="severe">
+  <header>
+    <div>
+      <h2>t40_4_14_0_071239b7aa</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T40_4_14.0.html</p>
+    </div>
+    <div class="score"><b>5.001</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T40_4_14.0.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t40_4_14_0_071239b7aa.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t40_4_14_0_071239b7aa/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t40_4_14_0_071239b7aa/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ bad">occlusion: yes · severe · text_graphic</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于空热量记录玩具工具类型；可见证据是单张白卡、一个目标输入、一个食物下拉、一个数量输入、蓝色添加按钮、空记录提示和大片空白下半屏，绿色进度条为空；未进更高档因为整体只是一个默认控件组的空表单，没有重复模块、视觉系统或品牌语言，符合 v27 空热量日志归入最低档的硬性覆盖。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>8.750</td><td>0.05</td><td>0.438</td></tr><tr><td>color_material</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>composition_hierarchy</td><td>5.000</td><td>0.2</td><td>1.000</td></tr><tr><td>detail_finish</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>typography</td><td>2.500</td><td>0.15</td><td>0.375</td></tr><tr><td>visual_impact_originality</td><td>6.250</td><td>0.3</td><td>1.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td>text_graphic</td><td>severe</td><td>text over image/icon</td><td>typography, composition_hierarchy, detail_finish, basic_usability</td><td>命中 [0,10) 档：属于空热量记录玩具工具类型；可见证据是单张白卡、一个目标输入、一个食物下拉、一个数量输入、蓝色添加按钮、空记录提示和大片空白下半屏，绿色进度条为空；未进更高档因为整体只是一个默认控件组的空表单，没有重复模块、视觉系统或品牌语言，符合 v27 空热量日志归入最低档的硬性覆盖。</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t49_2_14_7_fd65c58d7b</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T49_2_14.7.html</p>
+    </div>
+    <div class="score"><b>4.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T49_2_14.7.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t49_2_14_7_fd65c58d7b.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_2_14_7_fd65c58d7b/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_2_14_7_fd65c58d7b/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于近乎空白的练习级单按钮工具页。可见证据是仅有一个紫色圆角标题栏、一个绿色 Add Section 按钮，下方大面积空白，没有任何卡片、列表或内容结构，系统字体、默认控件、毫无视觉系统。未进 [10,20) 因为缺少多控件、列表行或稳定页面结构，状态丰富度不足，属于典型 bare one-card 工具。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>8.750</td><td>0.05</td><td>0.438</td></tr><tr><td>color_material</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>composition_hierarchy</td><td>6.250</td><td>0.2</td><td>1.250</td></tr><tr><td>detail_finish</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>typography</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>visual_impact_originality</td><td>6.250</td><td>0.3</td><td>1.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t49_3_58_4_1170b1c389</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T49_3_58.4.html</p>
+    </div>
+    <div class="score"><b>44.877</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/T49_3_58.4.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t49_3_58_4_1170b1c389.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_3_58_4_1170b1c389/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_3_58_4_1170b1c389/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于三栏课堂笔记/编辑工作区类型；可见证据是左侧分类侧栏带计数、中间笔记卡片网格含彩色标签与时间戳、右侧编辑面板含标题/内容/标签/保存删除按钮，紫色主色和卡片高亮选中状态克制统一；未进 [50,60) 因控件与排版仍为常见模板语言，缺少更成熟的品牌或状态层次。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>48.750</td><td>0.05</td><td>2.438</td></tr><tr><td>color_material</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>composition_hierarchy</td><td>46.250</td><td>0.2</td><td>9.250</td></tr><tr><td>detail_finish</td><td>41.250</td><td>0.15</td><td>6.188</td></tr><tr><td>typography</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>visual_impact_originality</td><td>46.250</td><td>0.3</td><td>13.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t49_6_57_8_cfeab1270a</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T49_6_57.8.html</p>
+    </div>
+    <div class="score"><b>55.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/T49_6_57.8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t49_6_57_8_cfeab1270a.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_6_57_8_cfeab1270a/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_6_57_8_cfeab1270a/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于深色三栏笔记工作区类型；可见证据是左侧分类侧栏带计数、中部六张笔记卡片配标签和日期、右侧编辑面板含标题分类标签内容字段，橙色主按钮与点状状态色一致，间距整齐；未进 [60,70) 因组件语言仍是常见笔记模板，缺乏更具辨识度的品牌与材质细节。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>60.000</td><td>0.05</td><td>3.000</td></tr><tr><td>color_material</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>composition_hierarchy</td><td>57.500</td><td>0.2</td><td>11.500</td></tr><tr><td>detail_finish</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>typography</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>visual_impact_originality</td><td>57.500</td><td>0.3</td><td>17.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t50_2_32_8_ad74f2b6e4</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T50_2_32.8.html</p>
+    </div>
+    <div class="score"><b>25.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T50_2_32.8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t50_2_32_8_ad74f2b6e4.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t50_2_32_8_ad74f2b6e4/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t50_2_32_8_ad74f2b6e4/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [20,30) 档：属于通用结账表单原型；可见证据是深灰顶栏标题、四步进度条、订单摘要小表格、付款字段（持卡人、卡号、有效期、CVV）与黑色 Place Order 按钮，整体为默认控件、无品牌图像、无奢华质感；未进 [30,40) 因视觉语言极其模板化、留白与下划线输入仅是基础 HTML 风格，缺少产品图、品牌细节与配色层次。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>30.000</td><td>0.05</td><td>1.500</td></tr><tr><td>color_material</td><td>30.000</td><td>0.15</td><td>4.500</td></tr><tr><td>composition_hierarchy</td><td>27.500</td><td>0.2</td><td>5.500</td></tr><tr><td>detail_finish</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>typography</td><td>20.000</td><td>0.15</td><td>3.000</td></tr><tr><td>visual_impact_originality</td><td>27.500</td><td>0.3</td><td>8.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t50_6_61_7_3d2e9d7d6e</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T50_6_61.7.html</p>
+    </div>
+    <div class="score"><b>54.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/T50_6_61.7.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t50_6_61_7_3d2e9d7d6e.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t50_6_61_7_3d2e9d7d6e/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t50_6_61_7_3d2e9d7d6e/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于深色金调奢侈品结算页类型；可见证据是 AURUM 品牌标识、四步进度指示器、整齐表单分组、右侧订单摘要含三件商品与小计/税费/合计、金色主CTA与安全结账标识，黑金配色统一、间距克制；未进 [60,70) 档因为组件语言仍是常见结算模板，缺乏更独特的品牌材质、图像或视觉记忆点。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>58.750</td><td>0.05</td><td>2.938</td></tr><tr><td>color_material</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>composition_hierarchy</td><td>56.250</td><td>0.2</td><td>11.250</td></tr><tr><td>detail_finish</td><td>47.500</td><td>0.15</td><td>7.125</td></tr><tr><td>typography</td><td>52.500</td><td>0.15</td><td>7.875</td></tr><tr><td>visual_impact_originality</td><td>56.250</td><td>0.3</td><td>16.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t51_2_9_7_0574c42496</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T51_2_9.7.html</p>
+    </div>
+    <div class="score"><b>4.814</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T51_2_9.7.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t51_2_9_7_0574c42496.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t51_2_9_7_0574c42496/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t51_2_9_7_0574c42496/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于纯文本体育资讯门户类型；可见证据是深色顶栏配三个导航文字、巨大灰白空白区域中仅有居中标题、下方白卡里只有两条新闻短句与即将开始的比分表头，没有任何图片、图标或视觉系统；未进 [10,20) 是因为整页主要由系统字体与默认分割线构成，控件与内容极度稀薄，比 low template 还要空。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>8.750</td><td>0.05</td><td>0.438</td></tr><tr><td>color_material</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>composition_hierarchy</td><td>5.000</td><td>0.2</td><td>1.000</td></tr><tr><td>detail_finish</td><td>1.250</td><td>0.15</td><td>0.188</td></tr><tr><td>typography</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>visual_impact_originality</td><td>6.250</td><td>0.3</td><td>1.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t53_1_23_2_28f1e4ce67</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T53_1_23.2.html</p>
+    </div>
+    <div class="score"><b>14.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T53_1_23.2.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t53_1_23_2_28f1e4ce67.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t53_1_23_2_28f1e4ce67/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t53_1_23_2_28f1e4ce67/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于低质量模板型待办/清单工具；可见证据是默认下拉选择、纯文本输入框、单一蓝色添加按钮、四个灰底筛选胶囊和一个空状态条，整页大量留白、默认控件、无主题语言；未进 [20,30) 因为没有彩色渐变或玻璃质感的刻意视觉处理，工作流也只是一行表单加空列表，视觉密度与完成度均不足。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>16.250</td><td>0.2</td><td>3.250</td></tr><tr><td>detail_finish</td><td>7.500</td><td>0.15</td><td>1.125</td></tr><tr><td>typography</td><td>12.500</td><td>0.15</td><td>1.875</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t53_2_24_1_541b0f7612</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T53_2_24.1.html</p>
+    </div>
+    <div class="score"><b>14.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B10%2C20%29/T53_2_24.1.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t53_2_24_1_541b0f7612.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t53_2_24_1_541b0f7612/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t53_2_24_1_541b0f7612/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于低质量模板型旅行打包清单工具；可见证据是绿色顶栏加四组重复分类条、默认输入框与绿色添加按钮，无任何列表内容，下方大面积留白，视觉语言全为默认控件；未进 [20,30) 因为缺少完整工作流与状态呈现，只是重复四次同一表单单元，主题化与组件深度都不足。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>18.750</td><td>0.05</td><td>0.938</td></tr><tr><td>color_material</td><td>18.750</td><td>0.15</td><td>2.813</td></tr><tr><td>composition_hierarchy</td><td>16.250</td><td>0.2</td><td>3.250</td></tr><tr><td>detail_finish</td><td>7.500</td><td>0.15</td><td>1.125</td></tr><tr><td>typography</td><td>12.500</td><td>0.15</td><td>1.875</td></tr><tr><td>visual_impact_originality</td><td>16.250</td><td>0.3</td><td>4.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t55_1_37_2_12030ad045</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T55_1_37.2.html</p>
+    </div>
+    <div class="score"><b>15.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T55_1_37.2.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t55_1_37_2_12030ad045.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t55_1_37_2_12030ad045/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t55_1_37_2_12030ad045/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于会议纪要整理表单工具类型；可见证据是纯默认灰白底、居中标题、四个默认输入/文本域、一个蓝色生成按钮加一个绿色复制按钮，下方大片空白，无任何品牌或视觉系统；未进 [20,30) 档因为字段数量虽多但全部默认控件，缺少卡片化分组、状态层级或可见工作流深度，仅是低质量模板表单。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>20.000</td><td>0.05</td><td>1.000</td></tr><tr><td>color_material</td><td>20.000</td><td>0.15</td><td>3.000</td></tr><tr><td>composition_hierarchy</td><td>17.500</td><td>0.2</td><td>3.500</td></tr><tr><td>detail_finish</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>typography</td><td>10.000</td><td>0.15</td><td>1.500</td></tr><tr><td>visual_impact_originality</td><td>17.500</td><td>0.3</td><td>5.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t55_3_45_2_def169ca74</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T55_3_45.2.html</p>
+    </div>
+    <div class="score"><b>35.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B30%2C40%29/T55_3_45.2.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t55_3_45_2_def169ca74.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t55_3_45_2_def169ca74/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t55_3_45_2_def169ca74/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [30,40) 档：属于会议纪要整理类的多卡片工具页；可见证据是蓝色渐变顶栏配标题副标题，四张白色卡片分别承载主题、参会人、讨论要点、待办事项，每卡含输入框、蓝色添加按钮、计数与空状态，底部紫蓝生成按钮，工作流组织清晰；未进 [40,50) 因控件、配色、emoji 图标均为默认模板语言，缺乏品牌识别与质感细节。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>40.000</td><td>0.05</td><td>2.000</td></tr><tr><td>color_material</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>composition_hierarchy</td><td>37.500</td><td>0.2</td><td>7.500</td></tr><tr><td>detail_finish</td><td>28.750</td><td>0.15</td><td>4.313</td></tr><tr><td>typography</td><td>30.000</td><td>0.15</td><td>4.500</td></tr><tr><td>visual_impact_originality</td><td>37.500</td><td>0.3</td><td>11.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t58_1_46_5_eb03940e08</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T58_1_46.5.html</p>
+    </div>
+    <div class="score"><b>35.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B30%2C40%29/T58_1_46.5.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t58_1_46_5_eb03940e08.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_1_46_5_eb03940e08/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_1_46_5_eb03940e08/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [30,40) 档：属于通用科研/社区服务型 landing 页面，蓝色顶栏、居中标题与副文案、单一蓝色 CTA、下方平台特色三张蓝色卡片配 emoji 图标。可见证据为常见图库照片做 hero、字体与按钮均为默认、卡片视觉语言通用且无品牌细节。未进 [40,50) 档因为缺乏更成熟的版式节奏、专属图像处理或品牌系统，整体仍是模板化普通产品页。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>40.000</td><td>0.05</td><td>2.000</td></tr><tr><td>color_material</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>composition_hierarchy</td><td>37.500</td><td>0.2</td><td>7.500</td></tr><tr><td>detail_finish</td><td>28.750</td><td>0.15</td><td>4.313</td></tr><tr><td>typography</td><td>30.000</td><td>0.15</td><td>4.500</td></tr><tr><td>visual_impact_originality</td><td>37.500</td><td>0.3</td><td>11.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t58_3_62_8_8cad66bf32</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T58_3_62.8.html</p>
+    </div>
+    <div class="score"><b>54.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/T58_3_62.8.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t58_3_62_8_8cad66bf32.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_3_62_8_8cad66bf32/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_3_62_8_8cad66bf32/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于科研协作社区门户类型；可见证据是深蓝渐变 hero、清晰品牌 logo、搜索条、12/10/8 统计、学科分类胶囊、想法列表卡片与右侧发布表单两栏布局，层级与间距成熟；未进 [60,70) 因为视觉语言仍是常见蓝色社区模板，缺乏更鲜明的品牌资产与差异化材质细节。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>58.750</td><td>0.05</td><td>2.938</td></tr><tr><td>color_material</td><td>58.750</td><td>0.15</td><td>8.813</td></tr><tr><td>composition_hierarchy</td><td>56.250</td><td>0.2</td><td>11.250</td></tr><tr><td>detail_finish</td><td>47.500</td><td>0.15</td><td>7.125</td></tr><tr><td>typography</td><td>52.500</td><td>0.15</td><td>7.875</td></tr><tr><td>visual_impact_originality</td><td>56.250</td><td>0.3</td><td>16.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t58_5_61_4_33d3b16bfd</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T58_5_61.4.html</p>
+    </div>
+    <div class="score"><b>55.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/T58_5_61.4.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t58_5_61_4_33d3b16bfd.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_5_61_4_33d3b16bfd/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_5_61_4_33d3b16bfd/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [50,60) 档：属于科研协作社区门户类型；可见证据是紫蓝渐变顶栏、居中标题与双 CTA、四个统计卡片、左侧研究领域筛选列表、中部发布想法表单、右侧推荐科学家关注模块，组件语言整齐统一；未进更高档因为整体仍是常规社区门户模板，缺少独特品牌系统与更成熟的图像/材质表达。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>60.000</td><td>0.05</td><td>3.000</td></tr><tr><td>color_material</td><td>60.000</td><td>0.15</td><td>9.000</td></tr><tr><td>composition_hierarchy</td><td>57.500</td><td>0.2</td><td>11.500</td></tr><tr><td>detail_finish</td><td>48.750</td><td>0.15</td><td>7.313</td></tr><tr><td>typography</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>visual_impact_originality</td><td>57.500</td><td>0.3</td><td>17.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="yes" data-status="severe">
+  <header>
+    <div>
+      <h2>t63_2_35_0_220ef8bf05</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T63_2_35.0.html</p>
+    </div>
+    <div class="score"><b>14.438</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B20%2C30%29/T63_2_35.0.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t63_2_35_0_220ef8bf05.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t63_2_35_0_220ef8bf05/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t63_2_35_0_220ef8bf05/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ bad">occlusion: yes · severe · control_nav</div>
+      <p class="rationale">desktop: 命中 [10,20) 档：属于慢病管理低质模板类型；可见证据是绿色默认头部、深灰导航条、两张白色默认表单卡片（症状/用药输入与默认日期时间控件）、绿色按钮和被页脚遮挡的教育资源标题；未进更高档因为整体仍是默认控件堆叠，视觉语言通用，缺乏主题化组件与产品深度，且存在底部页脚压住标题的轻度遮挡。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>12.500</td><td>0.05</td><td>0.625</td></tr><tr><td>color_material</td><td>20.000</td><td>0.15</td><td>3.000</td></tr><tr><td>composition_hierarchy</td><td>13.750</td><td>0.2</td><td>2.750</td></tr><tr><td>detail_finish</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>typography</td><td>10.000</td><td>0.15</td><td>1.500</td></tr><tr><td>visual_impact_originality</td><td>17.500</td><td>0.3</td><td>5.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td>control_nav</td><td>severe</td><td>interactive control</td><td>basic_usability, composition_hierarchy, detail_finish</td><td>命中 [10,20) 档：属于慢病管理低质模板类型；可见证据是绿色默认头部、深灰导航条、两张白色默认表单卡片（症状/用药输入与默认日期时间控件）、绿色按钮和被页脚遮挡的教育资源标题；未进更高档因为整体仍是默认控件堆叠，视觉语言通用，缺乏主题化组件与产品深度，且存在底部页脚压住标题的轻度遮挡。</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t63_6_62_5_41b232c8cd</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T63_6_62.5.html</p>
+    </div>
+    <div class="score"><b>64.876</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B50%2C60%29/T63_6_62.5.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t63_6_62_5_41b232c8cd.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t63_6_62_5_41b232c8cd/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t63_6_62_5_41b232c8cd/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [60,70) 档：属于深色健康管理仪表盘类型；可见证据是顶部导航清晰、四个KPI卡片配薄荷绿强调、症状追踪进度条带轻度/中度/良好分级配色、用药列表带状态标签和左侧色条、悬浮加号按钮，整体间距与层级成熟；未进 [70,80) 因为组件语言仍是常见仪表盘模板，缺乏更具辨识度的品牌系统与独特视觉资产。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>68.750</td><td>0.05</td><td>3.438</td></tr><tr><td>color_material</td><td>68.750</td><td>0.15</td><td>10.313</td></tr><tr><td>composition_hierarchy</td><td>66.250</td><td>0.2</td><td>13.250</td></tr><tr><td>detail_finish</td><td>57.500</td><td>0.15</td><td>8.625</td></tr><tr><td>typography</td><td>62.500</td><td>0.15</td><td>9.375</td></tr><tr><td>visual_impact_originality</td><td>66.250</td><td>0.3</td><td>19.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t65_3_16_9_a36697e5ba</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T65_3_16.9.html</p>
+    </div>
+    <div class="score"><b>5.064</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T65_3_16.9.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t65_3_16_9_a36697e5ba.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t65_3_16_9_a36697e5ba/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t65_3_16_9_a36697e5ba/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于近乎空白的吃药提醒玩具型工具页。可见证据是顶部一个小标题加 emoji，中间一个药丸 emoji 与两行灰色空状态文案，底部一个蓝色添加按钮，整页大量留白，无任何列表、卡片、表单或控件系统。未进 [10,20) 档因为缺少多控件、过滤、列表行或稳定页头等模板结构，视觉层级与状态丰富度都达不到低质量模板的下限。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>8.750</td><td>0.05</td><td>0.438</td></tr><tr><td>color_material</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>composition_hierarchy</td><td>6.250</td><td>0.2</td><td>1.250</td></tr><tr><td>detail_finish</td><td>1.250</td><td>0.15</td><td>0.188</td></tr><tr><td>typography</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>visual_impact_originality</td><td>6.250</td><td>0.3</td><td>1.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t65_4_17_0_5192c878f3</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T65_4_17.0.html</p>
+    </div>
+    <div class="score"><b>5.064</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B0%2C10%29/T65_4_17.0.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t65_4_17_0_5192c878f3.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t65_4_17_0_5192c878f3/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t65_4_17_0_5192c878f3/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [0,10) 档：属于空药品提醒表单玩具类型；可见证据是紫色色块标题、三个默认输入控件、一个紫色添加按钮和&#x27;暂无药品&#x27;空列表，下方大片留白；未进 [10,20) 因为整体只是一张默认表单卡片，控件全为系统样式，无筛选、无分类、无状态设计，视觉系统极薄。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>8.750</td><td>0.05</td><td>0.438</td></tr><tr><td>color_material</td><td>8.750</td><td>0.15</td><td>1.313</td></tr><tr><td>composition_hierarchy</td><td>6.250</td><td>0.2</td><td>1.250</td></tr><tr><td>detail_finish</td><td>1.250</td><td>0.15</td><td>0.188</td></tr><tr><td>typography</td><td>0.000</td><td>0.15</td><td>0.000</td></tr><tr><td>visual_impact_originality</td><td>6.250</td><td>0.3</td><td>1.875</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+
+
+<article class="card" data-occlusion="no" data-status="none">
+  <header>
+    <div>
+      <h2>t68_5_59_2_bc68b82896</h2>
+      <p>/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T68_5_59.2.html</p>
+    </div>
+    <div class="score"><b>45.563</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%9F%BA%E5%87%86%E9%9B%86-bobo%20%E7%A1%AE%E8%AE%A4%E7%89%88/%5B40%2C50%29/T68_5_59.2.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t68_5_59_2_bc68b82896.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t68_5_59_2_bc68b82896/desktop.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t68_5_59_2_bc68b82896/desktop.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ ok">occlusion: no · none · none</div>
+      <p class="rationale">desktop: 命中 [40,50) 档：属于紫色渐变玻璃质感倒计时小工具；可见证据是居中标题、毛玻璃主卡片中大号29天数字、日期副文、两条事件列表行与底部白色添加按钮，色彩与材质统一克制；未进更高档因为组件语言仍是常见单卡+列表，缺少更丰富的状态、品牌或视觉系统深度。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>50.000</td><td>0.05</td><td>2.500</td></tr><tr><td>color_material</td><td>50.000</td><td>0.15</td><td>7.500</td></tr><tr><td>composition_hierarchy</td><td>47.500</td><td>0.2</td><td>9.500</td></tr><tr><td>detail_finish</td><td>38.750</td><td>0.15</td><td>5.813</td></tr><tr><td>typography</td><td>40.000</td><td>0.15</td><td>6.000</td></tr><tr><td>visual_impact_originality</td><td>47.500</td><td>0.3</td><td>14.250</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td colspan="5">none</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+</main>
+</body>
+</html>

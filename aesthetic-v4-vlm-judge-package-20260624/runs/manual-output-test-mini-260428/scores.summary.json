@@ -1,0 +1,26 @@
+{
+  "anchors": 0,
+  "avg_record_seconds": 1.102,
+  "avg_scored_view_seconds": null,
+  "backend": "command",
+  "elapsed_seconds": 1.102,
+  "finished_at": "2026-07-02T08:42:20.203116+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "..\\runs\\manual-output-test-mini-260428\\scores.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records": 1,
+  "scored": 0,
+  "scored_viewport_counts": {},
+  "started_at": "2026-07-02T08:42:19.101359+00:00",
+  "target_viewport_counts": {
+    "image": 1
+  },
+  "viewport_selection": "auto",
+  "workers": 1
+}

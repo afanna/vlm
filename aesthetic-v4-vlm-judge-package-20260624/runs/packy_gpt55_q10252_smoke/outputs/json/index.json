@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "record_count": 1,
+  "records": [
+    {
+      "id": "q10252_6843fa8cde",
+      "qid": "q10252",
+      "html_path": "/Volumes/TU820/aesthetic/快思考3500/q10252.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10252_smoke/outputs/json/q10252.json",
+      "score": {
+        "score_100": 48.751,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 56.25,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 55.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.25
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 45.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 43.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.563
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 53.75,
+            "weight": 0.3,
+            "weighted_contribution_100": 16.125
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10252_smoke/screenshots/q10252_6843fa8cde/mobile.png"
+      ]
+    }
+  ]
+}

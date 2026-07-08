@@ -1,0 +1,28 @@
+{
+  "anchors": 0,
+  "avg_record_seconds": 0.007,
+  "avg_scored_view_seconds": 0.0,
+  "backend": "mock",
+  "elapsed_seconds": 0.007,
+  "finished_at": "2026-06-29T19:16:37.624026+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "../runs/final_mock_validation_default_aesthetic_v4/scores.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records": 1,
+  "scored": 1,
+  "scored_viewport_counts": {
+    "mobile": 1
+  },
+  "started_at": "2026-06-29T19:16:37.616834+00:00",
+  "target_viewport_counts": {
+    "mobile": 1
+  },
+  "viewport_selection": "auto",
+  "workers": 1
+}

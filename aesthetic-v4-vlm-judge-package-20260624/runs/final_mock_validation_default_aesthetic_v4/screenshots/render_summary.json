@@ -1,0 +1,9 @@
+{
+  "out": "../runs/final_mock_validation_default_aesthetic_v4/screenshots/render_manifest.jsonl",
+  "records": 1,
+  "ok": 1,
+  "partial": 0,
+  "by_viewport": {
+    "mobile": 1
+  }
+}

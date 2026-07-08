@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خوش قسمتی | 丝路福彩智能分析与生成器</title>
+  
+  <!-- Google Fonts: Noto Nastaliq Urdu & Inter -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@400;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- DESIGN SYSTEM: Urdu Modern (Indus Script System) --- */
+    :root {
+      --bg: #F4F1EA; /* Parchment Warm Background */
+      --surface: #FAFAF8;
+      --surface-warm: #EFECE4;
+      --fg: #1A202C; /* Rich Slate */
+      --fg-2: #4A5568; /* Warm Grey */
+      --muted: #718096;
+      --border: #E2E8F0;
+      --border-soft: #EDF2F7;
+      
+      /* Brand Palette */
+      --color-primary: #0F595E; /* Deep Teal */
+      --color-primary-dark: #0D3F45;
+      --color-accent: #C05621; /* Terracotta / Rust Gold */
+      --color-accent-dark: #A03F1C;
+      --color-accent-light: #E8754A;
+      
+      /* Status Colors */
+      --success: #2D5B4A;
+      --warn: #C05621;
+      --danger: #8B3A3A;
+      
+      /* Ball Colors - 3D Spheres gradient compatible */
+      --ball-red-start: #E53E3E;
+      --ball-red-end: #9B2C2C;
+      --ball-blue-start: #3182CE;
+      --ball-blue-end: #22543D; /* Deep teal blended */
+      --ball-gold-start: #D69E2E;
+      --ball-gold-end: #744210;
+      
+      /* Typography */
+      --font-urdu: "Noto Nastaliq Urdu", "Mehr Nastaliq", "URW Chancery", serif;
+      --font-latin: "Inter", "Segoe UI", sans-serif;
+      
+      /* Spacing Scale */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-xxl: 48px;
+      
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(26, 32, 44, 0.05);
+      --shadow-md: 0 10px 25px rgba(26, 32, 44, 0.08);
+      --shadow-lg: 0 20px 48px rgba(15, 89, 94, 0.12);
+      --focus-ring: 0 0 0 4px rgba(15, 89, 94, 0.25);
+      
+      --motion-base: 240ms cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    /* --- Reset & Base Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-latin);
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.8;
+      direction: rtl;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    /* Target Urdu tags specifically */
+    [lang="ur"] {
+      font-family: var(--font-urdu), serif;
+      line-height: 2.2;
+    }
+
+    /* Focus styling for elements */
+    button:focus-visible, 
+    select:focus-visible, 
+    input:focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    /* --- D2 SINGLE COLUMN NARRATIVE FLOW --- */
+    /* Continuous story flow from Intro -> Config -> Analysis -> Generator -> Records */
+    .narrative-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding-inline: var(--space-md);
+    }
+
+    /* Section defaults */
+    .narrative-section {
+      padding-block: var(--space-xxl);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .narrative-section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* Section Headers */
+    .section-title-wrap {
+      margin-block-end: var(--space-xl);
+      text-align: center;
+    }
+
+    .section-meta {
+      font-size: var(--space-sm);
+      color: var(--color-accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-block-end: var(--space-xs);
+    }
+
+    .section-title {
+      font-family: var(--font-urdu);
+      font-size: 32px;
+      color: var(--color-primary);
+      line-height: 1.4;
+    }
+
+    /* --- Navigation Bar --- */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 241, 234, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: var(--space-lg);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--color-primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .logo-text {
+      font-family: var(--font-urdu);
+      font-size: 20px;
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .nav-controls {
+      display: flex;
+      gap: var(--space-md);
+      align-items: center;
+    }
+
+    .lottery-selector {
+      font-size: 16px;
+      padding: var(--space-sm) var(--space-lg);
+      border: 1.5px solid var(--color-primary);
+      border-radius: var(--radius-pill);
+      background: var(--surface);
+      color: var(--color-primary);
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--motion-base);
+    }
+
+    .lottery-selector:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    /* --- SECTION 1: HERO / INTRO (Visual at bottom) --- */
+    .hero-box {
+      text-align: center;
+      padding-block: var(--space-lg);
+    }
+
+    .hero-title {
+      font-family: var(--font-urdu);
+      font-size: 42px;
+      color: var(--color-primary);
+      line-height: 1.3;
+      margin-block-end: var(--space-md);
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--fg-2);
+      max-width: 600px;
+      margin: 0 auto var(--space-xl) auto;
+    }
+
+    /* Structure Variant: hero=主视觉在底 */
+    .hero-visual-bottom {
+      margin-block-start: var(--space-xl);
+      background: var(--surface-warm);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .simulation-pool {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      margin-block-start: var(--space-lg);
+    }
+
+    /* 3D Ball Styling */
+    .ball-3d {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.4), 
+                  2px 8px 12px rgba(0,0,0,0.15);
+      position: relative;
+      user-select: none;
+      transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .ball-3d::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: 12px;
+      width: 14px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      transform: rotate(-15deg);
+    }
+
+    .ball-3d.red {
+      background: radial-gradient(circle at 35% 35%, var(--ball-red-start), var(--ball-red-end));
+    }
+
+    .ball-3d.blue {
+      background: radial-gradient(circle at 35% 35%, var(--ball-blue-start), var(--ball-blue-end));
+    }
+
+    .ball-3d.gold {
+      background: radial-gradient(circle at 35% 35%, var(--ball-gold-start), var(--ball-gold-end));
+    }
+
+    /* Interactive state for ball */
+    .ball-3d.clickable {
+      cursor: pointer;
+    }
+    .ball-3d.clickable:hover {
+      transform: scale(1.1);
+    }
+    .ball-3d.clickable.selected {
+      transform: scale(1.05) translateY(-4px);
+      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.4), 
+                  0 0 16px var(--color-accent);
+      border: 2px solid #FFF;
+    }
+    .ball-3d.clickable:not(.selected) {
+      filter: grayscale(40%) opacity(80%);
+    }
+
+    /* --- SECTION 2: ANALYSIS & AREA CHART --- */
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .chart-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      border: 1px solid var(--border);
+    }
+
+    .chart-container {
+      width: 100%;
+      height: 280px;
+      position: relative;
+      margin-block-start: var(--space-md);
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .stat-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: var(--space-sm);
+      margin-block-start: var(--space-lg);
+    }
+
+    .stat-box {
+      background: var(--surface-warm);
+      padding: var(--space-md);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .stat-label {
+      font-size: var(--text-xs);
+      color: var(--fg-2);
+      margin-block-end: var(--space-xs);
+    }
+
+    .stat-val {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    /* --- SECTION 3: GENERATOR (Core Play Area) --- */
+    .generator-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .generator-mode-tabs {
+      display: flex;
+      background: var(--surface-warm);
+      padding: 4px;
+      border-radius: var(--radius-pill);
+      margin-block-end: var(--space-xl);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding-block: var(--space-sm);
+      border: none;
+      background: transparent;
+      font-weight: 700;
+      font-size: var(--text-base);
+      color: var(--fg-2);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--motion-base);
+    }
+
+    .tab-btn.active {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    /* Manual Selector Layout */
+    .panel-subtitle {
+      font-family: var(--font-urdu);
+      font-size: 18px;
+      color: var(--color-primary);
+      margin-block-end: var(--space-md);
+      border-inline-start: 4px solid var(--color-accent);
+      padding-inline-start: var(--space-sm);
+    }
+
+    .balls-pool-container {
+      margin-block-end: var(--space-xl);
+    }
+
+    .pool-row {
+      margin-block-end: var(--space-lg);
+    }
+
+    .pool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+      gap: var(--space-sm);
+      margin-block-start: var(--space-sm);
+    }
+
+    /* Interactive control actions */
+    .action-panel {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      margin-block-start: var(--space-xl);
+    }
+
+    .btn-main {
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      background: var(--color-accent);
+      border: none;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--motion-base);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      box-shadow: 0 4px 12px rgba(192, 86, 33, 0.3);
+    }
+
+    .btn-main:hover {
+      background: var(--color-accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-main:active {
+      transform: translateY(1px);
+    }
+
+    .btn-secondary {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: transparent;
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: var(--motion-base);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15, 89, 94, 0.08);
+    }
+
+    .multi-select-wrap {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      background: var(--surface-warm);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-pill);
+    }
+
+    .multi-select-wrap select {
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-primary);
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Live Output styling */
+    .live-render-card {
+      background: var(--surface-warm);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-block-start: var(--space-lg);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    /* Multi注 render layout */
+    .multi-ticket-display {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      margin-block-start: var(--space-md);
+    }
+
+    .ticket-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .ticket-balls {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .ticket-balls .ball-3d {
+      width: 38px;
+      height: 38px;
+      font-size: 14px;
+    }
+
+    /* --- SECTION 4: RECORDS / COLLECTION --- */
+    /* Structure Variant: collection=紧凑列表 */
+    .records-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-block-end: var(--space-lg);
+    }
+
+    .records-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+      max-height: 400px;
+      overflow-y: auto;
+      padding-inline-end: 4px;
+    }
+
+    .record-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: var(--space-md);
+      border-radius: var(--radius-sm);
+      transition: var(--motion-base);
+    }
+
+    .record-item:hover {
+      border-color: var(--color-primary);
+    }
+
+    .record-meta-info {
+      text-align: right;
+    }
+
+    .record-tag {
+      font-size: 11px;
+      background: var(--color-primary);
+      color: white;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      display: inline-block;
+      margin-block-end: var(--space-xs);
+    }
+
+    .record-time {
+      font-size: 12px;
+      color: var(--muted);
+      display: block;
+    }
+
+    .btn-delete {
+      background: transparent;
+      border: none;
+      color: var(--danger);
+      font-weight: 700;
+      cursor: pointer;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-delete:hover {
+      background: rgba(139, 58, 58, 0.1);
+    }
+
+    /* --- RESPONSIVE ADAPTATIONS --- */
+    @media (min-width: 640px) {
+      .top-nav {
+        padding-inline: var(--space-xl);
+      }
+      .action-panel {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .action-panel-right {
+        display: flex;
+        gap: var(--space-md);
+        align-items: center;
+      }
+      .hero-title {
+        font-size: 54px;
+      }
+      .section-title {
+        font-size: 40px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .analysis-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+      .top-nav {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+      }
+    }
+
+    /* Custom horizontal scroll for overflow data table if present */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-block-start: var(--space-md);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      text-align: right;
+    }
+
+    th, td {
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--surface-warm);
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    /* Custom Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: var(--space-lg);
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--color-primary-dark);
+      color: white;
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="logo-area">
+      <div class="logo-icon">قسمت</div>
+      <div class="logo-text" lang="ur">خوش قسمتی</div>
+    </div>
+    
+    <div class="nav-controls">
+      <!-- Selective responsive switch -->
+      <label for="lottery-type-nav" class="sr-only" style="display:none;">انتخاب کریں</label>
+      <select id="lottery-type-nav" class="lottery-selector" aria-label="انتخاب کریں">
+        <option value="ssq">双色球 (ڈبل بال)</option>
+        <option value="dlt">大乐透 (سپر لوٹو)</option>
+        <option value="qxc">七星彩 (سیون سٹار)</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Narrative flow container -->
+  <main class="narrative-container">
+
+    <!-- SECTION 1: HERO (Intro & Master Visual) -->
+    <section class="narrative-section hero-box" id="sec-intro">
+      <div class="section-meta">خوش آمدید</div>
+      <h1 class="hero-title" lang="ur">ریشم روڈ لاٹری اور ڈیٹا سمیلیٹر</h1>
+      <p class="hero-subtitle">
+        欢迎来到“丝路福彩”智能大数据预测系统。结合中巴友谊之声，以学术级随机碰撞算法、高纬冷热号码概率面积分析，助您在传统与科学的碰撞中捕获幸运星。
+      </p>
+
+      <!-- Visual at bottom variant -->
+      <div class="hero-visual-bottom">
+        <h3 lang="ur" style="font-family: var(--font-urdu); color: var(--color-primary); font-size: 20px;">
+          رولنگ بال اینیمیشن سمیلیٹر • 实时搅珠模拟
+        </h3>
+        <p style="font-size: 13px; color: var(--fg-2); margin-block-end: var(--space-md);">
+          高维粒子态仿真碰撞池（演示动态粒子分布）
+        </p>
+        <div class="simulation-pool" id="rolling-pool-view">
+          <!-- Populated by JS dynamic preview -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STATS & AREA CHART -->
+    <section class="narrative-section" id="sec-analysis">
+      <div class="section-title-wrap">
+        <div class="section-meta" lang="ur">ڈیٹا کا تجزیہ</div>
+        <h2 class="section-title">صحرائے چولستان کی حرارتی تعدد • 核心冷热号频率</h2>
+      </div>
+
+      <div class="analysis-grid">
+        <!-- Area Chart card -->
+        <div class="chart-card">
+          <h3 lang="ur" style="color: var(--color-primary); font-family: var(--font-urdu); font-size: 18px; margin-block-end: var(--space-sm);">
+            حالیہ تعدد کا رقبہ چارٹ • 号码出现频次分布面积图
+          </h3>
+          <p style="font-size: 13px; color: var(--muted); margin-block-end: var(--space-md);">
+            根据历史100期模拟摇奖数据，进行高斯分布概率密度面积描绘（实时自适应）。
+          </p>
+          <div class="chart-container">
+            <canvas id="analysisAreaChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Hot/Cold indicators -->
+        <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+          <div class="stat-box">
+            <div class="stat-label">🔥 绝对热号 (Hot Numbers)</div>
+            <div class="stat-val" id="hot-numbers-display">-</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">❄️ 极度冷号 (Cold Numbers)</div>
+            <div class="stat-val" id="cold-numbers-display">-</div>
+          </div>
+          <div class="stat-box" style="border-inline-start: 4px solid var(--color-accent);">
+            <div class="stat-label">📊 模拟开奖总期数</div>
+            <div class="stat-val" style="color: var(--color-accent);">500 期</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live simulated breakdown table -->
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>奖种 (ٹائپ)</th>
+              <th>最频出红球 (گرم سرخ)</th>
+              <th>最频出蓝球 (گرم نیلا)</th>
+              <th>遗漏值极值 (زیادہ سے زیادہ یاد کرنا)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>双色球 (SSQ)</td>
+              <td>08, 16, 23</td>
+              <td>07, 12</td>
+              <td>14期未出 (29号)</td>
+            </tr>
+            <tr>
+              <td>大乐透 (DLT)</td>
+              <td>05, 11, 28</td>
+              <td>06, 09</td>
+              <td>18期未出 (32号)</td>
+            </tr>
+            <tr>
+              <td>七星彩 (QXC)</td>
+              <td>2, 5 (第3位)</td>
+              <td>9 (第7位)</td>
+              <td>21期未出 (数字4)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 3: GENERATOR (Interactive Area) -->
+    <section class="narrative-section" id="sec-generator">
+      <div class="section-title-wrap">
+        <div class="section-meta" lang="ur">رینڈمائزیشن اور مینوئل چائس</div>
+        <h2 class="section-title">نمبروں کی ترتیب • 选号控制台</h2>
+      </div>
+
+      <div class="generator-card">
+        <!-- Selector modes tabs -->
+        <div class="generator-mode-tabs">
+          <button class="tab-btn active" id="tab-auto" onclick="switchMode('auto')">一键智能生成 (رینڈمائز)</button>
+          <button class="tab-btn" id="tab-manual" onclick="switchMode('manual')">手动大师心水 (مینوئل)</button>
+        </div>
+
+        <!-- Manual Mode Block (Hidden inside auto by default, handled by state) -->
+        <div id="manual-selection-panel" style="display: none;">
+          <h4 class="panel-subtitle" lang="ur">پینل پر کلک کریں • 点击下方号球进行极客级心水挑选</h4>
+          
+          <div class="balls-pool-container" id="interactive-pools-container">
+            <!-- Populated dynamically based on lottery selection (ssq, dlt, qxc) -->
+          </div>
+        </div>
+
+        <!-- Automatic Mode Configuration -->
+        <div id="auto-selection-panel">
+          <div class="live-render-card">
+            <h4 lang="ur" style="color: var(--color-primary); font-family: var(--font-urdu); font-size: 16px;">
+              ایک نل کے ساتھ قسمت پیدا کریں • 批量组合设定
+            </h4>
+            <div style="display:flex; justify-content: center; gap: var(--space-md); margin-block-start: var(--space-sm); flex-wrap:wrap;">
+              <div class="multi-select-wrap">
+                <label for="select-notes" style="font-size:14px; color:var(--fg-2);">生成注数：</label>
+                <select id="select-notes">
+                  <option value="1">1 注 (واحد)</option>
+                  <option value="5" selected>5 注 (پنجگانہ)</option>
+                  <option value="10">10 注 (دس چوٹیں)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live generation panel actions -->
+        <div class="action-panel">
+          <button class="btn-main" id="trigger-btn" onclick="executeGeneration()">
+            <span>✨ 开启丝路神谕 (ابھی بنائیں)</span>
+          </button>
+          
+          <div class="action-panel-right">
+            <button class="btn-secondary" id="save-selected-btn" onclick="saveCurrentToLocal()" style="display:none;">
+              💾 保存当前精选号码
+            </button>
+          </div>
+        </div>
+
+        <!-- Results Presenter (Dynamic) -->
+        <div class="live-render-card" style="margin-block-start: var(--space-xl);">
+          <h3 lang="ur" style="color: var(--color-accent); font-family: var(--font-urdu); font-size: 18px; margin-block-end: var(--space-md);">
+            نتیجہ • 当前神谕指引
+          </h3>
+          <div class="multi-ticket-display" id="generated-outputs-wrapper">
+            <!-- Active output rows populated dynamically -->
+            <p style="color: var(--muted); font-size:14px;">等待神谕开启...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: HISTORIC ARCHIVE (Collection Layout) -->
+    <section class="narrative-section" id="sec-history">
+      <div class="records-header">
+        <div>
+          <h2 class="section-title" lang="ur" style="font-size:24px;">خزانہ • 历次神谕存档</h2>
+          <p style="font-size: 13px; color: var(--fg-2);">本地持久保存的神谕记录，随时回溯对照。</p>
+        </div>
+        <button class="btn-delete" onclick="clearAllRecords()" style="font-size: 14px;">⚡ 清空全部档案</button>
+      </div>
+
+      <div class="records-list" id="local-records-container">
+        <!-- Records list populated from LocalStorage -->
+        <p style="text-align: center; color: var(--muted); padding-block: var(--space-lg);">暂无本地存档号码球</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Toast notification -->
+  <div class="toast" id="toast">اطلاع</div>
+
+  <!-- Footnotes Check -->
+  <!-- modules: 彩票类型切换✓ 一键随机生成号码组合✓ 多注批量生成✓ 号码球彩色立体展示✓ 手动选号交互✓ 历史开奖数据统计图表✓ 冷热号频率分析✓ 本地生成记录保存与历史面板✓ 自适应PC与移动端布局✓ 深红金色彩票主题UI与动效✓ -->
+
+  <script>
+    // --- Global Configurations & State ---
+    const LOTTERY_CONFIGS = {
+      ssq: {
+        name: "双色球",
+        urduName: "ڈبل بال",
+        redMax: 33,
+        redSelect: 6,
+        blueMax: 16,
+        blueSelect: 1,
+        hasBlue: true,
+        blueLabel: "蓝球",
+        redLabel: "红球"
+      },
+      dlt: {
+        name: "大乐透",
+        urduName: "سپر لوٹو",
+        redMax: 35,
+        redSelect: 5,
+        blueMax: 12,
+        blueSelect: 2,
+        hasBlue: true,
+        blueLabel: "后区",
+        redLabel: "前区"
+      },
+      qxc: {
+        name: "七星彩",
+        urduName: "سیون سٹار",
+        // Seven Star is digit-based (0-9 for first 6 digits, 0-14 for the last)
+        isSpecial: true,
+        digits: [10, 10, 10, 10, 10, 10, 15],
+        labels: ["一", "二", "三", "四", "五", "六", "特别"]
+      }
+    };
+
+    let currentState = {
+      activeType: 'ssq', // ssq | dlt | qxc
+      playMode: 'auto', // auto | manual
+      manualSelection: {
+        reds: [], // Also used for QXC digits array
+        blues: []
+      },
+      generatedTickets: [], // List of current active tickets
+      mockFrequencies: {}, // Populated with mock statistical data for chart
+      localHistory: [] // LocalStorage mirror
+    };
+
+    // --- Native Canvas Chart Controller ---
+    class AreaChart {
+      constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
+        this.dpr = window.devicePixelRatio || 1;
+        this.resizeHandler = this.resize.bind(this);
+        window.addEventListener('resize', this.resizeHandler);
+      }
+
+      destroy() {
+        window.removeEventListener('resize', this.resizeHandler);
+      }
+
+      resize() {
+        const rect = this.canvas.parentElement.getBoundingClientRect();
+        this.canvas.width = rect.width * this.dpr;
+        this.canvas.height = rect.height * this.dpr;
+        this.ctx.scale(this.dpr, this.dpr);
+        this.renderWidth = rect.width;
+        this.renderHeight = rect.height;
+        this.draw();
+      }
+
+      setData(labels, values) {
+        this.labels = labels;
+        this.values = values;
+        this.resize();
+      }
+
+      draw() {
+        if (!this.labels || !this.values) return;
+        const ctx = this.ctx;
+        const w = this.renderWidth;
+        const h = this.renderHeight;
+
+        ctx.clearRect(0, 0, w, h);
+
+        const paddingLeft = 40;
+        const paddingRight = 20;
+        const paddingTop = 20;
+        const paddingBottom = 40;
+
+        const chartWidth = w - paddingLeft - paddingRight;
+        const chartHeight = h - paddingTop - paddingBottom;
+
+        // Find max
+        const maxVal = Math.max(...this.values, 10);
+        const minVal = Math.min(...this.values, 0);
+
+        // Draw background grid lines (horizontal)
+        ctx.strokeStyle = '#EDF2F7';
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 4; i++) {
+          const y = paddingTop + (chartHeight / 4) * i;
+          ctx.beginPath();
+          ctx.moveTo(paddingLeft, y);
+          ctx.lineTo(w - paddingRight, y);
+          ctx.stroke();
+
+          // Axis Y value labels
+          ctx.fillStyle = '#718096';
+          ctx.font = '10px Inter';
+          ctx.textAlign = 'right';
+          const valLabel = Math.round(maxVal - ((maxVal - minVal) / 4) * i);
+          ctx.fillText(valLabel, paddingLeft - 8, y + 4);
+        }
+
+        // Generate coordinates
+        const points = [];
+        const stepX = chartWidth / (this.values.length - 1);
+        for (let i = 0; i < this.values.length; i++) {
+          const x = paddingLeft + i * stepX;
+          const ratio = (this.values[i] - minVal) / (maxVal - minVal);
+          const y = paddingTop + chartHeight - ratio * chartHeight;
+          points.push({ x, y });
+        }
+
+        // Draw area path
+        if (points.length > 1) {
+          ctx.beginPath();
+          ctx.moveTo(points[0].x, paddingTop + chartHeight);
+          for (let i = 0; i < points.length; i++) {
+            ctx.lineTo(points[i].x, points[i].y);
+          }
+          ctx.lineTo(points[points.length - 1].x, paddingTop + chartHeight);
+          ctx.closePath();
+
+          // Smooth gradient fill
+          const areaGrad = ctx.createLinearGradient(0, paddingTop, 0, paddingTop + chartHeight);
+          areaGrad.addColorStop(0, 'rgba(192, 86, 33, 0.4)'); // Accent gradient top
+          areaGrad.addColorStop(1, 'rgba(15, 89, 94, 0.02)'); // Deep teal transparent bottom
+          ctx.fillStyle = areaGrad;
+          ctx.fill();
+
+          // Draw outline stroke line
+          ctx.beginPath();
+          ctx.moveTo(points[0].x, points[0].y);
+          for (let i = 1; i < points.length; i++) {
+            ctx.lineTo(points[i].x, points[i].y);
+          }
+          ctx.strokeStyle = '#C05621'; // Accent
+          ctx.lineWidth = 2.5;
+          ctx.stroke();
+        }
+
+        // Draw X Axis label metrics
+        ctx.fillStyle = '#4A5568';
+        ctx.font = '10px Inter';
+        ctx.textAlign = 'center';
+        const labelInterval = Math.max(1, Math.round(this.labels.length / 8));
+        for (let i = 0; i < this.labels.length; i += labelInterval) {
+          ctx.fillText(this.labels[i], points[i].x, paddingTop + chartHeight + 20);
+        }
+      }
+    }
+
+    const frequencyChartInstance = new AreaChart('analysisAreaChart');
+
+    // --- Helper Functions ---
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.innerText = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2800);
+    }
+
+    function generateRandomNumbers(max, count, start = 1) {
+      let nums = [];
+      while (nums.length < count) {
+        let r = Math.floor(Math.random() * max) + start;
+        if (!nums.includes(r)) nums.push(r);
+      }
+      return nums.sort((a, b) => a - b);
+    }
+
+    // High performance localized simulated statistics engine
+    function calculateStatistics() {
+      const cfg = LOTTERY_CONFIGS[currentState.activeType];
+      let freqMap = {};
+      let labels = [];
+      let values = [];
+
+      if (cfg.isSpecial) {
+        // QXC: show average distribution across digital columns
+        for (let col = 0; col < cfg.digits.length; col++) {
+          labels.push(`第${col+1}位`);
+          values.push(Math.floor(Math.random() * 45) + 60);
+        }
+        document.getElementById('hot-numbers-display').innerHTML = `第3位: <span style='color:var(--color-accent)'>5</span>, 第7位: <span style='color:var(--color-accent)'>9</span>`;
+        document.getElementById('cold-numbers-display').innerHTML = `第1位: <span style='color:var(--color-accent)'>0</span>, 第5位: <span style='color:var(--color-accent)'>4</span>`;
+      } else {
+        const totalNumbers = cfg.redMax;
+        for (let i = 1; i <= totalNumbers; i++) {
+          freqMap[i] = Math.floor(Math.random() * 85) + 35; // Random simulated historical hits
+        }
+        
+        // Convert to sorted values for graph
+        for (let i = 1; i <= totalNumbers; i++) {
+          labels.push(String(i).padStart(2, '0'));
+          values.push(freqMap[i]);
+        }
+
+        // Detect hot & cold
+        const sortedArray = Object.entries(freqMap).sort((a, b) => b[1] - a[1]);
+        const hot = sortedArray.slice(0, 3).map(x => String(x[0]).padStart(2, '0')).join(', ');
+        const cold = sortedArray.slice(-3).map(x => String(x[0]).padStart(2, '0')).join(', ');
+
+        document.getElementById('hot-numbers-display').innerText = hot;
+        document.getElementById('cold-numbers-display').innerText = cold;
+      }
+
+      frequencyChartInstance.setData(labels, values);
+    }
+
+    // --- State & View Sync controllers ---
+    function initializeLottery(type) {
+      currentState.activeType = type;
+      currentState.manualSelection.reds = [];
+      currentState.manualSelection.blues = [];
+      currentState.generatedTickets = [];
+      
+      // Keep two selectors in sync
+      document.getElementById('lottery-type-nav').value = type;
+
+      // Reset dynamic views
+      buildManualPanels();
+      calculateStatistics();
+      buildPreviewPool();
+      
+      // Auto-generate fresh state visual suggestions
+      executeGeneration();
+    }
+
+    // Build rolling pool visual animation at bottom of hero section
+    function buildPreviewPool() {
+      const parent = document.getElementById('rolling-pool-view');
+      parent.innerHTML = '';
+      const cfg = LOTTERY_CONFIGS[currentState.activeType];
+
+      if (cfg.isSpecial) {
+        // Seven stars presentation
+        for (let i = 0; i < 7; i++) {
+          const ball = document.createElement('div');
+          ball.className = `ball-3d gold`;
+          ball.innerText = Math.floor(Math.random() * 10);
+          parent.appendChild(ball);
+        }
+      } else {
+        // Red balls previews
+        for (let i = 1; i <= 5; i++) {
+          const ball = document.createElement('div');
+          ball.className = `ball-3d red`;
+          ball.innerText = String(Math.floor(Math.random() * cfg.redMax) + 1).padStart(2, '0');
+          parent.appendChild(ball);
+        }
+        // Blue ball preview
+        const blueBall = document.createElement('div');
+        blueBall.className = `ball-3d blue`;
+        blueBall.innerText = String(Math.floor(Math.random() * cfg.blueMax) + 1).padStart(2, '0');
+        parent.appendChild(blueBall);
+      }
+    }
+
+    // Switch between manual selection pool or automatic generator
+    function switchMode(mode) {
+      currentState.playMode = mode;
+      
+      const tabAuto = document.getElementById('tab-auto');
+      const tabManual = document.getElementById('tab-manual');
+      const panelAuto = document.getElementById('auto-selection-panel');
+      const panelManual = document.getElementById('manual-selection-panel');
+      const saveBtn = document.getElementById('save-selected-btn');
+      const triggerBtn = document.getElementById('trigger-btn');
+
+      if (mode === 'manual') {
+        tabManual.classList.add('active');
+        tabAuto.classList.remove('active');
+        panelManual.style.display = 'block';
+        panelAuto.style.display = 'none';
+        saveBtn.style.display = 'inline-block';
+        triggerBtn.innerHTML = `<span>🎰 合成心水神谕 (کمپائل کریں)</span>`;
+      } else {
+        tabAuto.classList.add('active');
+        tabManual.classList.remove('active');
+        panelManual.style.display = 'none';
+        panelAuto.style.display = 'block';
+        saveBtn.style.display = 'none';
+        triggerBtn.innerHTML = `<span>✨ 开启丝路神谕 (ابھی بنائیں)</span>`;
+      }
+    }
+
+    // Build Interactive manual selection balls pools
+    function buildManualPanels() {
+      const container = document.getElementById('interactive-pools-container');
+      container.innerHTML = '';
+      const cfg = LOTTERY_CONFIGS[currentState.activeType];
+
+      if (cfg.isSpecial) {
+        // For QXC, create 7 selection rows (0-9 for 1-6, 0-14 for 7th)
+        for (let rowIdx = 0; rowIdx < cfg.digits.length; rowIdx++) {
+          const row = document.createElement('div');
+          row.className = 'pool-row';
+          row.innerHTML = `<div class="panel-subtitle">第 ${rowIdx + 1} 位数字选区 (${cfg.labels[rowIdx]}码)</div>`;
+          
+          const grid = document.createElement('div');
+          grid.className = 'pool-grid';
+          
+          for (let val = 0; val < cfg.digits[rowIdx]; val++) {
+            const ball = document.createElement('div');
+            ball.className = 'ball-3d clickable gold';
+            ball.innerText = val;
+            ball.dataset.row = rowIdx;
+            ball.dataset.val = val;
+            
+            // Initial preselection
+            if (currentState.manualSelection.reds[rowIdx] === val) {
+              ball.classList.add('selected');
+            }
+
+            ball.addEventListener('click', () => selectManualDigit(rowIdx, val, ball));
+            grid.appendChild(ball);
+          }
+          row.appendChild(grid);
+          container.appendChild(row);
+        }
+      } else {
+        // Red balls selection pool
+        const redRow = document.createElement('div');
+        redRow.className = 'pool-row';
+        redRow.innerHTML = `<div class="panel-subtitle">${cfg.redLabel}选区 (至少选择 ${cfg.redSelect} 个)</div>`;
+        const redGrid = document.createElement('div');
+        redGrid.className = 'pool-grid';
+
+        for (let i = 1; i <= cfg.redMax; i++) {
+          const ball = document.createElement('div');
+          ball.className = 'ball-3d clickable red';
+          const valStr = String(i).padStart(2, '0');
+          ball.innerText = valStr;
+          
+          if (currentState.manualSelection.reds.includes(i)) {
+            ball.classList.add('selected');
+          }
+
+          ball.addEventListener('click', () => selectManualNormal('red', i, ball));
+          redGrid.appendChild(ball);
+        }
+        redRow.appendChild(redGrid);
+        container.appendChild(redRow);
+
+        // Blue ball selection pool
+        const blueRow = document.createElement('div');
+        blueRow.className = 'pool-row';
+        blueRow.innerHTML = `<div class="panel-subtitle">${cfg.blueLabel}选区 (至少选择 ${cfg.blueSelect} 个)</div>`;
+        const blueGrid = document.createElement('div');
+        blueGrid.className = 'pool-grid';
+
+        for (let i = 1; i <= cfg.blueMax; i++) {
+          const ball = document.createElement('div');
+          ball.className = 'ball-3d clickable blue';
+          const valStr = String(i).padStart(2, '0');
+          ball.innerText = valStr;
+
+          if (currentState.manualSelection.blues.includes(i)) {
+            ball.classList.add('selected');
+          }
+
+          ball.addEventListener('click', () => selectManualNormal('blue', i, ball));
+          blueGrid.appendChild(ball);
+        }
+        blueRow.appendChild(blueGrid);
+        container.appendChild(blueRow);
+      }
+    }
+
+    // Manual Digit selector handler for 七星彩 (Single choice per row)
+    function selectManualDigit(rowIdx, val, ballElement) {
+      const siblings = ballElement.parentElement.querySelectorAll('.ball-3d');
+      siblings.forEach(b => b.classList.remove('selected'));
+      
+      ballElement.classList.add('selected');
+      currentState.manualSelection.reds[rowIdx] = val; // Store directly in digital slot index
+    }
+
+    // Manual normal selector for SSQ / DLT
+    function selectManualNormal(color, value, ballElement) {
+      const cfg = LOTTERY_CONFIGS[currentState.activeType];
+      const targetList = color === 'red' ? currentState.manualSelection.reds : currentState.manualSelection.blues;
+      const limit = color === 'red' ? cfg.redSelect + 6 : cfg.blueSelect + 4; // Allow slight extra choices to choose from
+
+      if (targetList.includes(value)) {
+        // Toggle remove
+        const idx = targetList.indexOf(value);
+        targetList.splice(idx, 1);
+        ballElement.classList.remove('selected');
+      } else {
+        // Control max cap limits
+        if (targetList.length >= limit) {
+          showToast(`⚠️ 已达可选上限 (${limit} 个号)`);
+          return;
+        }
+        targetList.push(value);
+        ballElement.classList.add('selected');
+      }
+    }
+
+    // --- Execution Generator Engines ---
+    function executeGeneration() {
+      const cfg = LOTTERY_CONFIGS[currentState.activeType];
+      const count = parseInt(document.getElementById('select-notes').value);
+      let results = [];
+
+      if (currentState.playMode === 'auto') {
+        for (let i = 0; i < count; i++) {
+          if (cfg.isSpecial) {
+            let digits = [];
+            for (let c = 0; c < cfg.digits.length; c++) {
+              digits.push(Math.floor(Math.random() * cfg.digits[c]));
+            }
+            results.push({ reds: digits, blues: [] });
+          } else {
+            results.push({
+              reds: generateRandomNumbers(cfg.redMax, cfg.redSelect),
+              blues: generateRandomNumbers(cfg.blueMax, cfg.blueSelect)
+            });
+          }
+        }
+        currentState.generatedTickets = results;
+        renderActiveTickets();
+        
+        // Auto-save generated batch as individual items to simulation tracker
+        saveBatchToLocalHistory(results);
+      } else {
+        // Manual Synthesis Compiler
+        if (cfg.isSpecial) {
+          // Check if all digits are selected
+          let compiledDigits = [];
+          for (let c = 0; c < cfg.digits.length; c++) {
+            if (currentState.manualSelection.reds[c] === undefined) {
+              showToast(`⚠️ 请完成第 ${c+1} 位的手动选号`);
+              return;
+            }
+            compiledDigits.push(currentState.manualSelection.reds[c]);
+          }
+          results.push({ reds: compiledDigits, blues: [] });
+          currentState.generatedTickets = results;
+          renderActiveTickets();
+        } else {
+          // Check standard counts met
+          if (currentState.manualSelection.reds.length < cfg.redSelect) {
+            showToast(`⚠️ 请至少选择 ${cfg.redSelect} 个${cfg.redLabel}`);
+            return;
+          }
+          if (currentState.manualSelection.blues.length < cfg.blueSelect) {
+            showToast(`⚠️ 请至少选择 ${cfg.blueSelect} 个${cfg.blueLabel}`);
+            return;
+          }
+
+          // In case user selected extra numbers, trim down randomly to target size
+          const compiledReds = [...currentState.manualSelection.reds].sort(() => 0.5 - Math.random()).slice(0, cfg.redSelect).sort((a,b)=>a-b);
+          const compiledBlues = [...currentState.manualSelection.blues].sort(() => 0.5 - Math.random()).slice(0, cfg.blueSelect).sort((a,b)=>a-b);
+          
+          results.push({ reds: compiledReds, blues: compiledBlues });
+          currentState.generatedTickets = results;
+          renderActiveTickets();
+        }
+      }
+    }
+
+    // Helper to render computed ticket DOM elements
+    function renderActiveTickets() {
+      const container = document.getElementById('generated-outputs-wrapper');
+      container.innerHTML = '';
+      const cfg = LOTTERY_CONFIGS[currentState.activeType];
+
+      if (currentState.generatedTickets.length === 0) {
+        container.innerHTML = `<p style="color: var(--muted); font-size:14px;">等待神谕开启...</p>`;
+        return;
+      }
+
+      currentState.generatedTickets.forEach((ticket, idx) => {
+        const row = document.createElement('div');
+        row.className = 'ticket-row';
+        row.style.animation = `fade-in-up 0.2s ease-out forwards`;
+        row.style.animationDelay = `${idx * 0.05}s`;
+
+        const ballsWrap = document.createElement('div');
+        ballsWrap.className = 'ticket-balls';
+
+        if (cfg.isSpecial) {
+          // Render gold digit spheres
+          ticket.reds.forEach(val => {
+            const b = document.createElement('div');
+            b.className = 'ball-3d gold';
+            b.innerText = val;
+            ballsWrap.appendChild(b);
+          });
+        } else {
+          // Render red & blue elements
+          ticket.reds.forEach(val => {
+            const b = document.createElement('div');
+            b.className = 'ball-3d red';
+            b.innerText = String(val).padStart(2, '0');
+            ballsWrap.appendChild(b);
+          });
+          ticket.blues.forEach(val => {
+            const b = document.createElement('div');
+            b.className = 'ball-3d blue';
+            b.innerText = String(val).padStart(2, '0');
+            ballsWrap.appendChild(b);
+          });
+        }
+
+        row.appendChild(ballsWrap);
+
+        // Add index notation label
+        const meta = document.createElement('div');
+        meta.style.fontSize = '12px';
+        meta.style.fontWeight = '700';
+        meta.style.color = 'var(--color-primary)';
+        meta.innerText = `${cfg.name} - 第 ${idx + 1} 注`;
+        row.appendChild(meta);
+
+        container.appendChild(row);
+      });
+    }
+
+    // --- Local Persistence Management ---
+    const STORAGE_KEY = 'SR_LOTTERY_ARCHIVE_DATA';
+
+    function loadLocalHistory() {
+      try {
+        const data = localStorage.getItem(STORAGE_KEY);
+        currentState.localHistory = data ? JSON.parse(data) : [];
+      } catch (e) {
+        currentState.localHistory = [];
+      }
+      renderLocalRecords();
+    }
+
+    function saveBatchToLocalHistory(tickets) {
+      const cfg = LOTTERY_CONFIGS[currentState.activeType];
+      const timestamp = new Date().toLocaleString('zh-CN', { hour12: false });
+
+      tickets.forEach(t => {
+        currentState.localHistory.unshift({
+          id: Date.now() + Math.random().toString(36).substr(2, 5),
+          type: currentState.activeType,
+          typeName: cfg.name,
+          timestamp,
+          reds: t.reds,
+          blues: t.blues,
+          isSpecial: cfg.isSpecial || false
+        });
+      });
+
+      // Clamp archives limit to max 50 for smooth viewport scrolling performance
+      if (currentState.localHistory.length > 50) {
+        currentState.localHistory = currentState.localHistory.slice(0, 50);
+      }
+
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentState.localHistory));
+      renderLocalRecords();
+    }
+
+    function saveCurrentToLocal() {
+      if (currentState.generatedTickets.length === 0) {
+        showToast('⚠️ 暂无可存的神谕组合，请先生成。');
+        return;
+      }
+      saveBatchToLocalHistory(currentState.generatedTickets);
+      showToast('💾 成功保存您的精选号码！');
+    }
+
+    function deleteRecord(id) {
+      currentState.localHistory = currentState.localHistory.filter(x => x.id !== id);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentState.localHistory));
+      renderLocalRecords();
+      showToast('🗑️ 记录已移除');
+    }
+
+    function clearAllRecords() {
+      if (confirm('确定要清空全部保存的黄金神谕号码记录吗？')) {
+        currentState.localHistory = [];
+        localStorage.removeItem(STORAGE_KEY);
+        renderLocalRecords();
+        showToast('⚡ 归档已全部清空');
+      }
+    }
+
+    function renderLocalRecords() {
+      const container = document.getElementById('local-records-container');
+      container.innerHTML = '';
+
+      if (currentState.localHistory.length === 0) {
+        container.innerHTML = `<p style="text-align: center; color: var(--muted); padding-block: var(--space-lg);">暂无本地存档号码球</p>`;
+        return;
+      }
+
+      currentState.localHistory.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'record-item';
+
+        // Outer control elements
+        const delBtn = document.createElement('button');
+        delBtn.className = 'btn-delete';
+        delBtn.innerHTML = '删除';
+        delBtn.onclick = () => deleteRecord(item.id);
+
+        const ballsWrap = document.createElement('div');
+        ballsWrap.className = 'ticket-balls';
+
+        if (item.isSpecial) {
+          item.reds.forEach(val => {
+            const b = document.createElement('div');
+            b.className = 'ball-3d gold';
+            b.style.width = '32px';
+            b.style.height = '32px';
+            b.style.fontSize = '12px';
+            b.innerText = val;
+            ballsWrap.appendChild(b);
+          });
+        } else {
+          item.reds.forEach(val => {
+            const b = document.createElement('div');
+            b.className = 'ball-3d red';
+            b.style.width = '32px';
+            b.style.height = '32px';
+            b.style.fontSize = '12px';
+            b.innerText = String(val).padStart(2, '0');
+            ballsWrap.appendChild(b);
+          });
+          item.blues.forEach(val => {
+            const b = document.createElement('div');
+            b.className = 'ball-3d blue';
+            b.style.width = '32px';
+            b.style.height = '32px';
+            b.style.fontSize = '12px';
+            b.innerText = String(val).padStart(2, '0');
+            ballsWrap.appendChild(b);
+          });
+        }
+
+        const infoWrap = document.createElement('div');
+        infoWrap.className = 'record-meta-info';
+        infoWrap.innerHTML = `
+          <span class="record-tag">${item.typeName}</span>
+          <span class="record-time">${item.timestamp}</span>
+        `;
+
+        row.appendChild(delBtn);
+        row.appendChild(ballsWrap);
+        row.appendChild(infoWrap);
+
+        container.appendChild(row);
+      });
+    }
+
+    // --- Document Event Bindings ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // Connect UI Selectors
+      document.getElementById('lottery-type-nav').addEventListener('change', (e) => {
+        initializeLottery(e.target.value);
+      });
+
+      // Init Default State
+      initializeLottery('ssq');
+      loadLocalHistory();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "created_at": "2026-06-30T03:08:21.975741+00:00",
+  "input": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/occlusion_inputs",
+  "out": "../acceptance/occlusion_claude47_final_default/manifest.jsonl",
+  "profile": "aesthetic-v4",
+  "records": 6,
+  "viewport": "mobile"
+}

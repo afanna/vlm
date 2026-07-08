@@ -1,0 +1,6 @@
+{
+  "query": "A responsive design-quality operations dashboard for reviewing generated UI samples.",
+  "product_title": "Aesthetic Ops",
+  "target_viewport": "all",
+  "notes": "Sample HTML used to verify the aesthetic-v4 package flow."
+}

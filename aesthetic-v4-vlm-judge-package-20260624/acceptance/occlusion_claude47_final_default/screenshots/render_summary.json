@@ -1,0 +1,9 @@
+{
+  "out": "../acceptance/occlusion_claude47_final_default/screenshots/render_manifest.jsonl",
+  "records": 6,
+  "ok": 6,
+  "partial": 0,
+  "by_viewport": {
+    "mobile": 6
+  }
+}

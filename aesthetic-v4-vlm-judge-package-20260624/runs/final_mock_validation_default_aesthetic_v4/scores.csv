@@ -1,0 +1,2 @@
+id,status,score_100,bucket,aggregate_view,prompt_version,model,occlusion_overlap_check,occlusion_findings,occlusion_affected_axes,input_path,rationale
+sample_aesthetic_v4_dashboard_820530cbcd,scored,27.5,"[20,30)",mobile,aesthetic-v4,,always_on,[],[],/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/input_html/sample_aesthetic_v4_dashboard.html,mobile: Deterministic mock score for pipeline validation only; do not treat this as an aesthetic judgment.

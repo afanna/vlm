@@ -1,0 +1,28 @@
+{
+  "anchors": 0,
+  "avg_record_seconds": 21.745,
+  "avg_scored_view_seconds": 21.734,
+  "backend": "command",
+  "elapsed_seconds": 21.745,
+  "finished_at": "2026-06-29T18:45:19.071691+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "../runs/packy_gpt55_q10252_score_only/scores.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records": 1,
+  "scored": 1,
+  "scored_viewport_counts": {
+    "mobile": 1
+  },
+  "started_at": "2026-06-29T18:44:57.326534+00:00",
+  "target_viewport_counts": {
+    "mobile": 1
+  },
+  "viewport_selection": "auto",
+  "workers": 1
+}

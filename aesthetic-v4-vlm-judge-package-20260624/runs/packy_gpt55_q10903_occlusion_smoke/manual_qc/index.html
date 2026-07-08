@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aesthetic-v4 manual QC</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f2; color: #171717; }
+    header.top { position: sticky; top: 0; z-index: 2; background: #fff; border-bottom: 1px solid #ddd; padding: 16px 24px; display: flex; gap: 24px; align-items: baseline; }
+    header.top h1 { margin: 0; font-size: 22px; }
+    main { padding: 20px 24px 48px; }
+    .card { background: #fff; border: 1px solid #d8d8d2; border-radius: 8px; margin: 0 0 18px; padding: 16px; }
+    .card > header { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid #ecece7; padding-bottom: 12px; }
+    h2 { margin: 0 0 6px; font-size: 18px; }
+    h3 { margin: 16px 0 8px; font-size: 14px; }
+    p { margin: 0; color: #555; }
+    nav { display: flex; gap: 10px; margin: 12px 0; }
+    a { color: #0f5f99; text-decoration: none; }
+    .score { text-align: right; min-width: 110px; }
+    .score b { font-size: 28px; display: block; }
+    .score span { color: #666; }
+    .grid { display: grid; grid-template-columns: minmax(260px, 380px) 1fr; gap: 16px; align-items: start; }
+    .shot img { width: 100%; max-height: 760px; object-fit: contain; border: 1px solid #ddd; background: #eee; }
+    .missing { border: 1px dashed #aaa; padding: 24px; color: #777; }
+    .occ { display: inline-block; padding: 6px 9px; border-radius: 6px; font-size: 13px; }
+    .occ.ok { background: #edf7ee; color: #176426; }
+    .occ.bad { background: #fff1e5; color: #9a3412; }
+    .rationale { margin: 12px 0; color: #222; line-height: 1.5; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { border: 1px solid #ddd; padding: 6px 7px; text-align: left; vertical-align: top; }
+    th { background: #f0f0eb; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } header.top { flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <header class="top"><h1>aesthetic-v4 manual QC</h1><span>Total 1</span><span>Occlusion 1</span></header>
+  <main>
+<article class="card" data-occlusion="yes" data-status="severe">
+  <header>
+    <div>
+      <h2>q10903</h2>
+      <p>/Volumes/TU820/aesthetic/快思考3500/q10903.html</p>
+    </div>
+    <div class="score"><b>28.375</b><span>/100</span></div>
+  </header>
+  <nav>
+    <a href="file:///Volumes/TU820/aesthetic/%E5%BF%AB%E6%80%9D%E8%80%833500/q10903.html">HTML</a>
+    <a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10903_occlusion_smoke/outputs/json/q10903.json">JSON</a>
+  </nav>
+  <section class="grid">
+    <div class="shot"><a href="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10903_occlusion_smoke/screenshots/q10903_070b231424/mobile.png"><img src="file:///Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/runs/packy_gpt55_q10903_occlusion_smoke/screenshots/q10903_070b231424/mobile.png" loading="lazy"></a></div>
+    <div>
+      <div class="occ bad">occlusion: yes · severe · text_graphic, control_nav</div>
+      <p class="rationale">mobile: ZERO_DEFECT: 命中 [20,30) 档：选择水源卡片被中央圆环、数字和竖条大面积压住，晨起、日常水杯、下午茶等关键文字与容量不可稳定阅读；下方饮水记录标题也被主按钮遮挡。虽有柔和米白与鼠尾草绿的统一色调，但核心信息层级和组件叠放崩坏，无法进入更高完整 UI 档。</p>
+      <h3>Axis Breakdown</h3>
+      <table><thead><tr><th>axis</th><th>axis_score_100</th><th>weight</th><th>weighted_contribution_100</th></tr></thead><tbody><tr><td>basic_usability</td><td>12.500</td><td>0.05</td><td>0.625</td></tr><tr><td>color_material</td><td>52.500</td><td>0.15</td><td>7.875</td></tr><tr><td>composition_hierarchy</td><td>15.000</td><td>0.2</td><td>3.000</td></tr><tr><td>detail_finish</td><td>12.500</td><td>0.15</td><td>1.875</td></tr><tr><td>typography</td><td>12.500</td><td>0.15</td><td>1.875</td></tr><tr><td>visual_impact_originality</td><td>43.750</td><td>0.3</td><td>13.125</td></tr></tbody></table>
+      <h3>Occlusion Findings</h3>
+      <table><thead><tr><th>type</th><th>severity</th><th>target</th><th>affected_axes</th><th>evidence</th></tr></thead><tbody><tr><td>text_graphic</td><td>severe</td><td>选择水源预设卡片文字与容量</td><td>composition_hierarchy, typography, detail_finish, basic_usability</td><td>中央圆环、0 数字与竖条覆盖四个预设卡片区域，部分名称和 ml 数值被遮挡或裁切。</td></tr><tr><td>control_nav</td><td>moderate</td><td>饮水记录区标题</td><td>composition_hierarchy, typography, detail_finish, basic_usability</td><td>绿色主按钮横向覆盖卡片左上方标题，仅露出“饮”字边缘，破坏区块识别。</td></tr></tbody></table>
+    </div>
+  </section>
+</article>
+</main>
+</body>
+</html>

@@ -1,0 +1,2 @@
+id,status,score_100,bucket,aggregate_view,prompt_version,model,occlusion_overlap_check,occlusion_findings,occlusion_affected_axes,input_path,rationale
+Snipaste_2026-07-02_15-57-30,failed,,failed,,aesthetic-v4,,always_on,[],[],C:\Users\afan\Desktop\Automation-screenshot\output\Snipaste_2026-07-02_15-57-30.png,No score rationale available.

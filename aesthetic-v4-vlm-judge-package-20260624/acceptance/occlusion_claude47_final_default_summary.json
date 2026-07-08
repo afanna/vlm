@@ -1,0 +1,107 @@
+{
+  "detected_count": 4,
+  "model": "claude-opus-4-7-thinking",
+  "normal_scroll_false_positive_count": 0,
+  "profile": "aesthetic-v4",
+  "prompt_version": "aesthetic-v4",
+  "provider": "pangu",
+  "records": 6,
+  "rows": [
+    {
+      "affected_axes": [],
+      "final_score_8": 1.2,
+      "finding_count": 0,
+      "id": "t64_2_scroll_normal_87b59b64cc",
+      "occlusion_detected": false,
+      "occlusion_status": "none",
+      "occlusion_types": [],
+      "score_100": 15.0,
+      "target_viewport": "mobile"
+    },
+    {
+      "affected_axes": [],
+      "final_score_8": 3.6,
+      "finding_count": 0,
+      "id": "q10252_user_sample_a0e6292c91",
+      "occlusion_detected": false,
+      "occlusion_status": "none",
+      "occlusion_types": [],
+      "score_100": 45.0,
+      "target_viewport": "mobile"
+    },
+    {
+      "affected_axes": [
+        "composition_hierarchy",
+        "basic_usability",
+        "detail_finish",
+        "typography"
+      ],
+      "final_score_8": 0.4,
+      "finding_count": 3,
+      "id": "q10903_overlap_21c6205968",
+      "occlusion_detected": true,
+      "occlusion_status": "severe",
+      "occlusion_types": [
+        "text_graphic",
+        "text_text"
+      ],
+      "score_100": 5.0,
+      "target_viewport": "mobile"
+    },
+    {
+      "affected_axes": [
+        "composition_hierarchy",
+        "typography",
+        "detail_finish",
+        "basic_usability"
+      ],
+      "final_score_8": 3.6,
+      "finding_count": 1,
+      "id": "q13061_overlap_9a84d51448",
+      "occlusion_detected": true,
+      "occlusion_status": "moderate",
+      "occlusion_types": [
+        "text_text"
+      ],
+      "score_100": 45.0,
+      "target_viewport": "mobile"
+    },
+    {
+      "affected_axes": [
+        "typography",
+        "composition_hierarchy",
+        "detail_finish",
+        "basic_usability"
+      ],
+      "final_score_8": 2.8,
+      "finding_count": 1,
+      "id": "q13382_overlap_bd2302a9c4",
+      "occlusion_detected": true,
+      "occlusion_status": "moderate",
+      "occlusion_types": [
+        "text_text"
+      ],
+      "score_100": 35.0,
+      "target_viewport": "mobile"
+    },
+    {
+      "affected_axes": [
+        "typography",
+        "composition_hierarchy",
+        "detail_finish",
+        "basic_usability"
+      ],
+      "final_score_8": 0.4,
+      "finding_count": 1,
+      "id": "q51042_overlap_d1c47bb5a1",
+      "occlusion_detected": true,
+      "occlusion_status": "severe",
+      "occlusion_types": [
+        "text_graphic"
+      ],
+      "score_100": 5.0,
+      "target_viewport": "mobile"
+    }
+  ],
+  "user_sample_false_positive_count": 0
+}

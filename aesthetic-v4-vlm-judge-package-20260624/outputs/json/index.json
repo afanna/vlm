@@ -1,0 +1,4221 @@
+{
+  "schema_version": 1,
+  "record_count": 72,
+  "records": [
+    {
+      "id": "00010_naka_com_c6413660b2",
+      "qid": "00010_naka_com_c6413660b2",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/00010_naka.com.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/00010_naka_com_c6413660b2.json",
+      "score": {
+        "score_100": 74.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 78.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 78.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 76.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 67.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 72.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 76.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 22.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/00010_naka_com_c6413660b2/desktop.png"
+      ]
+    },
+    {
+      "id": "00016_somervilles_co_uk_f74fec35ca",
+      "qid": "00016_somervilles_co_uk_f74fec35ca",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/00016_somervilles.co.uk.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/00016_somervilles_co_uk_f74fec35ca.json",
+      "score": {
+        "score_100": 74.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 77.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.875
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 77.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.625
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 75.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 67.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.125
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 78.75,
+            "weight": 0.3,
+            "weighted_contribution_100": 23.625
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/00016_somervilles_co_uk_f74fec35ca/desktop.png"
+      ]
+    },
+    {
+      "id": "149_feed_standalone_acd6f0048e",
+      "qid": "149_feed_standalone_acd6f0048e",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/149-feed-standalone.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/149_feed_standalone_acd6f0048e.json",
+      "score": {
+        "score_100": 64.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 68.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 66.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 61.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 66.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 19.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/149_feed_standalone_acd6f0048e/desktop.png"
+      ]
+    },
+    {
+      "id": "150_folio_reading_app_2f4b8dd61b",
+      "qid": "150_folio_reading_app_2f4b8dd61b",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/150-Folio Reading App.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/150_folio_reading_app_2f4b8dd61b.json",
+      "score": {
+        "score_100": 74.627,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 78.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 78.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 75.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 71.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 76.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 22.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/150_folio_reading_app_2f4b8dd61b/mobile.png"
+      ]
+    },
+    {
+      "id": "15_task_app_6c4038fd71",
+      "qid": "15_task_app_6c4038fd71",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/15-Task App.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/15_task_app_6c4038fd71.json",
+      "score": {
+        "score_100": 75.439,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 78.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 78.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 76.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 71.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 72.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 76.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 22.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/15_task_app_6c4038fd71/mobile.png"
+      ]
+    },
+    {
+      "id": "169_38c46c7bfa",
+      "qid": "169_38c46c7bfa",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/169-经期跟踪.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/169_38c46c7bfa.json",
+      "score": {
+        "score_100": 75.0,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 72.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.625
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 80.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 12.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 73.75,
+            "weight": 0.2,
+            "weighted_contribution_100": 14.75
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 72.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.875
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 70.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 77.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 23.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": true,
+        "status": "minor",
+        "types": [
+          "control_nav"
+        ],
+        "affected_axes": [
+          "basic_usability",
+          "composition_hierarchy",
+          "detail_finish"
+        ]
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/169_38c46c7bfa/desktop.png"
+      ]
+    },
+    {
+      "id": "179_3f96b037be",
+      "qid": "179_3f96b037be",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/179.健康习惯应用.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/179_3f96b037be.json",
+      "score": {
+        "score_100": 74.439,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 75.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.75
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 78.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 75.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 71.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 76.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 22.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": true,
+        "status": "minor",
+        "types": [
+          "control_nav"
+        ],
+        "affected_axes": [
+          "detail_finish",
+          "basic_usability",
+          "composition_hierarchy"
+        ]
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/179_3f96b037be/desktop.png"
+      ]
+    },
+    {
+      "id": "372_f6b2197e82",
+      "qid": "372_f6b2197e82",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/372-去掉灵动岛.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/372_f6b2197e82.json",
+      "score": {
+        "score_100": 75.563,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 80.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 4.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 80.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 12.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 77.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 70.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 77.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 23.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/372_f6b2197e82/mobile.png"
+      ]
+    },
+    {
+      "id": "490_8db5d97635",
+      "qid": "490_8db5d97635",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/490-消息通知应用.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/490_8db5d97635.json",
+      "score": {
+        "score_100": 64.877,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 68.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 66.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 61.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 66.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 19.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/490_8db5d97635/mobile.png"
+      ]
+    },
+    {
+      "id": "496_7a3283092a",
+      "qid": "496_7a3283092a",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/496-论文展示应用.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/496_7a3283092a.json",
+      "score": {
+        "score_100": 75.439,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 78.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 78.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 76.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 71.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 72.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 76.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 22.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/496_7a3283092a/mobile.png"
+      ]
+    },
+    {
+      "id": "498_f21bb4bfce",
+      "qid": "498_f21bb4bfce",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/498-研究分析仪表盘应用.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/498_f21bb4bfce.json",
+      "score": {
+        "score_100": 75.125,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 77.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.875
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 77.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.625
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 75.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 72.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.875
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 67.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.125
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 78.75,
+            "weight": 0.3,
+            "weighted_contribution_100": 23.625
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/498_f21bb4bfce/desktop.png"
+      ]
+    },
+    {
+      "id": "code_42ed11740c",
+      "qid": "code_42ed11740c",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/code.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/code_42ed11740c.json",
+      "score": {
+        "score_100": 65.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 70.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 70.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 67.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 67.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 20.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_42ed11740c/desktop.png"
+      ]
+    },
+    {
+      "id": "code_53fe1ad176",
+      "qid": "code_53fe1ad176",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/query_091/code.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/code_53fe1ad176.json",
+      "score": {
+        "score_100": 64.877,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 68.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 66.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 61.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 66.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 19.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_53fe1ad176/mobile.png"
+      ]
+    },
+    {
+      "id": "code_810db6c942",
+      "qid": "code_810db6c942",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/code.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/code_810db6c942.json",
+      "score": {
+        "score_100": 54.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 58.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 56.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 51.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 56.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 16.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_810db6c942/desktop.png"
+      ]
+    },
+    {
+      "id": "code_ea2ed0a405",
+      "qid": "q037",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/q037_q_web_006_002/code.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q037.json",
+      "score": {
+        "score_100": 65.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 70.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 70.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 67.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 67.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 20.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_ea2ed0a405/desktop.png"
+      ]
+    },
+    {
+      "id": "q19789_eb13fa663d",
+      "qid": "q19789",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q19789.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q19789.json",
+      "score": {
+        "score_100": 44.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 48.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 46.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 41.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 46.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 13.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q19789_eb13fa663d/desktop.png"
+      ]
+    },
+    {
+      "id": "q22_3ea44f013b",
+      "qid": "q22",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q22.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q22.json",
+      "score": {
+        "score_100": 55.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 60.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 57.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 57.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 17.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q22_3ea44f013b/desktop.png"
+      ]
+    },
+    {
+      "id": "q23700_2e2744d869",
+      "qid": "q23700",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/q23700.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q23700.json",
+      "score": {
+        "score_100": 54.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 58.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 56.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 51.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 56.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 16.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q23700_2e2744d869/desktop.png"
+      ]
+    },
+    {
+      "id": "q25253_342e550c7a",
+      "qid": "q25253",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q25253.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q25253.json",
+      "score": {
+        "score_100": 45.313,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 50.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 46.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 47.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q25253_342e550c7a/desktop.png"
+      ]
+    },
+    {
+      "id": "code_5187e3d6c1",
+      "qid": "q277",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/q277_q_scene_026_009/code.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q277.json",
+      "score": {
+        "score_100": 64.877,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 68.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 66.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 61.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 66.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 19.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_5187e3d6c1/mobile.png"
+      ]
+    },
+    {
+      "id": "q28202_afce121772",
+      "qid": "q28202",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q28202.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q28202.json",
+      "score": {
+        "score_100": 45.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 50.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 47.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 47.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q28202_afce121772/desktop.png"
+      ]
+    },
+    {
+      "id": "q37_949a555175",
+      "qid": "q37",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/q37.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q37.json",
+      "score": {
+        "score_100": 45.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 50.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 47.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 47.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q37_949a555175/desktop.png"
+      ]
+    },
+    {
+      "id": "code_6e82443c59",
+      "qid": "q448",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[60,70)/q448_q_web_066_002/code.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q448.json",
+      "score": {
+        "score_100": 65.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 70.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 70.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 67.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 67.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 20.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/code_6e82443c59/desktop.png"
+      ]
+    },
+    {
+      "id": "q4995_6ab3e4254f",
+      "qid": "q4995",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/q4995.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q4995.json",
+      "score": {
+        "score_100": 55.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 60.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 57.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 57.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 17.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q4995_6ab3e4254f/desktop.png"
+      ]
+    },
+    {
+      "id": "q_scene_fb_17_185_b2acc9313e",
+      "qid": "q_scene_fb_17_185_b2acc9313e",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/q_scene_fb_17_185.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q_scene_fb_17_185_b2acc9313e.json",
+      "score": {
+        "score_100": 74.877,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 78.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 78.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 11.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 76.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 15.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 71.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 76.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 22.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_17_185_b2acc9313e/mobile.png"
+      ]
+    },
+    {
+      "id": "q_scene_fb_19_193_a4d4090c98",
+      "qid": "q_scene_fb_19_193_a4d4090c98",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[70,80)/q_scene_fb_19_193.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q_scene_fb_19_193_a4d4090c98.json",
+      "score": {
+        "score_100": 65.564,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 68.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 65.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 70.0,
+            "weight": 0.3,
+            "weighted_contribution_100": 21.0
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_19_193_a4d4090c98/mobile.png"
+      ]
+    },
+    {
+      "id": "q_scene_fb_20_199_f2da467947",
+      "qid": "q_scene_fb_20_199_f2da467947",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/q_scene_fb_20_199.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/q_scene_fb_20_199_f2da467947.json",
+      "score": {
+        "score_100": 64.877,
+        "aggregate_view": "mobile",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 68.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 66.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 61.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 66.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 19.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/q_scene_fb_20_199_f2da467947/mobile.png"
+      ]
+    },
+    {
+      "id": "t21_1_40_2_fae2793652",
+      "qid": "t21_1_40_2_fae2793652",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T21_1_40.2.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_1_40_2_fae2793652.json",
+      "score": {
+        "score_100": 35.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 40.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 37.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 28.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 30.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 37.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 11.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_1_40_2_fae2793652/desktop.png"
+      ]
+    },
+    {
+      "id": "t21_2_36_0_480d2bac25",
+      "qid": "t21_2_36_0_480d2bac25",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T21_2_36.0.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_2_36_0_480d2bac25.json",
+      "score": {
+        "score_100": 24.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 28.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 28.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 26.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 5.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 17.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.625
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 22.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.375
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 26.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 7.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_2_36_0_480d2bac25/desktop.png"
+      ]
+    },
+    {
+      "id": "t21_4_43_8_c2a588b6fa",
+      "qid": "t21_4_43_8_c2a588b6fa",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T21_4_43.8.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_4_43_8_c2a588b6fa.json",
+      "score": {
+        "score_100": 34.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 38.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 36.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 7.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 27.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 32.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 36.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 10.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_4_43_8_c2a588b6fa/desktop.png"
+      ]
+    },
+    {
+      "id": "t21_5_55_9_d695f6a087",
+      "qid": "t21_5_55_9_d695f6a087",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T21_5_55.9.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t21_5_55_9_d695f6a087.json",
+      "score": {
+        "score_100": 44.626,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 48.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 45.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 37.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.625
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 42.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.375
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 46.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 13.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t21_5_55_9_d695f6a087/desktop.png"
+      ]
+    },
+    {
+      "id": "t22_2_22_4_55cd8b6a24",
+      "qid": "t22_2_22_4_55cd8b6a24",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T22_2_22.4.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t22_2_22_4_55cd8b6a24.json",
+      "score": {
+        "score_100": 14.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 16.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 7.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 12.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t22_2_22_4_55cd8b6a24/desktop.png"
+      ]
+    },
+    {
+      "id": "t22_6_61_7_e3735f94df",
+      "qid": "t22_6_61_7_e3735f94df",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T22_6_61.7.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t22_6_61_7_e3735f94df.json",
+      "score": {
+        "score_100": 54.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 58.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 56.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 47.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 52.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 56.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 16.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t22_6_61_7_e3735f94df/desktop.png"
+      ]
+    },
+    {
+      "id": "t24_6_60_3_5d4459d74a",
+      "qid": "t24_6_60_3_5d4459d74a",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T24_6_60.3.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t24_6_60_3_5d4459d74a.json",
+      "score": {
+        "score_100": 54.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 58.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 56.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 47.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 52.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 56.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 16.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t24_6_60_3_5d4459d74a/desktop.png"
+      ]
+    },
+    {
+      "id": "t25_2_43_8_d0bee10501",
+      "qid": "t25_2_43_8_d0bee10501",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T25_2_43.8.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t25_2_43_8_d0bee10501.json",
+      "score": {
+        "score_100": 24.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 28.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 28.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 26.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 5.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 21.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 26.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 7.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t25_2_43_8_d0bee10501/desktop.png"
+      ]
+    },
+    {
+      "id": "t26_1_15_2_029d2ff572",
+      "qid": "t26_1_15_2_029d2ff572",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T26_1_15.2.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t26_1_15_2_029d2ff572.json",
+      "score": {
+        "score_100": 5.251,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 8.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 6.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 2.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.375
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 6.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": true,
+        "status": "severe",
+        "types": [
+          "text_graphic"
+        ],
+        "affected_axes": [
+          "typography",
+          "composition_hierarchy",
+          "detail_finish",
+          "basic_usability"
+        ]
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t26_1_15_2_029d2ff572/desktop.png"
+      ]
+    },
+    {
+      "id": "t26_4_13_2_eb4fea5a85",
+      "qid": "t26_4_13_2_eb4fea5a85",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T26_4_13.2.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t26_4_13_2_eb4fea5a85.json",
+      "score": {
+        "score_100": 5.001,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 2.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.125
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 10.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 3.75,
+            "weight": 0.2,
+            "weighted_contribution_100": 0.75
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 1.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 1.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.188
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 7.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 2.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": true,
+        "status": "moderate",
+        "types": [
+          "clipping_crop"
+        ],
+        "affected_axes": [
+          "detail_finish",
+          "basic_usability",
+          "composition_hierarchy",
+          "typography"
+        ]
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t26_4_13_2_eb4fea5a85/desktop.png"
+      ]
+    },
+    {
+      "id": "t27_3_53_8_98737f2def",
+      "qid": "t27_3_53_8_98737f2def",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T27_3_53.8.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t27_3_53_8_98737f2def.json",
+      "score": {
+        "score_100": 44.439,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 46.25,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.313
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 46.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.938
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 43.75,
+            "weight": 0.2,
+            "weighted_contribution_100": 8.75
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 41.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 47.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t27_3_53_8_98737f2def/desktop.png"
+      ]
+    },
+    {
+      "id": "t27_4_30_0_9ba6e6791e",
+      "qid": "t27_4_30_0_9ba6e6791e",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T27_4_30.0.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t27_4_30_0_9ba6e6791e.json",
+      "score": {
+        "score_100": 44.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 47.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.375
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 47.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.125
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 45.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 37.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.625
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 48.75,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.625
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t27_4_30_0_9ba6e6791e/desktop.png"
+      ]
+    },
+    {
+      "id": "t28_2_29_6_fe1305f799",
+      "qid": "t28_2_29_6_fe1305f799",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T28_2_29.6.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t28_2_29_6_fe1305f799.json",
+      "score": {
+        "score_100": 14.627,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 15.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 11.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t28_2_29_6_fe1305f799/desktop.png"
+      ]
+    },
+    {
+      "id": "t28_4_25_1_638b713e8e",
+      "qid": "t28_4_25_1_638b713e8e",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T28_4_25.1.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t28_4_25_1_638b713e8e.json",
+      "score": {
+        "score_100": 14.627,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 15.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 11.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t28_4_25_1_638b713e8e/desktop.png"
+      ]
+    },
+    {
+      "id": "t30_2_21_8_b8e110f79d",
+      "qid": "t30_2_21_8_b8e110f79d",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T30_2_21.8.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t30_2_21_8_b8e110f79d.json",
+      "score": {
+        "score_100": 14.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 16.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 11.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t30_2_21_8_b8e110f79d/desktop.png"
+      ]
+    },
+    {
+      "id": "t31_2_18_6_954da11808",
+      "qid": "t31_2_18_6_954da11808",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T31_2_18.6.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t31_2_18_6_954da11808.json",
+      "score": {
+        "score_100": 4.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 8.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 6.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 6.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t31_2_18_6_954da11808/desktop.png"
+      ]
+    },
+    {
+      "id": "t31_6_63_5_486c5ac6d4",
+      "qid": "t31_6_63_5_486c5ac6d4",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T31_6_63.5.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t31_6_63_5_486c5ac6d4.json",
+      "score": {
+        "score_100": 45.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 50.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 47.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 47.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t31_6_63_5_486c5ac6d4/desktop.png"
+      ]
+    },
+    {
+      "id": "t32_2_31_9_2800a66d9c",
+      "qid": "t32_2_31_9_2800a66d9c",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T32_2_31.9.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t32_2_31_9_2800a66d9c.json",
+      "score": {
+        "score_100": 14.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 16.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 11.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.688
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t32_2_31_9_2800a66d9c/desktop.png"
+      ]
+    },
+    {
+      "id": "t34_2_22_9_c6fd71fe24",
+      "qid": "t34_2_22_9_c6fd71fe24",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T34_2_22.9.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t34_2_22_9_c6fd71fe24.json",
+      "score": {
+        "score_100": 15.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 20.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 20.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 17.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 10.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 17.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 5.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t34_2_22_9_c6fd71fe24/desktop.png"
+      ]
+    },
+    {
+      "id": "t34_4_31_5_8f3b86eacf",
+      "qid": "t34_4_31_5_8f3b86eacf",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T34_4_31.5.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t34_4_31_5_8f3b86eacf.json",
+      "score": {
+        "score_100": 25.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 30.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 30.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 27.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 5.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 20.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 27.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 8.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t34_4_31_5_8f3b86eacf/desktop.png"
+      ]
+    },
+    {
+      "id": "t35_2_19_4_d876b3a247",
+      "qid": "t35_2_19_4_d876b3a247",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T35_2_19.4.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_2_19_4_d876b3a247.json",
+      "score": {
+        "score_100": 5.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 10.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 10.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 7.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 2.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.375
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 1.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.188
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 5.0,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.5
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_2_19_4_d876b3a247/desktop.png"
+      ]
+    },
+    {
+      "id": "t35_3_39_5_7d2a76053c",
+      "qid": "t35_3_39_5_7d2a76053c",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T35_3_39.5.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_3_39_5_7d2a76053c.json",
+      "score": {
+        "score_100": 25.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 30.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 30.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 27.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 5.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 20.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 27.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 8.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_3_39_5_7d2a76053c/desktop.png"
+      ]
+    },
+    {
+      "id": "t35_4_18_4_1680a4a154",
+      "qid": "t35_4_18_4_1680a4a154",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T35_4_18.4.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_4_18_4_1680a4a154.json",
+      "score": {
+        "score_100": 5.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 10.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 10.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 7.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 2.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.375
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 1.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.188
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 5.0,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.5
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_4_18_4_1680a4a154/desktop.png"
+      ]
+    },
+    {
+      "id": "t35_5_23_6_d61de1c976",
+      "qid": "t35_5_23_6_d61de1c976",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T35_5_23.6.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t35_5_23_6_d61de1c976.json",
+      "score": {
+        "score_100": 14.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 16.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 7.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 12.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t35_5_23_6_d61de1c976/desktop.png"
+      ]
+    },
+    {
+      "id": "t38_2_24_5_35a83da1e8",
+      "qid": "t38_2_24_5_35a83da1e8",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T38_2_24.5.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t38_2_24_5_35a83da1e8.json",
+      "score": {
+        "score_100": 15.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 20.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 20.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 17.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 10.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 17.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 5.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t38_2_24_5_35a83da1e8/desktop.png"
+      ]
+    },
+    {
+      "id": "t38_5_58_6_360a1610e6",
+      "qid": "t38_5_58_6_360a1610e6",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T38_5_58.6.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t38_5_58_6_360a1610e6.json",
+      "score": {
+        "score_100": 44.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 47.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.375
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 47.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.125
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 45.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 37.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.625
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 48.75,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.625
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t38_5_58_6_360a1610e6/desktop.png"
+      ]
+    },
+    {
+      "id": "t40_4_14_0_071239b7aa",
+      "qid": "t40_4_14_0_071239b7aa",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T40_4_14.0.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t40_4_14_0_071239b7aa.json",
+      "score": {
+        "score_100": 5.001,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 8.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 5.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 2.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.375
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 6.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": true,
+        "status": "severe",
+        "types": [
+          "text_graphic"
+        ],
+        "affected_axes": [
+          "typography",
+          "composition_hierarchy",
+          "detail_finish",
+          "basic_usability"
+        ]
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t40_4_14_0_071239b7aa/desktop.png"
+      ]
+    },
+    {
+      "id": "t49_2_14_7_fd65c58d7b",
+      "qid": "t49_2_14_7_fd65c58d7b",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T49_2_14.7.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t49_2_14_7_fd65c58d7b.json",
+      "score": {
+        "score_100": 4.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 8.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 6.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 6.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_2_14_7_fd65c58d7b/desktop.png"
+      ]
+    },
+    {
+      "id": "t49_3_58_4_1170b1c389",
+      "qid": "t49_3_58_4_1170b1c389",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T49_3_58.4.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t49_3_58_4_1170b1c389.json",
+      "score": {
+        "score_100": 44.877,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 48.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 46.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 41.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 46.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 13.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_3_58_4_1170b1c389/desktop.png"
+      ]
+    },
+    {
+      "id": "t49_6_57_8_cfeab1270a",
+      "qid": "t49_6_57_8_cfeab1270a",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T49_6_57.8.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t49_6_57_8_cfeab1270a.json",
+      "score": {
+        "score_100": 55.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 60.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 57.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 57.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 17.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t49_6_57_8_cfeab1270a/desktop.png"
+      ]
+    },
+    {
+      "id": "t50_2_32_8_ad74f2b6e4",
+      "qid": "t50_2_32_8_ad74f2b6e4",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T50_2_32.8.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t50_2_32_8_ad74f2b6e4.json",
+      "score": {
+        "score_100": 25.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 30.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 30.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 27.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 5.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 20.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 27.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 8.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t50_2_32_8_ad74f2b6e4/desktop.png"
+      ]
+    },
+    {
+      "id": "t50_6_61_7_3d2e9d7d6e",
+      "qid": "t50_6_61_7_3d2e9d7d6e",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T50_6_61.7.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t50_6_61_7_3d2e9d7d6e.json",
+      "score": {
+        "score_100": 54.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 58.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 56.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 47.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 52.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 56.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 16.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t50_6_61_7_3d2e9d7d6e/desktop.png"
+      ]
+    },
+    {
+      "id": "t51_2_9_7_0574c42496",
+      "qid": "t51_2_9_7_0574c42496",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T51_2_9.7.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t51_2_9_7_0574c42496.json",
+      "score": {
+        "score_100": 4.814,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 8.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 5.0,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.0
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 1.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 6.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t51_2_9_7_0574c42496/desktop.png"
+      ]
+    },
+    {
+      "id": "t53_1_23_2_28f1e4ce67",
+      "qid": "t53_1_23_2_28f1e4ce67",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T53_1_23.2.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t53_1_23_2_28f1e4ce67.json",
+      "score": {
+        "score_100": 14.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 16.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 7.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 12.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t53_1_23_2_28f1e4ce67/desktop.png"
+      ]
+    },
+    {
+      "id": "t53_2_24_1_541b0f7612",
+      "qid": "t53_2_24_1_541b0f7612",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[10,20)/T53_2_24.1.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t53_2_24_1_541b0f7612.json",
+      "score": {
+        "score_100": 14.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 18.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 18.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 2.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 16.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 7.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 12.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 16.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 4.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t53_2_24_1_541b0f7612/desktop.png"
+      ]
+    },
+    {
+      "id": "t55_1_37_2_12030ad045",
+      "qid": "t55_1_37_2_12030ad045",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T55_1_37.2.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t55_1_37_2_12030ad045.json",
+      "score": {
+        "score_100": 15.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 20.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 1.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 20.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 17.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 3.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 10.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 17.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 5.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t55_1_37_2_12030ad045/desktop.png"
+      ]
+    },
+    {
+      "id": "t55_3_45_2_def169ca74",
+      "qid": "t55_3_45_2_def169ca74",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T55_3_45.2.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t55_3_45_2_def169ca74.json",
+      "score": {
+        "score_100": 35.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 40.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 37.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 28.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 30.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 37.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 11.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t55_3_45_2_def169ca74/desktop.png"
+      ]
+    },
+    {
+      "id": "t58_1_46_5_eb03940e08",
+      "qid": "t58_1_46_5_eb03940e08",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[30,40)/T58_1_46.5.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t58_1_46_5_eb03940e08.json",
+      "score": {
+        "score_100": 35.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 40.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 37.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 28.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 30.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 4.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 37.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 11.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_1_46_5_eb03940e08/desktop.png"
+      ]
+    },
+    {
+      "id": "t58_3_62_8_8cad66bf32",
+      "qid": "t58_3_62_8_8cad66bf32",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T58_3_62.8.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t58_3_62_8_8cad66bf32.json",
+      "score": {
+        "score_100": 54.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 58.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.938
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 58.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.813
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 56.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 47.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.125
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 52.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.875
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 56.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 16.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_3_62_8_8cad66bf32/desktop.png"
+      ]
+    },
+    {
+      "id": "t58_5_61_4_33d3b16bfd",
+      "qid": "t58_5_61_4_33d3b16bfd",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T58_5_61.4.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t58_5_61_4_33d3b16bfd.json",
+      "score": {
+        "score_100": 55.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 60.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 60.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 57.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 11.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 48.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 57.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 17.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t58_5_61_4_33d3b16bfd/desktop.png"
+      ]
+    },
+    {
+      "id": "t63_2_35_0_220ef8bf05",
+      "qid": "t63_2_35_0_220ef8bf05",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[20,30)/T63_2_35.0.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t63_2_35_0_220ef8bf05.json",
+      "score": {
+        "score_100": 14.438,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 12.5,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.625
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 20.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 3.0
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 13.75,
+            "weight": 0.2,
+            "weighted_contribution_100": 2.75
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 10.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.5
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 17.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 5.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": true,
+        "status": "severe",
+        "types": [
+          "control_nav"
+        ],
+        "affected_axes": [
+          "basic_usability",
+          "composition_hierarchy",
+          "detail_finish"
+        ]
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t63_2_35_0_220ef8bf05/desktop.png"
+      ]
+    },
+    {
+      "id": "t63_6_62_5_41b232c8cd",
+      "qid": "t63_6_62_5_41b232c8cd",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[50,60)/T63_6_62.5.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t63_6_62_5_41b232c8cd.json",
+      "score": {
+        "score_100": 64.876,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 68.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 3.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 68.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 10.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 66.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 13.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 57.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 8.625
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 62.5,
+            "weight": 0.15,
+            "weighted_contribution_100": 9.375
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 66.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 19.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t63_6_62_5_41b232c8cd/desktop.png"
+      ]
+    },
+    {
+      "id": "t65_3_16_9_a36697e5ba",
+      "qid": "t65_3_16_9_a36697e5ba",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T65_3_16.9.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t65_3_16_9_a36697e5ba.json",
+      "score": {
+        "score_100": 5.064,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 8.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 6.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 1.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 6.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t65_3_16_9_a36697e5ba/desktop.png"
+      ]
+    },
+    {
+      "id": "t65_4_17_0_5192c878f3",
+      "qid": "t65_4_17_0_5192c878f3",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[0,10)/T65_4_17.0.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t65_4_17_0_5192c878f3.json",
+      "score": {
+        "score_100": 5.064,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 8.75,
+            "weight": 0.05,
+            "weighted_contribution_100": 0.438
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 8.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 1.313
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 6.25,
+            "weight": 0.2,
+            "weighted_contribution_100": 1.25
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 1.25,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.188
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 0.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 0.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 6.25,
+            "weight": 0.3,
+            "weighted_contribution_100": 1.875
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t65_4_17_0_5192c878f3/desktop.png"
+      ]
+    },
+    {
+      "id": "t68_5_59_2_bc68b82896",
+      "qid": "t68_5_59_2_bc68b82896",
+      "html_path": "/Volumes/TU820/aesthetic/基准集-bobo 确认版/[40,50)/T68_5_59.2.html",
+      "json_path": "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/outputs/json/t68_5_59_2_bc68b82896.json",
+      "score": {
+        "score_100": 45.563,
+        "aggregate_view": "desktop",
+        "aggregate_formula": "single_canonical_screenshot_score",
+        "axis_breakdown": [
+          {
+            "axis": "basic_usability",
+            "axis_score_100": 50.0,
+            "weight": 0.05,
+            "weighted_contribution_100": 2.5
+          },
+          {
+            "axis": "color_material",
+            "axis_score_100": 50.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 7.5
+          },
+          {
+            "axis": "composition_hierarchy",
+            "axis_score_100": 47.5,
+            "weight": 0.2,
+            "weighted_contribution_100": 9.5
+          },
+          {
+            "axis": "detail_finish",
+            "axis_score_100": 38.75,
+            "weight": 0.15,
+            "weighted_contribution_100": 5.813
+          },
+          {
+            "axis": "typography",
+            "axis_score_100": 40.0,
+            "weight": 0.15,
+            "weighted_contribution_100": 6.0
+          },
+          {
+            "axis": "visual_impact_originality",
+            "axis_score_100": 47.5,
+            "weight": 0.3,
+            "weighted_contribution_100": 14.25
+          }
+        ]
+      },
+      "occlusion": {
+        "detected": false,
+        "status": "none",
+        "types": [],
+        "affected_axes": []
+      },
+      "screenshots": [
+        "/Volumes/TU820/aesthetic/handoff_packages/aesthetic-v4-vlm-judge-package-20260624/acceptance/benchmark_claude47_v27_auto_full72/screenshots/t68_5_59_2_bc68b82896/desktop.png"
+      ]
+    }
+  ]
+}

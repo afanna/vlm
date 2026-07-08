@@ -1,0 +1,13 @@
+{
+  "bucket_counts": {
+    "failed": 1
+  },
+  "csv": "..\\runs\\manual-output-test\\scores.csv",
+  "out": "..\\runs\\manual-output-test\\report.html",
+  "profile": "aesthetic-v4",
+  "records": 1,
+  "score_breakdown": "on",
+  "status_counts": {
+    "failed": 1
+  }
+}

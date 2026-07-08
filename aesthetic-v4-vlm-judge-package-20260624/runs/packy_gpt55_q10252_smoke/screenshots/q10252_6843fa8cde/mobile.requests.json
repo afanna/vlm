@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "sample_id": "q10252_6843fa8cde",
+  "viewport": "mobile",
+  "started_at": "2026-06-29T18:41:04.005Z",
+  "requests": [],
+  "summary": {
+    "total_logged": 0,
+    "failed_count": 0,
+    "http_error_count": 0,
+    "domains": {}
+  }
+}

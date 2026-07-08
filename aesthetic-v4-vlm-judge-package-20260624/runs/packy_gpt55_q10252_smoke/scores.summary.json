@@ -1,0 +1,28 @@
+{
+  "anchors": 0,
+  "avg_record_seconds": 70.394,
+  "avg_scored_view_seconds": 70.38,
+  "backend": "command",
+  "elapsed_seconds": 70.394,
+  "finished_at": "2026-06-29T18:42:17.697918+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "../runs/packy_gpt55_q10252_smoke/scores.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records": 1,
+  "scored": 1,
+  "scored_viewport_counts": {
+    "mobile": 1
+  },
+  "started_at": "2026-06-29T18:41:07.304083+00:00",
+  "target_viewport_counts": {
+    "mobile": 1
+  },
+  "viewport_selection": "auto",
+  "workers": 1
+}

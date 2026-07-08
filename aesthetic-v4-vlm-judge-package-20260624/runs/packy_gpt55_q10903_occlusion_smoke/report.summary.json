@@ -1,0 +1,13 @@
+{
+  "bucket_counts": {
+    "[20,30)": 1
+  },
+  "csv": "../runs/packy_gpt55_q10903_occlusion_smoke/scores.csv",
+  "out": "../runs/packy_gpt55_q10903_occlusion_smoke/report.html",
+  "profile": "aesthetic-v4",
+  "records": 1,
+  "score_breakdown": "on",
+  "status_counts": {
+    "scored": 1
+  }
+}

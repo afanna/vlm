@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "sample_id": "q51042_overlap_d1c47bb5a1",
+  "viewport": "mobile",
+  "started_at": "2026-06-30T03:08:54.887Z",
+  "requests": [],
+  "summary": {
+    "total_logged": 0,
+    "failed_count": 0,
+    "http_error_count": 0,
+    "domains": {}
+  }
+}

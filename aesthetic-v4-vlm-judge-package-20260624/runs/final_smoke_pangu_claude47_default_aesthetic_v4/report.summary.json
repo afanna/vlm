@@ -1,0 +1,13 @@
+{
+  "bucket_counts": {
+    "[70,80)": 1
+  },
+  "csv": "../runs/final_smoke_pangu_claude47_default_aesthetic_v4/scores.csv",
+  "out": "../runs/final_smoke_pangu_claude47_default_aesthetic_v4/report.html",
+  "profile": "aesthetic-v4",
+  "records": 1,
+  "score_breakdown": "on",
+  "status_counts": {
+    "scored": 1
+  }
+}

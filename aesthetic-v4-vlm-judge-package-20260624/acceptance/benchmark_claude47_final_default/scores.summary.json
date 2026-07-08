@@ -1,0 +1,30 @@
+{
+  "anchors": 0,
+  "avg_record_seconds": 12.554,
+  "avg_scored_view_seconds": 12.55,
+  "backend": "command",
+  "elapsed_seconds": 903.855,
+  "finished_at": "2026-06-30T02:59:08.224144+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "../acceptance/benchmark_claude47_final_default/scores.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records": 72,
+  "scored": 72,
+  "scored_viewport_counts": {
+    "desktop": 62,
+    "mobile": 10
+  },
+  "started_at": "2026-06-30T02:44:04.368542+00:00",
+  "target_viewport_counts": {
+    "desktop": 62,
+    "mobile": 10
+  },
+  "viewport_selection": "auto",
+  "workers": 1
+}

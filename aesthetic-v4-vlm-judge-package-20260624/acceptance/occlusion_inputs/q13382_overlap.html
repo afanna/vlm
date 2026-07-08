@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>程序员技术成长报告 // Dev_Path Report</title>
+  <style>
+    /* --- DESIGN SYSTEM: VERCEL TOKENS --- */
+    :root {
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --surface-warm: var(--surface);     
+      --fg: #171717;                       
+      --fg-2: #4d4d4d;                     
+      --muted: #666666;                    
+      --meta: #808080;                     
+      --border: rgba(0, 0, 0, 0.08);       
+      --border-soft: rgba(0, 0, 0, 0.04);  
+      --accent: #0070f3;                   
+      --accent-on: #ffffff;                
+      --accent-hover: color-mix(in oklab, var(--accent), black 8%);
+      --accent-active: color-mix(in oklab, var(--accent), black 14%);
+      --success: #16a34a;
+      --warn: #eab308;
+      --danger: #dc2626;
+      --font-display: "Geist", "Geist Sans", -apple-system, "Segoe UI", Arial, sans-serif;
+      --font-body: "Geist", "Geist Sans", -apple-system, "Segoe UI", Arial, sans-serif;
+      --font-mono: "Geist Mono", ui-monospace, "SF Mono", "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+      --text-xs: 12px;                     
+      --text-sm: 14px;                     
+      --text-base: 16px;                   
+      --text-lg: 20px;                     
+      --text-xl: 24px;                     
+      --text-2xl: 32px;                    
+      --text-3xl: 40px;                    
+      --text-4xl: 48px;                    
+      --leading-body: 1.5;
+      --leading-tight: 1.1;
+      --tracking-display: -0.05em;
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --section-y-desktop: 96px;
+      --section-y-tablet: 64px;
+      --section-y-phone: 48px;
+      --radius-sm: 6px;                    
+      --radius-md: 8px;                    
+      --radius-lg: 12px;                   
+      --radius-pill: 9999px;               
+      --elev-flat: none;
+      --elev-ring: 0 0 0 1px var(--border);
+      --elev-raised:
+        0 0 0 1px rgba(0, 0, 0, 0.08),
+        0 2px 2px rgba(0, 0, 0, 0.04),
+        0 8px 8px -8px rgba(0, 0, 0, 0.04),
+        0 0 0 1px #fafafa;
+      --focus-ring: 0 0 0 2px var(--accent);
+      --motion-fast: 150ms;
+      --motion-base: 200ms;
+      --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+      --container-max: 1200px;
+      --container-gutter-desktop: 24px;
+      --container-gutter-tablet: 16px;
+      --container-gutter-phone: 12px;
+
+      /* Workflow Colors */
+      --develop-blue: #0a72ef;
+      --preview-pink: #de1d8d;
+      --ship-red: #ff5b4f;
+    }
+
+    /* --- BASIC SETUP --- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      line-height: var(--leading-body);
+      font-size: var(--text-base);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* OpenType Ligatures */
+    h1, h2, h3, h4, p, span, button, a {
+      font-variant-ligatures: common-ligatures;
+    }
+
+    /* Focus Ring Styles */
+    *:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* --- LAYOUT WRAPPERS & CONTAINERS --- */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding-left: var(--container-gutter-phone);
+      padding-right: var(--container-gutter-phone);
+    }
+
+    /* --- NAV BAR --- */
+    .nav-bar {
+      width: 100%;
+      background: var(--bg);
+      box-shadow: 0 1px 0 0 var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 56px;
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--fg);
+    }
+
+    .logo svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .nav-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      background-color: #ebf5ff;
+      color: #0068d6;
+      font-size: var(--text-xs);
+      font-weight: 500;
+      padding: var(--space-1) var(--space-2);
+      border-radius: var(--radius-pill);
+      font-family: var(--font-mono);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent);
+    }
+
+    /* --- HERO DISPLAY SECTION --- */
+    .hero-section {
+      padding-top: var(--space-12);
+      padding-bottom: var(--space-6);
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+      font-weight: 600;
+      letter-spacing: -0.05em; /* Extreme Vercel-style compression */
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-2);
+    }
+
+    .hero-subtitle {
+      font-size: var(--text-base);
+      color: var(--fg-2);
+      max-width: 600px;
+      margin: 0 auto var(--space-8);
+    }
+
+    /* --- DIMENSION CONTROLLER (INTERACTIVE CONTROLS) --- */
+    .dimension-controller {
+      display: inline-flex;
+      background: var(--border-soft);
+      padding: var(--space-1);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--elev-ring);
+      margin-bottom: var(--space-8);
+      gap: var(--space-1);
+      max-width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .dimension-controller::-webkit-scrollbar {
+      display: none;
+    }
+
+    .dimension-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color var(--motion-fast) var(--ease-standard), background-color var(--motion-fast) var(--ease-standard);
+      min-width: 44px; /* Ensure mobile friendly touch */
+    }
+
+    .dimension-btn.active {
+      background: var(--fg);
+      color: var(--bg);
+    }
+
+    /* --- BENTO GRID SYSTEM --- */
+    /* Mobile standard layout */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      margin-bottom: var(--space-12);
+    }
+
+    /* Base Card Styling with Shadow-as-Border technique */
+    .bento-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--elev-raised);
+      padding: var(--space-6);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow var(--motion-base) var(--ease-standard), transform var(--motion-base) var(--ease-standard);
+    }
+
+    .bento-card:hover {
+      box-shadow: 
+        0px 0px 0px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 6px rgba(0, 0, 0, 0.04),
+        0px 12px 16px -8px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Card Typography */
+    .card-label {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      text-transform: uppercase;
+      color: var(--meta);
+      margin-bottom: var(--space-1);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .card-title {
+      font-size: var(--text-xl);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--fg);
+      margin-bottom: var(--space-4);
+    }
+
+    /* --- CARD 1: PRIMARY AREA CHART (Blog Influence) --- */
+    .chart-container-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .chart-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--space-4);
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .chart-stats {
+      display: flex;
+      gap: var(--space-6);
+    }
+
+    .stat-node {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-node .num {
+      font-family: var(--font-mono);
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--fg);
+    }
+
+    .stat-node .label {
+      font-size: var(--text-xs);
+      color: var(--muted);
+    }
+
+    .chart-viewport {
+      position: relative;
+      flex-grow: 1;
+      min-height: 220px;
+      width: 100%;
+    }
+
+    canvas.trend-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* --- CARD 2: LEETCODE DONUT PROGRESS --- */
+    .leetcode-widget {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      align-items: center;
+    }
+
+    .donut-visual {
+      position: relative;
+      width: 160px;
+      height: 160px;
+    }
+
+    .donut-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .donut-ring-bg {
+      fill: none;
+      stroke: var(--border-soft);
+      stroke-width: 10;
+    }
+
+    .donut-ring-segment {
+      fill: none;
+      stroke-width: 10;
+      stroke-linecap: round;
+      transition: stroke-dasharray var(--motion-base) var(--ease-standard);
+    }
+
+    .donut-ring-segment.easy { stroke: var(--success); }
+    .donut-ring-segment.medium { stroke: var(--warn); }
+    .donut-ring-segment.hard { stroke: var(--danger); }
+
+    .donut-center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .donut-center-total {
+      font-family: var(--font-mono);
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .donut-center-label {
+      font-size: var(--text-xs);
+      color: var(--muted);
+    }
+
+    .leetcode-breakdown {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .lc-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-sm);
+      background-color: var(--border-soft);
+      font-size: var(--text-xs);
+    }
+
+    .lc-badge {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: 500;
+    }
+
+    .lc-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .lc-nums {
+      font-family: var(--font-mono);
+      color: var(--fg);
+    }
+
+    /* --- CARD 3: TECH STACK MATRIX (Interactive Tree structure) --- */
+    .stack-matrix-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .stack-branch {
+      border-radius: var(--radius-sm);
+      box-shadow: 0 0 0 1px var(--border);
+      overflow: hidden;
+    }
+
+    .stack-header {
+      background: var(--surface);
+      padding: var(--space-3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color var(--motion-fast) var(--ease-standard);
+    }
+
+    .stack-header:hover {
+      background-color: var(--border-soft);
+    }
+
+    .stack-name {
+      font-weight: 500;
+      font-size: var(--text-sm);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .stack-progress-bar {
+      width: 60px;
+      height: 4px;
+      background-color: var(--border-soft);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+    }
+
+    .stack-progress-fill {
+      height: 100%;
+      background-color: var(--develop-blue);
+      border-radius: var(--radius-pill);
+      transition: width var(--motion-base) var(--ease-standard);
+    }
+
+    .stack-content {
+      padding: var(--space-3);
+      background: #fafafa;
+      border-top: 1px solid var(--border);
+      display: none;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .stack-branch.active .stack-content {
+      display: flex;
+    }
+
+    .tech-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: var(--text-xs);
+    }
+
+    .tech-title {
+      font-family: var(--font-mono);
+      color: var(--fg-2);
+    }
+
+    /* --- CARD 4: GITHUB HEATMAP & CORE TIMELINE VISUAL (Hero at Bottom) --- */
+    .heatmap-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .heatmap-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .heatmap-total-count {
+      font-size: var(--text-sm);
+      color: var(--fg-2);
+    }
+
+    .heatmap-total-count strong {
+      font-family: var(--font-mono);
+      color: var(--fg);
+    }
+
+    /* Horizontal scroll for grid on ultra mobile */
+    .heatmap-scroll-container {
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+      padding-bottom: var(--space-2);
+    }
+
+    .heatmap-grid {
+      display: grid;
+      grid-template-flow: column;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(7, 10px);
+      grid-auto-columns: 10px;
+      gap: 3px;
+      width: max-content; /* Lock width to force proper rendering */
+    }
+
+    .heatmap-cell {
+      width: 10px;
+      height: 10px;
+      background-color: #ebebeb;
+      border-radius: 2px;
+      transition: background-color var(--motion-fast) var(--ease-standard);
+      cursor: crosshair;
+    }
+
+    .heatmap-cell[data-level="1"] { background-color: #cdcdcd; }
+    .heatmap-cell[data-level="2"] { background-color: #808080; }
+    .heatmap-cell[data-level="3"] { background-color: #4d4d4d; }
+    .heatmap-cell[data-level="4"] { background-color: #171717; }
+
+    /* GitHub-styled bottom timeline/terminal (Main Visual at bottom of Bento) */
+    .hero-bottom-timeline {
+      margin-top: var(--space-6);
+      background-color: #fafafa;
+      box-shadow: inset 0 0 0 1px var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      font-family: var(--font-mono);
+    }
+
+    .timeline-header {
+      font-size: var(--text-xs);
+      color: var(--meta);
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: var(--space-2);
+      margin-bottom: var(--space-3);
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .timeline-item {
+      font-size: var(--text-xs);
+      display: flex;
+      gap: var(--space-3);
+      line-height: var(--leading-tight);
+    }
+
+    .timeline-item .date {
+      color: var(--meta);
+      flex-shrink: 0;
+      width: 80px;
+    }
+
+    .timeline-item .activity {
+      color: var(--fg);
+    }
+
+    .timeline-item .activity strong {
+      color: var(--accent);
+    }
+
+    /* --- CHART TOOLTIP (Floating & Clean) --- */
+    .chart-tooltip {
+      position: absolute;
+      background: var(--fg);
+      color: var(--bg);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity var(--motion-fast) var(--ease-standard);
+      z-index: 50;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* --- RESPONSIVE ADAPTATIONS (UPWARD ENHANCEMENT) --- */
+    /* Tablet layout: min-width 640px */
+    @media (min-width: 640px) {
+      .container {
+        padding-left: var(--container-gutter-tablet);
+        padding-right: var(--container-gutter-tablet);
+      }
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+      }
+      .bento-card-primary {
+        grid-column: span 2;
+      }
+      .bento-card-full {
+        grid-column: span 2;
+      }
+    }
+
+    /* Desktop layout: min-width 1024px */
+    @media (min-width: 1024px) {
+      .container {
+        padding-left: var(--container-gutter-desktop);
+        padding-right: var(--container-gutter-desktop);
+      }
+      .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
+      }
+      /* Grid Layout Matrix matching Bento blueprint: 1 Large Card + Multi smaller cards */
+      .bento-card-primary {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .bento-card-sidebar {
+        grid-column: span 1;
+      }
+      .bento-card-full {
+        grid-column: span 3;
+      }
+    }
+
+    /* Global Motion Reduction Rules */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-bar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <svg viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M38 0L76 76H0L38 0Z" fill="black"/>
+        </svg>
+        <span>DEV_PATH // GROW_ENGINE</span>
+      </div>
+      <div class="nav-meta">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>LIVE METRICS</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH COMPRESSED TYPOGRAPHY -->
+  <section class="hero-section container">
+    <h1 class="hero-title">ENGINEER PROFILE</h1>
+    <p class="hero-subtitle">全栈开发者技术演进与学习脉络交互报告（演示数据）</p>
+
+    <!-- INTERACTIVE DIMENSION CONTROLLER -->
+    <div class="dimension-controller" role="tablist" aria-label="Growth Dimensions">
+      <button class="dimension-btn active" role="tab" aria-selected="true" data-dimension="all">OVERVIEW // 完整图鉴</button>
+      <button class="dimension-btn" role="tab" aria-selected="false" data-dimension="code">ALGORITHMS // 算法突破</button>
+      <button class="dimension-btn" role="tab" aria-selected="false" data-dimension="infra">INFRA // 系统工程</button>
+      <button class="dimension-btn" role="tab" aria-selected="false" data-dimension="blog">INFLUENCE // 写作输出</button>
+    </div>
+  </section>
+
+  <!-- BENTO GRID CONTAINER -->
+  <main class="container">
+    <div class="bento-grid">
+
+      <!-- CARD 1: PRIMARY AREA CHART (Spans 2x2 on Desktop) -->
+      <section class="bento-card bento-card-primary" id="card-blog">
+        <div class="chart-container-card">
+          <div class="chart-meta-row">
+            <div>
+              <div class="card-label">
+                <span style="color: var(--preview-pink)">●</span> INFLUENCE TRENDS
+              </div>
+              <h2 class="card-title">博客阅读量 & 技术影响力趋势</h2>
+            </div>
+            <div class="chart-stats">
+              <div class="stat-node">
+                <span class="num" id="stat-total-views">124.8k</span>
+                <span class="label">Total Views</span>
+              </div>
+              <div class="stat-node">
+                <span class="num" id="stat-articles">42</span>
+                <span class="label">Articles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Canvas Area Chart -->
+          <div class="chart-viewport" id="trend-chart-viewport">
+            <canvas id="trend-chart" class="trend-canvas"></canvas>
+            <!-- Float Tooltip -->
+            <div class="chart-tooltip" id="chart-tooltip"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 2: LEETCODE CIRCULAR PROGRESS -->
+      <section class="bento-card bento-card-sidebar" id="card-leetcode">
+        <div>
+          <div class="card-label">
+            <span style="color: var(--ship-red)">▲</span> ALGORITHM STATS
+          </div>
+          <h2 class="card-title">LeetCode 分类进度</h2>
+        </div>
+
+        <div class="leetcode-widget">
+          <div class="donut-visual">
+            <svg class="donut-svg">
+              <circle class="donut-ring-bg" cx="80" cy="80" r="65" />
+              <!-- Segments overlapping or nested. We'll draw 3 nested visual tracks -->
+              <circle class="donut-ring-bg" cx="80" cy="80" r="50" style="stroke-width: 6; opacity: 0.5;" />
+              <circle class="donut-ring-bg" cx="80" cy="80" r="35" style="stroke-width: 6; opacity: 0.5;" />
+              
+              <!-- Active Segments -->
+              <!-- Easy (Outer) -->
+              <circle class="donut-ring-segment easy" id="lc-easy-circle" cx="80" cy="80" r="65" />
+              <!-- Medium (Middle) -->
+              <circle class="donut-ring-segment medium" id="lc-medium-circle" cx="80" cy="80" r="50" style="stroke-width: 8;" />
+              <!-- Hard (Inner) -->
+              <circle class="donut-ring-segment hard" id="lc-hard-circle" cx="80" cy="80" r="35" style="stroke-width: 8;" />
+            </svg>
+            <div class="donut-center-text">
+              <div class="donut-center-total" id="lc-total-solved">412</div>
+              <div class="donut-center-label">Solved</div>
+            </div>
+          </div>
+
+          <div class="leetcode-breakdown">
+            <div class="lc-item">
+              <span class="lc-badge">
+                <span class="lc-badge-dot" style="background-color: var(--success)"></span>
+                Easy
+              </span>
+              <span class="lc-nums" id="lc-easy-nums">180/200</span>
+            </div>
+            <div class="lc-item">
+              <span class="lc-badge">
+                <span class="lc-badge-dot" style="background-color: var(--warn)"></span>
+                Medium
+              </span>
+              <span class="lc-nums" id="lc-medium-nums">192/400</span>
+            </div>
+            <div class="lc-item">
+              <span class="lc-badge">
+                <span class="lc-badge-dot" style="background-color: var(--danger)"></span>
+                Hard
+              </span>
+              <span class="lc-nums" id="lc-hard-nums">40/150</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 3: TECH STACK HIERARCHY / mastery -->
+      <section class="bento-card bento-card-sidebar" id="card-stack">
+        <div>
+          <div class="card-label">
+            <span style="color: var(--develop-blue)">◆</span> TECHNICAL SPECTRUM
+          </div>
+          <h2 class="card-title">技术栈掌握度图谱</h2>
+        </div>
+
+        <div class="stack-matrix-wrapper">
+          <!-- Branch 1 -->
+          <div class="stack-branch active" data-index="0">
+            <div class="stack-header" onclick="toggleBranch(this)">
+              <div class="stack-name">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <span>Core Frontend</span>
+              </div>
+              <div class="stack-progress-bar">
+                <div class="stack-progress-fill" style="width: 90%; background-color: var(--develop-blue)"></div>
+              </div>
+            </div>
+            <div class="stack-content">
+              <div class="tech-item"><span class="tech-title">TypeScript / JS</span><span>92%</span></div>
+              <div class="tech-item"><span class="tech-title">React / Next.js</span><span>90%</span></div>
+              <div class="tech-item"><span class="tech-title">Browser Engine</span><span>80%</span></div>
+            </div>
+          </div>
+
+          <!-- Branch 2 -->
+          <div class="stack-branch" data-index="1">
+            <div class="stack-header" onclick="toggleBranch(this)">
+              <div class="stack-name">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                <span>Node & Go Backend</span>
+              </div>
+              <div class="stack-progress-bar">
+                <div class="stack-progress-fill" style="width: 78%; background-color: var(--preview-pink)"></div>
+              </div>
+            </div>
+            <div class="stack-content">
+              <div class="tech-item"><span class="tech-title">Node.js (Runtime)</span><span>85%</span></div>
+              <div class="tech-item"><span class="tech-title">Go (Concurrence)</span><span>75%</span></div>
+              <div class="tech-item"><span class="tech-title">gRPC / Microservices</span><span>70%</span></div>
+            </div>
+          </div>
+
+          <!-- Branch 3 -->
+          <div class="stack-branch" data-index="2">
+            <div class="stack-header" onclick="toggleBranch(this)">
+              <div class="stack-name">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Infra & Cloud</span>
+              </div>
+              <div class="stack-progress-bar">
+                <div class="stack-progress-fill" style="width: 65%; background-color: var(--ship-red)"></div>
+              </div>
+            </div>
+            <div class="stack-content">
+              <div class="tech-item"><span class="tech-title">Docker / K8s</span><span>70%</span></div>
+              <div class="tech-item"><span class="tech-title">CI/CD Pipelines</span><span>80%</span></div>
+              <div class="tech-item"><span class="tech-title">Terraform</span><span>55%</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 4: FULL-WIDTH GITHUB HEATMAP & HERO TIMELINE -->
+      <section class="bento-card bento-card-full" id="card-github">
+        <div class="heatmap-section">
+          <div class="heatmap-meta">
+            <div>
+              <div class="card-label">
+                <span style="color: var(--fg)">■</span> GIT CONTRIBUTIONS
+              </div>
+              <h2 class="card-title">GitHub 开源社区贡献矩阵</h2>
+            </div>
+            <div class="heatmap-total-count">
+              Yearly Contributions: <strong id="contribution-count">1,824</strong>
+            </div>
+          </div>
+
+          <!-- Horizontal scrollable matrix wrapper -->
+          <div class="heatmap-scroll-container">
+            <div class="heatmap-grid" id="heatmap-grid-element">
+              <!-- Cells generated dynamic via JS -->
+            </div>
+          </div>
+
+          <!-- HERO TIMELINE AT THE BOTTOM -->
+          <div class="hero-bottom-timeline">
+            <div class="timeline-header">
+              <span>LATEST ACTIVITY MILESTONES // 最新研发轨迹</span>
+              <span>GEIST CONSOLE V1.4.2</span>
+            </div>
+            <div class="timeline-list" id="activity-timeline-list">
+              <!-- Active items filled via controller context -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- --- REAL TIME JAVASCRIPT LOGIC --- -->
+  <script>
+    // 1. DATASETS DEFINITION
+    const globalState = {
+      activeDimension: 'all',
+      // Base Data Model
+      dimensions: {
+        all: {
+          totalSolved: 412,
+          easy: 180, medium: 192, hard: 40,
+          views: "124.8k",
+          articles: 42,
+          contributions: 1824,
+          timeline: [
+            { date: '2023-11-20', text: 'Merged Pull Request #228 into upstream <strong>rust-lang/cargo</strong> (Optimized registry index resolution)' },
+            { date: '2023-11-05', text: 'Published technical post: <i>"Fine-Tuning V8 Runtime Engines under High-Concurrency WebSockets"</i>' },
+            { date: '2023-10-18', text: 'Solved LeetCode <strong>#124 Binary Tree Maximum Path Sum</strong> (Hard Category solved)' }
+          ],
+          chartData: [
+            { month: 'Jun', views: 8200, output: 2 },
+            { month: 'Jul', views: 12400, output: 4 },
+            { month: 'Aug', views: 10100, output: 3 },
+            { month: 'Sep', views: 18900, output: 6 },
+            { month: 'Oct', views: 24500, output: 8 },
+            { month: 'Nov', views: 32000, output: 9 }
+          ]
+        },
+        code: {
+          totalSolved: 550,
+          easy: 210, medium: 260, hard: 80,
+          views: "34.2k",
+          articles: 12,
+          contributions: 610,
+          timeline: [
+            { date: '2023-11-15', text: 'Achieved LeetCode Weekly Contest Rating peak <strong>2140</strong> (Top 1.5%)' },
+            { date: '2023-10-30', text: 'Completed 30-day coding marathon: 120 Dynamic Programming challenges resolved' },
+            { date: '2023-09-12', text: 'Refactored algorithmic base library in TypeScript: achieved O(1) space optimization' }
+          ],
+          chartData: [
+            { month: 'Jun', views: 2100, output: 1 },
+            { month: 'Jul', views: 4200, output: 2 },
+            { month: 'Aug', views: 3800, output: 2 },
+            { month: 'Sep', views: 6400, output: 3 },
+            { month: 'Oct', views: 9200, output: 2 },
+            { month: 'Nov', views: 11000, output: 4 }
+          ]
+        },
+        infra: {
+          totalSolved: 120,
+          easy: 30, medium: 60, hard: 30,
+          views: "48.6k",
+          articles: 15,
+          contributions: 920,
+          timeline: [
+            { date: '2023-11-10', text: 'Deployed production Kubernetes cluster with GitOps ArgoCD integration' },
+            { date: '2023-10-22', text: 'Contributed to CNCF sandbox project, optimizing container overlay networking layers' },
+            { date: '2023-08-15', text: 'Migrated monolithic microservices pipeline from AWS EC2 to serverless container execution' }
+          ],
+          chartData: [
+            { month: 'Jun', views: 4000, output: 1 },
+            { month: 'Jul', views: 5100, output: 2 },
+            { month: 'Aug', views: 4500, output: 1 },
+            { month: 'Sep', views: 8800, output: 4 },
+            { month: 'Oct', views: 12000, output: 3 },
+            { month: 'Nov', views: 16000, output: 5 }
+          ]
+        },
+        blog: {
+          totalSolved: 210,
+          easy: 120, medium: 70, hard: 20,
+          views: "89.5k",
+          articles: 32,
+          contributions: 550,
+          timeline: [
+            { date: '2023-11-18', text: 'Article featured on official Dev.to front page: <i>"Inside Node.js Event Loop Internals"</i>' },
+            { date: '2023-10-05', text: 'Reached newsletter milestone of 5,000 weekly active subscribers' },
+            { date: '2023-09-01', text: 'Launched dev blog with clean markdown compiler optimized using edge runtime engines' }
+          ],
+          chartData: [
+            { month: 'Jun', views: 6100, output: 3 },
+            { month: 'Jul', views: 9800, output: 5 },
+            { month: 'Aug', views: 8200, output: 4 },
+            { month: 'Sep', views: 15100, output: 8 },
+            { month: 'Oct', views: 21000, output: 10 },
+            { month: 'Nov', views: 28000, output: 12 }
+          ]
+        }
+      }
+    };
+
+    // 2. DIMENSION SELECTION INTERACTION
+    const dimensionButtons = document.querySelectorAll('.dimension-btn');
+    
+    dimensionButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        // Accessibility update
+        dimensionButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        const nextDim = btn.getAttribute('data-dimension');
+        globalState.activeDimension = nextDim;
+
+        // Propagate updates to views
+        updateDashboardData();
+      });
+    });
+
+    // 3. MAIN AREA CHART RENDERING LOGIC (Canvas with High-DPI support)
+    const canvas = document.getElementById('trend-chart');
+    const ctx = canvas.getContext('2d');
+    let chartTooltipElement = document.getElementById('chart-tooltip');
+    let lastRenderedPoints = []; // Track points coordinates for hit testing
+
+    function initChartResize() {
+      const resizeObserver = new ResizeObserver(() => {
+        renderAreaChart();
+      });
+      resizeObserver.observe(canvas.parentElement);
+    }
+
+    function renderAreaChart() {
+      const data = globalState.dimensions[globalState.activeDimension].chartData;
+      
+      // Handle devicePixelRatio
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      
+      ctx.resetTransform();
+      ctx.scale(dpr, dpr);
+      
+      const width = rect.width;
+      const height = rect.height;
+      
+      // Clear
+      ctx.clearRect(0, 0, width, height);
+
+      // Margin
+      const padding = { top: 20, right: 20, bottom: 30, left: 40 };
+      const chartWidth = width - padding.left - padding.right;
+      const chartHeight = height - padding.top - padding.bottom;
+
+      // Min-Max limits
+      const maxViews = Math.max(...data.map(d => d.views)) * 1.15; // 15% buffer
+      
+      // X Scale / Y Scale
+      const getX = (index) => padding.left + (index / (data.length - 1)) * chartWidth;
+      const getY = (val) => padding.top + chartHeight - (val / maxViews) * chartHeight;
+
+      // Draw horizontal grid lines (Minimal Vercel Style)
+      ctx.strokeStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.lineWidth = 1;
+      
+      const gridLevels = 4;
+      for (let i = 0; i <= gridLevels; i++) {
+        const val = (maxViews / gridLevels) * i;
+        const y = getY(val);
+        ctx.beginPath();
+        ctx.moveTo(padding.left, y);
+        ctx.lineTo(width - padding.right, y);
+        ctx.stroke();
+
+        // Labels
+        ctx.fillStyle = '#808080';
+        ctx.font = '10px "Geist Mono", ui-monospace, monospace';
+        ctx.fillText((val / 1000).toFixed(1) + 'k', padding.left - 35, y + 3);
+      }
+
+      // Record coordinates for interactivity
+      lastRenderedPoints = data.map((d, i) => {
+        return {
+          x: getX(i),
+          y: getY(d.views),
+          data: d
+        };
+      });
+
+      // Render Area Gradient
+      ctx.beginPath();
+      ctx.moveTo(getX(0), getY(0));
+      for (let i = 0; i < lastRenderedPoints.length; i++) {
+        ctx.lineTo(lastRenderedPoints[i].x, lastRenderedPoints[i].y);
+      }
+      ctx.lineTo(getX(data.length - 1), getY(0));
+      ctx.closePath();
+
+      const gradient = ctx.createLinearGradient(0, padding.top, 0, padding.top + chartHeight);
+      gradient.addColorStop(0, 'rgba(10, 114, 239, 0.15)'); // Subtle blue overlay
+      gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      // Render Main Line
+      ctx.beginPath();
+      for (let i = 0; i < lastRenderedPoints.length; i++) {
+        if (i === 0) ctx.moveTo(lastRenderedPoints[i].x, lastRenderedPoints[i].y);
+        else ctx.lineTo(lastRenderedPoints[i].x, lastRenderedPoints[i].y);
+      }
+      ctx.strokeStyle = '#0a72ef'; // Standard Develop Blue
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // Render X labels
+      ctx.fillStyle = '#808080';
+      ctx.font = '11px "Geist Mono", ui-monospace, monospace';
+      ctx.textAlign = 'center';
+      data.forEach((d, i) => {
+        ctx.fillText(d.month, getX(i), height - 8);
+      });
+    }
+
+    // Chart Mouse Interaction Handling
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      // Find closest point on X scale
+      let closestPoint = null;
+      let minDistance = Infinity;
+
+      lastRenderedPoints.forEach(pt => {
+        const dist = Math.abs(pt.x - mouseX);
+        if (dist < minDistance) {
+          minDistance = dist;
+          closestPoint = pt;
+        }
+      });
+
+      if (closestPoint && minDistance < 50) {
+        // Show indicator circle & overlay tooltip
+        renderAreaChart(); // Redraw baseline
+        
+        ctx.beginPath();
+        ctx.arc(closestPoint.x, closestPoint.y, 4, 0, Math.PI * 2);
+        ctx.fillStyle = '#171717';
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.fill();
+        ctx.stroke();
+
+        // Draw Vertical Crosshair Line
+        ctx.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(closestPoint.x, 20);
+        ctx.lineTo(closestPoint.x, rect.height - 30);
+        ctx.stroke();
+        ctx.setLineDash([]); // Reset
+
+        // Render floating tooltip
+        chartTooltipElement.style.opacity = '1';
+        chartTooltipElement.innerHTML = `Views: ${closestPoint.data.views.toLocaleString()}<br>Posts: ${closestPoint.data.output}`;
+        chartTooltipElement.style.left = (closestPoint.x + 10) + 'px';
+        chartTooltipElement.style.top = (closestPoint.y - 45) + 'px';
+      } else {
+        chartTooltipElement.style.opacity = '0';
+      }
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+      chartTooltipElement.style.opacity = '0';
+      renderAreaChart(); // clear crosshair
+    });
+
+    // 4. TECH STACK BRANCH TREE ACCORDION TOGGLER
+    function toggleBranch(element) {
+      const parent = element.parentElement;
+      const isActive = parent.classList.contains('active');
+      
+      // Close all branches
+      document.querySelectorAll('.stack-branch').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      if (!isActive) {
+        parent.classList.add('active');
+      }
+    }
+
+    // 5. GITHUB MATRIX GRID GENERATION
+    function createGithubHeatmap() {
+      const grid = document.getElementById('heatmap-grid-element');
+      grid.innerHTML = ''; // Reset
+
+      const cols = 53; // weeks
+      const rows = 7;  // days
+
+      // Simple mock dataset for 371 cells (53 * 7)
+      const mockContributions = Array.from({ length: cols * rows }, () => {
+        const rand = Math.random();
+        if (rand < 0.5) return 0;
+        if (rand < 0.75) return 1;
+        if (rand < 0.9) return 2;
+        if (rand < 0.97) return 3;
+        return 4;
+      });
+
+      mockContributions.forEach((level, idx) => {
+        const cell = document.createElement('div');
+        cell.classList.add('heatmap-cell');
+        cell.setAttribute('data-level', level);
+        cell.setAttribute('title', `Contributions Level: ${level}`);
+        grid.appendChild(cell);
+      });
+    }
+
+    // 6. ADAPTIVE UPDATES ACROSS THE BENTO DOMAIN
+    function updateDashboardData() {
+      const data = globalState.dimensions[globalState.activeDimension];
+
+      // Highlight corresponding card depending on selected dimension
+      document.querySelectorAll('.bento-card').forEach(card => {
+        card.style.transform = 'scale(1.0)';
+        card.style.boxShadow = 'var(--elev-raised)';
+      });
+
+      if (globalState.activeDimension === 'code') {
+        const target = document.getElementById('card-leetcode');
+        target.style.transform = 'scale(1.02)';
+        target.style.boxShadow = '0 0 0 2px var(--ship-red)';
+      } else if (globalState.activeDimension === 'infra') {
+        const target = document.getElementById('card-stack');
+        target.style.transform = 'scale(1.02)';
+        target.style.boxShadow = '0 0 0 2px var(--develop-blue)';
+      } else if (globalState.activeDimension === 'blog') {
+        const target = document.getElementById('card-blog');
+        target.style.transform = 'scale(1.01)';
+        target.style.boxShadow = '0 0 0 2px var(--preview-pink)';
+      }
+
+      // Update primary KPI numbers
+      document.getElementById('stat-total-views').textContent = data.views;
+      document.getElementById('stat-articles').textContent = data.articles;
+      document.getElementById('contribution-count').textContent = data.contributions;
+
+      // Update LeetCode counts
+      document.getElementById('lc-total-solved').textContent = data.totalSolved;
+      document.getElementById('lc-easy-nums').textContent = `${data.easy}/200`;
+      document.getElementById('lc-medium-nums').textContent = `${data.medium}/400`;
+      document.getElementById('lc-hard-nums').textContent = `${data.hard}/150`;
+
+      // Animate SVG LeetCode paths
+      const easyPct = (data.easy / 200) * 408.4; // 408.4 is circumference for r=65
+      const medPct = (data.medium / 400) * 314.1; // 314.1 circumference for r=50
+      const hardPct = (data.hard / 150) * 219.9;  // 219.9 circumference for r=35
+
+      const easyCirc = 408.4;
+      const medCirc = 314.1;
+      const hardCirc = 219.9;
+
+      document.getElementById('lc-easy-circle').style.strokeDasharray = `${easyPct} ${easyCirc}`;
+      document.getElementById('lc-medium-circle').style.strokeDasharray = `${medPct} ${medCirc}`;
+      document.getElementById('lc-hard-circle').style.strokeDasharray = `${hardPct} ${hardCirc}`;
+
+      // Update Timeline / terminal outputs
+      const timelineBox = document.getElementById('activity-timeline-list');
+      timelineBox.innerHTML = '';
+      data.timeline.forEach(item => {
+        const timelineItem = document.createElement('div');
+        timelineItem.className = 'timeline-item';
+        timelineItem.innerHTML = `<span class="date">${item.date}</span><span class="activity">${item.text}</span>`;
+        timelineBox.appendChild(timelineItem);
+      });
+
+      // Redraw Canvas Chart
+      renderAreaChart();
+    }
+
+    // Initialize Components
+    window.addEventListener('DOMContentLoaded', () => {
+      createGithubHeatmap();
+      initChartResize();
+      updateDashboardData();
+    });
+  </script>
+</body>
+<!-- modules: 维度交互控制器✓ LeetCode进度圆环✓ 架构技能树✓ GitHub热力矩阵✓ Canvas面积趋势图✓ 自适应响应式布局✓ -->
+</html>
